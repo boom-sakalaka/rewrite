@@ -17,6 +17,7 @@
 //   delete content.fn
 // }
 
+
 //第三版本 如果传入的对象为null 改成window对象 / 添加返回值
 Function.prototype.call2 = function(content){
   content = content || window
@@ -33,6 +34,26 @@ Function.prototype.call2 = function(content){
 }
 
 
+// apply 的重写
+// Function.prototype.apply2 = function (context, arr) {
+//   var context = Object(context) || window;
+//   context.fn = this;
+
+//   var result;
+//   if (!arr) {
+//       result = context.fn();
+//   }
+//   else {
+//       var args = [];
+//       for (var i = 0, len = arr.length; i < len; i++) {
+//           args.push('arr[' + i + ']');
+//       }
+//       result = eval('context.fn(' + args + ')')
+//   }
+
+//   delete context.fn
+//   return result;
+// }
 
 // 调用 代码
 const a = 'global'
