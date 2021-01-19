@@ -71,34 +71,59 @@ function getUserAction() {
 // container.onmousemove = Debounce(getUserAction, 1000);
 
 // 第四版 先执行一次 之后再开始防抖
-function debounce(func, wait, immediate) {
-  var timeout;
+// function debounce(func, wait, immediate) {
+//   var timeout;
 
-  return function () {
-    var context = this;
-    var args = arguments;
+//   return function () {
+//     var context = this;
+//     var args = arguments;
 
-    if (timeout) clearTimeout(timeout);
-    if (immediate) {
-      // 如果已经执行过，不再执行
-      var callNow = !timeout;
-      timeout = setTimeout(function () {
-        timeout = null;
-      }, wait);
-      if (callNow) func.apply(context, args);
-    } else {
-      timeout = setTimeout(function () {
-        func.apply(context, args);
-      }, wait);
-    }
-  };
-}
+//     if (timeout) clearTimeout(timeout);
+//     if (immediate) {
+//       // 如果已经执行过，不再执行
+//       var callNow = !timeout;
+//       timeout = setTimeout(function () {
+//         timeout = null;
+//       }, wait);
+//       if (callNow) func.apply(context, args);
+//     } else {
+//       timeout = setTimeout(function () {
+//         func.apply(context, args);
+//       }, wait);
+//     }
+//   };
+// }
 
 // 第五版 加上 arguments 参数
+// function debounce(func, wait, immediate) {
+//   var timeout, result;
+
+//   return function () {
+//     var context = this;
+//     var args = arguments;
+
+//     if (timeout) clearTimeout(timeout);
+//     if (immediate) {
+//       // 如果已经执行过，不再执行
+//       var callNow = !timeout;
+//       timeout = setTimeout(function () {
+//         timeout = null;
+//       }, wait);
+//       if (callNow) result = func.apply(context, args);
+//     } else {
+//       timeout = setTimeout(function () {
+//         func.apply(context, args);
+//       }, wait);
+//     }
+//     return result;
+//   };
+// }
+
+// 第六版 添加 删除防抖的方法 立即执行
 function debounce(func, wait, immediate) {
   var timeout, result;
 
-  return function () {
+  var debounced = function () {
     var context = this;
     var args = arguments;
 
@@ -117,4 +142,11 @@ function debounce(func, wait, immediate) {
     }
     return result;
   };
+
+  debounced.cancel = function () {
+    clearTimeout(timeout);
+    timeout = null;
+  };
+
+  return debounced;
 }
