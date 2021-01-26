@@ -148,3 +148,8 @@ function createUniKey(data, arr) {
   }
   return key.join("_");
 }
+
+// 数字不足补零
+function PrefixInteger(num, length) {
+  return (Array(length).join("0") + num).slice(-length);
+}
