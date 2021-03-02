@@ -153,3 +153,11 @@ function createUniKey(data, arr) {
 function PrefixInteger(num, length) {
   return (Array(length).join("0") + num).slice(-length);
 }
+
+// 去除 http域名
+function dleHttp(str) {
+  if (str) {
+    return "/" + str.split("/").slice(3).join("/");
+  }
+  return "";
+}
