@@ -1,8 +1,9 @@
-//判断是否是数字
+//判断是否是数字 添加去除空格 "2 "解决这种情况 
 function isNumber(val) {
+  var newVal = val.toString().replace(/\s*/g,"");
   var regPos = /^(\-|\+)?\d+(\.\d+)?$/; //判断是否是数字。
-  if (regPos.test(val)) {
-    return parseFloat(val);
+  if (regPos.test(newVal)) {
+    return Number(newVal);
   } else {
     return 0;
   }
@@ -22,7 +23,7 @@ function sortAlphaNum(a, b) {
     return aA > bA ? 1 : -1;
   }
 }
-printDataList.sort(sortAlphaNum);
+//printDataList.sort(sortAlphaNum);
 
 // 浮点数 加法
 function floatAdd(arg1, arg2) {
