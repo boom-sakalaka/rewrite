@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-03-30 23:20:13
+ * @LastEditTime: 2021-03-30 23:29:52
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \rewrite\DataStructuresAndAlgorithms\queue.js
+ */
 //普通队列;
 function Queue() {
   let items = []; // 初始化用来存储队列元素的数组
@@ -29,3 +37,32 @@ queue.enqueue(2);
 queue.enqueue(1);
 
 console.log(queue.toString());
+
+// 击鼓传花
+//{Array：参加游戏人员的名字} nameList
+//{number：数到这个数字的人就淘汰} number
+
+function passGame(nameList, number) {
+  //    创建一个队列
+  const queue = new Queue();
+
+  //    将所有人放入到队列中
+  for (let i = 0; i < nameList.length; i++) {
+    queue.enqueue(nameList[i]);
+  }
+
+  //    当只有一个人的时候终止游戏
+  while (queue.size() > 1) {
+    for (let i = 0; i < number - 1; i++) {
+      //    把队列的第一个人放入到队尾
+      queue.enqueue(queue.dequeue());
+    }
+    // 直接从队列中删除number对应的这个人，
+    queue.dequeue();
+  }
+
+  return {
+    name: queue.front(), //    最终获胜的人
+    num: nameList.indexOf(queue.front()) + 1, //    最终获胜人在原来队伍中的第几个
+  };
+}
