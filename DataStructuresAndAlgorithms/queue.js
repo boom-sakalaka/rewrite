@@ -1,11 +1,12 @@
 /*
- * @Author: your name
+ * @Author:gzh
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-03-30 23:29:52
- * @LastEditors: your name
+ * @LastEditTime: 2021-03-30 23:34:50
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\queue.js
  */
+
 //普通队列;
 function Queue() {
   let items = []; // 初始化用来存储队列元素的数组
