@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-04-01 21:56:59
- * @LastEditTime: 2021-04-01 21:56:59
+ * @LastEditTime: 2021-04-05 20:52:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\linkedList.js
@@ -110,7 +110,6 @@ export class LinkedList {
     while (index++ < position) {
       currentNode = currentNode.next;
     }
-
     // 3、返回 data
     return currentNode.data;
   }
