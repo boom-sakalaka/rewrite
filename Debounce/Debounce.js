@@ -1,7 +1,15 @@
-// 函数防抖的实现
+/*
+ * @Author: gzh
+ * @Date: 2021-04-06 09:23:05
+ * @LastEditTime: 2021-04-06 10:36:05
+ * @LastEditors: Please set LastEditors
+ * @Description: 重写new https://github.com/mqyqingfeng/Blog/issues/13 笔记
+ * @FilePath: \rewrite\newRewrite.js
+ */
 
+// 函数防抖的实现
 let count = 1;
-const container = document.querySelector("#container");
+const container = document.querySelector('#container');
 function getUserAction() {
   container.innerHTML = count++;
 }
@@ -32,7 +40,7 @@ function getUserAction() {
 
 // 第二版 绑定this
 // onmousemove 调用的是 return 的匿名函数
-// 那么函数内的this指向为者，setTimeOut延时调用的fnc方法中的this指向为window
+// 那么函数内的this指向为调用者，setTimeOut延时调用的fnc方法中的this指向为window
 // 解决方法为 在返回的匿名函数内 获取this的引用 使用 apply call 改变this的指向
 // function Debounce(fnc, wait) {
 //   let timer = "";
