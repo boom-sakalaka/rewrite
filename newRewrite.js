@@ -1,7 +1,7 @@
 /*
  * @Author: gzh
  * @Date: 2021-04-06 09:23:05
- * @LastEditTime: 2021-04-06 09:43:53
+ * @LastEditTime: 2021-04-06 09:50:38
  * @LastEditors: Please set LastEditors
  * @Description: 重写new https://github.com/mqyqingfeng/Blog/issues/13 笔记
  * @FilePath: \rewrite\newRewrite.js
@@ -29,7 +29,7 @@
 // console.log(otakuOne.strength);
 // otakuOne.sayYourName();
 
-// new 实现
+// new 实现 本质上就是修改了对象的原型指向 和执行构造方法时候改变this的指向
 
 // 第一版
 function ObjectCreate() {
