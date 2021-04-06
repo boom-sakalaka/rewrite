@@ -1,11 +1,14 @@
 /*
  * @Author: gzh
  * @Date: 2021-03-15 11:45:49
- * @LastEditTime: 2021-04-02 14:23:31
+ * @LastEditTime: 2021-04-05 22:24:31
  * @LastEditors: Please set LastEditors
  * @Description: call apply 手写
  * @FilePath: \rewrite\callAndApplyReWrite.js
  */
+
+// 需要清楚call和apply的用法才能去重写 call apply  函数去调用的，参数的第一个为this的指向，然后立即执行
+
 // 第一版 简单实现
 // Function.prototype.call2 = function (content){
 //   content.fn = this

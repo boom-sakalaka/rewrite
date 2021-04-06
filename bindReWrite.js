@@ -1,3 +1,12 @@
+/*
+ * @Author: your name
+ * @Date: 2021-03-30 23:20:13
+ * @LastEditTime: 2021-04-05 22:25:54
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \rewrite\bindReWrite.js
+ */
+// bind 的使用  返回一个函数  区别于call 和applye ，bind只是修改了函数里面this的值，并返回了这个函数，执行这个函数仍然需要自己去手动调用
 // 例子 bind的使用
 // var foo = {
 //   value: 1
@@ -8,7 +17,7 @@
 // }
 
 // // 返回了一个函数
-// var bindFoo = bar.bind(foo); 
+// var bindFoo = bar.bind(foo);
 
 // bindFoo(); // 1
 
@@ -22,28 +31,27 @@
 
 // 第二版 添加 传递的参数
 Function.prototype.bind2 = function (content) {
-  const self = this
-  // 获取到 arguments 
-  const asgs = Array.prototype.splice.call(arguments,1)
-  return function() {
-    let nextAsgs = Array.prototype.splice.call(arguments,0)
-    return self.apply(content,asgs.concat(nextAsgs))
-  }
-}
-
-
-// 实例
-const value = 'global'
-const foo = {
-  value: 'local'
+  const self = this;
+  // 获取到 arguments
+  const asgs = Array.prototype.splice.call(arguments, 1);
+  return function () {
+    let nextAsgs = Array.prototype.splice.call(arguments, 0);
+    return self.apply(content, asgs.concat(nextAsgs));
+  };
 };
 
-function bar(name,age) {
-  console.log(name)
-  console.log(age)
+// 实例
+const value = 'global';
+const foo = {
+  value: 'local',
+};
+
+function bar(name, age) {
+  console.log(name);
+  console.log(age);
   console.log(this.value);
 }
 
 // 返回了一个函数
 const bindFoo = bar.bind2(foo);
-bindFoo('Tom', 2)
+bindFoo('Tom', 2);
