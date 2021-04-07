@@ -1,6 +1,6 @@
-//判断是否是数字 添加去除空格 "2 "解决这种情况 
+//判断是否是数字 添加去除空格 "2 "解决这种情况
 function isNumber(val) {
-  var newVal = val.toString().replace(/\s*/g,"");
+  var newVal = val.toString().replace(/\s*/g, '');
   var regPos = /^(\-|\+)?\d+(\.\d+)?$/; //判断是否是数字。
   if (regPos.test(newVal)) {
     return Number(newVal);
@@ -9,15 +9,23 @@ function isNumber(val) {
   }
 }
 
+//判断是否是数字 添加去除空格 "2 "解决这种情况
+function isNumberTwo(val) {
+  if (val && !isNaN(val)) {
+    return Number(val);
+  }
+  return 0;
+}
+console.log(isNumberTwo('111'));
 // 字母数字混合排序
 var reA = /[^a-zA-Z]/g;
 var reN = /[^0-9]/g;
 function sortAlphaNum(a, b) {
-  var aA = a.goods_sn.replace(reA, "");
-  var bA = b.goods_sn.replace(reA, "");
+  var aA = a.goods_sn.replace(reA, '');
+  var bA = b.goods_sn.replace(reA, '');
   if (aA === bA) {
-    var aN = parseInt(a.goods_sn.replace(reN, ""), 10);
-    var bN = parseInt(b.goods_sn.replace(reN, ""), 10);
+    var aN = parseInt(a.goods_sn.replace(reN, ''), 10);
+    var bN = parseInt(b.goods_sn.replace(reN, ''), 10);
     return aN === bN ? 0 : aN > bN ? 1 : -1;
   } else {
     return aA > bA ? 1 : -1;
@@ -29,33 +37,29 @@ function sortAlphaNum(a, b) {
 function floatAdd(arg1, arg2) {
   var r1, r2, m;
   try {
-    r1 = arg1.toString().split(".")[1].length;
+    r1 = arg1.toString().split('.')[1].length;
   } catch (e) {
     r1 = 0;
   }
   try {
-    r2 = arg2.toString().split(".")[1].length;
+    r2 = arg2.toString().split('.')[1].length;
   } catch (e) {
     r2 = 0;
   }
   m = Math.pow(10, Math.max(r1, r2));
   //return (arg1 * m + arg2 * m) / m;
-  return (
-    ($Core.Utility.calculate.floatMul(arg1, m) +
-      $Core.Utility.calculate.floatMul(arg2, m)) /
-    m
-  );
+  return ($Core.Utility.calculate.floatMul(arg1, m) + $Core.Utility.calculate.floatMul(arg2, m)) / m;
 }
 // 浮点数 减法
 function floatSub(arg1, arg2) {
   var r1, r2, m, n;
   try {
-    r1 = arg1.toString().split(".")[1].length;
+    r1 = arg1.toString().split('.')[1].length;
   } catch (e) {
     r1 = 0;
   }
   try {
-    r2 = arg2.toString().split(".")[1].length;
+    r2 = arg2.toString().split('.')[1].length;
   } catch (e) {
     r2 = 0;
   }
@@ -70,15 +74,12 @@ function floatMul(arg1, arg2) {
     s1 = arg1.toString(),
     s2 = arg2.toString();
   try {
-    m += s1.split(".")[1].length;
+    m += s1.split('.')[1].length;
   } catch (e) {}
   try {
-    m += s2.split(".")[1].length;
+    m += s2.split('.')[1].length;
   } catch (e) {}
-  return (
-    (Number(s1.replace(".", "")) * Number(s2.replace(".", ""))) /
-    Math.pow(10, m)
-  );
+  return (Number(s1.replace('.', '')) * Number(s2.replace('.', ''))) / Math.pow(10, m);
 }
 // 浮点数 除法
 function floatDiv(arg1, arg2) {
@@ -87,39 +88,38 @@ function floatDiv(arg1, arg2) {
     r1,
     r2;
   try {
-    t1 = arg1.toString().split(".")[1].length;
+    t1 = arg1.toString().split('.')[1].length;
   } catch (e) {}
   try {
-    t2 = arg2.toString().split(".")[1].length;
+    t2 = arg2.toString().split('.')[1].length;
   } catch (e) {}
-  r1 = Number(arg1.toString().replace(".", ""));
-  r2 = Number(arg2.toString().replace(".", ""));
+  r1 = Number(arg1.toString().replace('.', ''));
+  r2 = Number(arg2.toString().replace('.', ''));
   return (r1 / r2) * Math.pow(10, t2 - t1);
 }
 
 // 中文数字 大写
 function number_chinese(str) {
   var num = parseFloat(str);
-  var strOutput = "",
-    strUnit = "仟佰拾亿仟佰拾万仟佰拾元角分";
-  num += "00";
-  var intPos = num.indexOf(".");
+  var strOutput = '',
+    strUnit = '仟佰拾亿仟佰拾万仟佰拾元角分';
+  num += '00';
+  var intPos = num.indexOf('.');
   if (intPos >= 0) {
     num = num.substring(0, intPos) + num.substr(intPos + 1, 2);
   }
   strUnit = strUnit.substr(strUnit.length - num.length);
   for (var i = 0; i < num.length; i++) {
-    strOutput +=
-      "零壹贰叁肆伍陆柒捌玖".substr(num.substr(i, 1), 1) + strUnit.substr(i, 1);
+    strOutput += '零壹贰叁肆伍陆柒捌玖'.substr(num.substr(i, 1), 1) + strUnit.substr(i, 1);
   }
   return strOutput
-    .replace(/零角零分$/, "整")
-    .replace(/零[仟佰拾]/g, "零")
-    .replace(/零{2,}/g, "零")
-    .replace(/零([亿|万])/g, "$1")
-    .replace(/零+元/, "元")
-    .replace(/亿零{0,3}万/, "亿")
-    .replace(/^元/, "零元");
+    .replace(/零角零分$/, '整')
+    .replace(/零[仟佰拾]/g, '零')
+    .replace(/零{2,}/g, '零')
+    .replace(/零([亿|万])/g, '$1')
+    .replace(/零+元/, '元')
+    .replace(/亿零{0,3}万/, '亿')
+    .replace(/^元/, '零元');
 }
 
 // 多个条件 分组汇总数据
@@ -147,18 +147,18 @@ function createUniKey(data, arr) {
       key.push(data[item]);
     });
   }
-  return key.join("_");
+  return key.join('_');
 }
 
 // 数字不足补零
 function PrefixInteger(num, length) {
-  return (Array(length).join("0") + num).slice(-length);
+  return (Array(length).join('0') + num).slice(-length);
 }
 
 // 去除 http域名
 function dleHttp(str) {
   if (str) {
-    return "/" + str.split("/").slice(3).join("/");
+    return '/' + str.split('/').slice(3).join('/');
   }
-  return "";
+  return '';
 }
