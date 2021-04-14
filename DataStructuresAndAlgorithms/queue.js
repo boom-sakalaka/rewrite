@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-04-14 14:24:29
- * @LastEditTime: 2021-04-14 14:55:29
+ * @LastEditTime: 2021-04-14 15:08:15
  * @LastEditors: Please set LastEditors
  * @Description: js 队列和击鼓传花游戏
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\queueCopy.js
@@ -21,7 +21,7 @@ function Queue() {
 
   // 队列中是否有数据
   Queue.prototype.isEmpty = function () {
-    return this.item.length === 0;
+    return !this.item.length === 0;
   };
 
   //显示队列中的数字
