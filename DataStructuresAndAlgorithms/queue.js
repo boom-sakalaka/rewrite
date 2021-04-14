@@ -1,69 +1,80 @@
 /*
- * @Author:gzh
- * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-03-30 23:34:50
+ * @Author: your name
+ * @Date: 2021-04-14 14:24:29
+ * @LastEditTime: 2021-04-14 14:55:29
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \rewrite\DataStructuresAndAlgorithms\queue.js
+ * @Description: js 队列和击鼓传花游戏
+ * @FilePath: \rewrite\DataStructuresAndAlgorithms\queueCopy.js
  */
-
-//普通队列;
+// 队列 先进先出
+// 利用数组来实现队列
 function Queue() {
-  let items = []; // 初始化用来存储队列元素的数组
-  this.enqueue = function (element) {
-    items.push(element); // 向队列底部添加元素
+  this.item = [];
+  // 向队列中添加元素
+  Queue.prototype.addEle = function (val) {
+    return this.item.push(val);
   };
-  this.dequeue = function () {
-    return items.shift(); // 移除队列顶部的第一个元素并返回
+  // 删除队列中的第一个元素
+  Queue.prototype.delQueue = function () {
+    return this.item.shift();
   };
-  this.front = function () {
-    return itmes[0]; // 仅返回顶部的第一个元素
+
+  // 队列中是否有数据
+  Queue.prototype.isEmpty = function () {
+    return this.item.length === 0;
   };
-  this.isEmpty = function () {
-    return itmes.length === 0; // 判断队列是否为空
+
+  //显示队列中的数字
+  Queue.prototype.size = function () {
+    return this.item.length;
   };
-  this.size = function () {
-    return items.length; // 返回队列的长度
+
+  // 显示队列中的第一个元素
+  Queue.prototype.showFirstEle = function () {
+    return this.item[0];
   };
-  this.toString = function () {
-    return items.join(',');
+
+  // 显示队列中的所有数据
+  Queue.prototype.toString = function () {
+    return this.item.join(',');
   };
 }
 
-let queue = new Queue();
-
-queue.enqueue(4);
-queue.enqueue(3);
-queue.enqueue(2);
-queue.enqueue(1);
-
-console.log(queue.toString());
+// const queueOne = new Queue();
+// queueOne.addEle('1');
+// queueOne.addEle('2');
+// queueOne.addEle('3');
+// queueOne.addEle('4');
+// queueOne.addEle('5');
+// console.log(queueOne.toString());
+// console.log(queueOne.isEmpty());
+// console.log(queueOne.delQueue());
+// console.log(queueOne.toString());
+// console.log(queueOne.showFirstEle());
+// console.log(queueOne.size());
 
 // 击鼓传花
 //{Array：参加游戏人员的名字} nameList
 //{number：数到这个数字的人就淘汰} number
-
-function passGame(nameList, number) {
-  //    创建一个队列
-  const queue = new Queue();
-
-  //    将所有人放入到队列中
-  for (let i = 0; i < nameList.length; i++) {
-    queue.enqueue(nameList[i]);
-  }
-
-  //    当只有一个人的时候终止游戏
-  while (queue.size() > 1) {
-    for (let i = 0; i < number - 1; i++) {
-      //    把队列的第一个人放入到队尾
-      queue.enqueue(queue.dequeue());
+const nameList = ['迪迦', '盖亚', '高斯', '戴拿', '阿古茹', '雷欧', '泰罗'];
+function passGame(nameList, num) {
+  // 新建队列
+  const queueList = new Queue();
+  if (nameList && Array.isArray(nameList)) {
+    for (const v of nameList) {
+      queueList.addEle(v);
     }
-    // 直接从队列中删除number对应的这个人，
-    queue.dequeue();
   }
-
+  while (queueList.size > 1) {
+    for (let i = 0; i < num; i++) {
+      queueList.addEle(queueList.delQueue());
+    }
+    queueList.delQueue();
+  }
   return {
-    name: queue.front(), //    最终获胜的人
-    num: nameList.indexOf(queue.front()) + 1, //    最终获胜人在原来队伍中的第几个
+    name: queueList.showFirstEle(),
+    num: nameList.indexOf(queueList.showFirstEle()) + 1,
   };
 }
+
+console.log(passGame(nameList, 5));
