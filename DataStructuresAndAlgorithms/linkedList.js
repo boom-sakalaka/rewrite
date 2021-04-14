@@ -1,7 +1,7 @@
 /*
  * @Author: gzh
  * @Date: 2021-04-02 14:26:26
- * @LastEditTime: 2021-04-14 19:01:53
+ * @LastEditTime: 2021-04-14 20:46:54
  * @LastEditors: Please set LastEditors
  * @Description: 链表的实现
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\linkedList.js
@@ -99,5 +99,32 @@ class LinkedList {
     this.removeAt(index);
   }
 
-  isEmpty() {}
+  isEmpty() {
+    return !this.length;
+  }
+  size() {
+    return this.length;
+  }
+  // 转换字符串
+  toString() {
+    let current = this.head;
+    let string = '';
+    while (current) {
+      string += ` ${current.element}`;
+      current = current.next;
+    }
+    return string;
+  }
 }
+
+const linkedList = new LinkedList();
+
+console.log(linkedList.toString());
+linkedList.append(2);
+linkedList.append(6);
+linkedList.append(24);
+linkedList.append(152);
+
+linkedList.insert(3, 18);
+console.log(linkedList.toString());
+console.log(linkedList.findIndex(24));
