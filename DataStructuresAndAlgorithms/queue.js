@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-04-14 14:24:29
- * @LastEditTime: 2021-04-14 15:08:15
+ * @LastEditTime: 2021-04-19 09:44:31
  * @LastEditors: Please set LastEditors
  * @Description: js 队列和击鼓传花游戏
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\queueCopy.js
@@ -65,7 +65,7 @@ function passGame(nameList, num) {
       queueList.addEle(v);
     }
   }
-  while (queueList.size > 1) {
+  while (queueList.size() > 1) {
     for (let i = 0; i < num; i++) {
       queueList.addEle(queueList.delQueue());
     }
