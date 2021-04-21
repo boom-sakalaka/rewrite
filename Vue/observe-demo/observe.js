@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-04-20 20:42:40
- * @LastEditTime: 2021-04-20 21:32:31
+ * @LastEditTime: 2021-04-20 21:40:48
  * @LastEditors: Please set LastEditors
  * @Description: Vue 响应式原理 defineProperty
  * @FilePath: \rewrite\Vue\observe-demo\observe.js
@@ -51,6 +51,12 @@ function observe(target) {
   if (typeof target != 'object' || target === null) {
     return target;
   }
+
+  // 污染全局的 Array 原型
+  // Array.prototype.push = function () {
+  //     updateView()
+  //     ...
+  // }
 
   if (Array.isArray(target)) {
     target.__proto__ = arrProto;
