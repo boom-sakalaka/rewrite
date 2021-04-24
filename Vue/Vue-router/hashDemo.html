@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-04-23 09:58:13
+ * @LastEditTime: 2021-04-24 14:56:29
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \rewrite\Vue\Vue-router\hashDemo.html
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +25,7 @@
     // a. JS 修改 url
     // b. 手动修改 url 的 hash
     // c. 浏览器前进、后退
+    // hash模式 不会刷新页面，单页面的使用，监听到变化，通过JS来调用切换路由
     window.onhashchange = (event) => {
       console.log('old url', event.oldURL)
       console.log('new url', event.newURL)
