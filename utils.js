@@ -50,6 +50,7 @@ function floatAdd(arg1, arg2) {
   //return (arg1 * m + arg2 * m) / m;
   return ($Core.Utility.calculate.floatMul(arg1, m) + $Core.Utility.calculate.floatMul(arg2, m)) / m;
 }
+
 // 浮点数 减法
 function floatSub(arg1, arg2) {
   var r1, r2, m, n;
@@ -68,6 +69,7 @@ function floatSub(arg1, arg2) {
   n = r1 >= r2 ? r1 : r2;
   return ((arg1 * m - arg2 * m) / m).toFixed(n);
 }
+
 // 浮点数 乘法
 function floatMul(arg1, arg2) {
   var m = 0,
@@ -81,6 +83,7 @@ function floatMul(arg1, arg2) {
   } catch (e) {}
   return (Number(s1.replace('.', '')) * Number(s2.replace('.', ''))) / Math.pow(10, m);
 }
+
 // 浮点数 除法
 function floatDiv(arg1, arg2) {
   var t1 = 0,
@@ -162,3 +165,45 @@ function dleHttp(str) {
   }
   return '';
 }
+
+// 随机ID 生成
+const a = Math.random().toString(36).substring(2);
+console.log(a);
+// 72pklaoe38u
+
+// 生成范围内的随机数
+max = 20;
+min = 10;
+var a = Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(a);
+// 17
+
+// 随机排列数组 洗牌
+var arr = ['A', 'B', 'C', 'D', 'E'];
+console.log(arr.slice().sort(() => Math.random() - 0.5));
+//['C', 'B', 'A', 'D', 'E'];
+
+// 获取随机布尔值
+const randomBoolean = () => Math.random() >= 0.5;
+console.log(randomBoolean());
+//false
+
+// 反转字符串
+const reverse = str => str.split('').reverse().join('');
+console.log(reverse('javascript'));
+//tpircsavaj
+
+// 计算两个给定日期之间的天数
+const days = (date, otherDate) => Math.ceil(Math.abs(date - otherDate) / 86400000);
+result = days(newDate('2020-04-15'), newDate('2021-01-15'));
+console.log(result);
+//275
+
+// 滚动到页面底部
+const goToTop = () => window.scrollTo(0, 0);
+goToTop();
+
+// 将文字复制到粘贴板
+const copyTextToClipboard = async text => {
+  await navigator.clipboard.writeText(text);
+};
