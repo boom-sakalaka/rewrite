@@ -1,19 +1,11 @@
 /*
  * @Author: your name
  * @Date: 2021-05-05 10:25:11
- * @LastEditTime: 2021-05-05 10:48:46
+ * @LastEditTime: 2021-05-06 09:06:19
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @Description: 深拷贝
  * @FilePath: \rewrite\deepClone.js
  */
-// /*
-//  * @Author: your name
-//  * @Date: 2021-05-05 10:25:11
-//  * @LastEditTime: 2021-05-05 10:39:47
-//  * @LastEditors: Please set LastEditors
-//  * @Description: 深拷贝
-//  * @FilePath: \rewrite\deepClone.js
-//  */
 
 const obj = {
   name: '张三',
