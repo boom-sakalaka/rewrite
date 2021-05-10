@@ -1,0 +1,42 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-10 12:27:04
+ * @LastEditTime: 2021-05-10 12:36:33
+ * @LastEditors: Please set LastEditors
+ * @Description: Vue 原理
+ * @FilePath: \rewrite\Vue\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="app">
+  {{title}}
+</div>
+
+<body>
+
+
+  <script src="http://unpkg.com/vue"></script>
+  <script>
+    new Vue({
+      data() {
+        return {
+          title: '第一个标题'
+        }
+      },
+      mounted() {
+        setTimeout(() => {
+          this.title = "新的标题"
+        }, 3000);
+      }
+    }).$mount('#app');
+  </script>
+</body>
+
+</html>
