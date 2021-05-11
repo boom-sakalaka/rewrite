@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-10 12:27:04
- * @LastEditTime: 2021-05-10 23:30:02
+ * @LastEditTime: 2021-05-11 20:30:24
  * @LastEditors: Please set LastEditors
  * @Description: Vue 原理
  * @FilePath: \rewrite\Vue\index.html
@@ -30,7 +30,6 @@
         defineReactive(obj, key, obj[key])
       })
     }
-
     function defineReactive(obj, key, val) {
       Object.defineProperty(obj, key, {
         get() {
@@ -44,7 +43,6 @@
         },
       })
     }
-
     // 数据驱动，没有dom业务操作
     function Vue(options) {
       this.$options = options
@@ -52,8 +50,6 @@
       // 响应式
       observe(this.$data)
     }
-
-
     Vue.prototype.$mount = function (sel) {
       // 转换生成dom的过程
       // update 数据
