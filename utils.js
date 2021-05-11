@@ -234,3 +234,13 @@ Date.prototype.format = function (fmt) {
   }
   return fmt;
 };
+
+// 获取到 对象中的属性(除开原型)
+Object.prototype.test = '111';
+const obj = {
+  name: '1',
+  age: 19,
+};
+Object.keys(obj).forEach(itme => {
+  console.log(itme);
+});
