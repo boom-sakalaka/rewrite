@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-05 10:25:11
- * @LastEditTime: 2021-05-06 09:06:19
+ * @LastEditTime: 2021-05-12 18:45:29
  * @LastEditors: Please set LastEditors
  * @Description: 深拷贝
  * @FilePath: \rewrite\deepClone.js
@@ -19,10 +19,11 @@ const obj = {
 // newObj.name = '李四';
 // console.log(obj.name);
 
-function deepClone(obj = {}) {
+function deepClone(obj) {
   if (typeof obj !== 'object' || obj == null) {
     return obj;
   }
+
   let result;
   if (obj instanceof Array) {
     result = [];
@@ -30,17 +31,13 @@ function deepClone(obj = {}) {
     result = {};
   }
 
-  // for in for of 介绍 https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/
   for (let key in obj) {
-    // 只递归复制对象本身的属性，不包括原型的属性(优化性能)
     if (obj.hasOwnProperty(key)) {
       result[key] = deepClone(obj[key]);
     }
   }
-
   return result;
 }
-
 const newObj = deepClone(obj);
 newObj.color.push('绿色');
 newObj.friend.name = 'jon';
