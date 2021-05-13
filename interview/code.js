@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-05-13 16:48:47
+ * @LastEditTime: 2021-05-13 17:02:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -59,6 +59,8 @@ console.log(curryAdd(1, 2, 3));
 
 // 拍平数组
 const arr = [1, 2, [3, 4, [5, 6]]];
+console.log(arr.flat()); // 只到第一层
+
 function flatten(arr) {
   if (arr instanceof Array) {
     let result = [];
