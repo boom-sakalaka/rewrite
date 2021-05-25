@@ -1,31 +1,51 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-25 22:02:57
- * @LastEditTime: 2021-05-25 22:21:55
+ * @LastEditTime: 2021-05-25 22:38:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\Vue\Vue3\HelloVue3.html
 -->
 <div id="app">
   <h1>{{title}}</h1>
-  <h1>{{state.title}}</h1>
+  <!-- <h1>{{state.title}}</h1> -->
 </div>
 
 <script>
   // createApp 返回的应用程序实例是什么样子的
   const Vue = {
-    createApp() {
+    createApp(options) {
       // 返回就是app实例
       return {
-        mount(selector) { }
+        mount(selector) {
+          // mount 的目标是什么?
+          const parent = document.querySelector(selector)
+          // 将组件的配置解析为dom
+          // 通过render 函数
+          if (!options.render) {
+            options.render = this.compile(parent.innerHTML)
+          }
+          const el = options.render.call(options.data())
+          // 追加到宿主元素中去
+          parent.innerHTML = ''
+          parent.appendChild(el)
+        },
+        compile(template) {
+          // 没有用到template 解析 硬编码
+          return function render() {
+            const h3 = document.createElement('h3')
+            h3.textContent = this.title
+            return h3
+          }
+        }
       }
     }
   }
 </script>
 <script>
-  // 1.函数式： 类型支持更好 ts
-  // 2.标准化、简化 一致性
-  // 3.tree-shaking 
+  // 1. 函数式： 类型支持更好 ts
+  // 2. 标准化、简化 一致性
+  // 3. tree-shaking 
   // 4. 复用性 composition api
   // 5. 性能优化 编译期的优化
   // 6. 扩展性：自定义渲染器
