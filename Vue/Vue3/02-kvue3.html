@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-25 22:02:57
- * @LastEditTime: 2021-05-25 22:38:15
+ * @LastEditTime: 2021-05-26 19:28:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\Vue\Vue3\HelloVue3.html
@@ -25,7 +25,34 @@
           if (!options.render) {
             options.render = this.compile(parent.innerHTML)
           }
-          const el = options.render.call(options.data())
+
+          // 兼容options api
+          if (options.setup) {
+            this.setupState = options.setup()
+          } else {
+            this.data = options.data()
+          }
+
+          // Proxy
+          // 确定render中数据如何获取
+          this.proxy = new Proxy(this, {
+            get(target, key) {
+              if (key in target.setupState) {
+                return target.setupState[key]
+              } else {
+                return target.data[key]
+              }
+            },
+            set(target, key, val) {
+              if (key in target.setupState) {
+                target.setupState[key] = val
+              } else {
+                target.data[key] = val
+              }
+            }
+          })
+
+          const el = options.render.call(this.proxy)
           // 追加到宿主元素中去
           parent.innerHTML = ''
           parent.appendChild(el)
@@ -56,6 +83,7 @@
       }
     },
     setup() {
+      // 规避this
       return {
         title: 'hello vue3!!!!!!!!!!!'
       }
