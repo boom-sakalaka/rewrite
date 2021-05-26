@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-05-13 17:02:04
+ * @LastEditTime: 2021-05-24 09:33:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -58,9 +58,11 @@ console.log(curryAdd(1, 2)(3));
 console.log(curryAdd(1, 2, 3));
 
 // 拍平数组
+// 第一种方式
 const arr = [1, 2, [3, 4, [5, 6]]];
-console.log(arr.flat()); // 只到第一层
+console.log(arr.flat()); // 只到取到第一层
 
+// 自定义方法实现
 function flatten(arr) {
   if (arr instanceof Array) {
     let result = [];
@@ -74,3 +76,31 @@ function flatten(arr) {
   }
 }
 console.log(flatten(arr));
+
+// 函数防抖
+function debounce(fnc, await) {
+  let timeout, content, args;
+  return function () {
+    content = this;
+    args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      fnc.apply(content, args);
+    }, await);
+  };
+}
+
+// 函数节流
+function throttleI(fnc, await) {
+  let previous = 0;
+  let content, args;
+  return function () {
+    content = this;
+    args = arguments;
+    const nowData = +new Date();
+    if (nowData - previous > await) {
+      fnc.apply(content, args);
+      previous = nowData;
+    }
+  };
+}
