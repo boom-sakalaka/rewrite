@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-25 22:02:57
- * @LastEditTime: 2021-05-26 19:38:40
+ * @LastEditTime: 2021-05-26 21:51:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\Vue\Vue3\HelloVue3.html
@@ -12,6 +12,25 @@
 </div>
 
 <script>
+
+  // 就收obj 代理他 使他成为响应式
+  // 替换Object.defineProperty()
+  function reactive(obj) {
+    // Vue3 中基于Proxy
+    return new Proxy(obj, {
+      get(target, key) {
+        console.log('get' + key);
+        return target[key]
+      },
+      set(target, key, val) {
+        console.log('set' + key);
+        target[key] = val
+        //update() // 响应式更新
+        app.update(0)
+      },
+    })
+  }
+
   // createApp 返回的应用程序实例是什么样子的
   const Vue = {
     createApp(options) {
@@ -67,11 +86,17 @@
                 }
               })
 
-              const el = options.render.call(this.proxy)
-              // 追加到宿主元素中去
-              parent.innerHTML = ''
-              // parent.appendChild(el)
-              insert(el, parent)
+              // app 实例上加了一个更新函数
+              this.update = function () {
+                const el = options.render.call(this.proxy)
+                // 追加到宿主元素中去
+                parent.innerHTML = ''
+                // parent.appendChild(el)
+                insert(el, parent)
+              }
+
+              // 初始化
+              this.update()
             },
             compile(template) {
               // 没有用到template 解析 硬编码
@@ -102,9 +127,13 @@
     },
     setup() {
       // 规避this
-      return {
+      const state = reactive({
         title: 'hello vue3!!!!!!!!!!!'
-      }
+      })
+      setTimeout(() => {
+        state.title = 'mytitle'
+      }, 2000);
+      return state
     }
   })
 
