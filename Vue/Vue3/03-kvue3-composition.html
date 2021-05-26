@@ -1,0 +1,56 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-25 22:02:57
+ * @LastEditTime: 2021-05-26 21:34:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \rewrite\Vue\Vue3\HelloVue3.html
+-->
+<div id="app">
+  <h1>{{title}}</h1>
+  <h1>{{state.title}}</h1>
+</div>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+  // 1.函数式： 类型支持更好 ts
+  // 2.标准化、简化 一致性
+  // 3.tree-shaking 
+  // 4. 复用性 composition api
+  // 5. 性能优化 编译期的优化
+  // 6. 扩展性：自定义渲染器
+  const { createApp, reactive, onMounted } = Vue
+
+  function useTitle() {
+    const state = reactive({
+      title: 'hello vue3!!!!!!!!!!!'
+    })
+
+    onMounted(() => {
+      state.title = 'vue3 - hello '
+    })
+
+    setTimeout(() => {
+      state.title = 'title'
+    }, 3000);
+    return state
+  }
+
+  const app = createApp({
+    data() {
+      return {
+        title: 'Hello Vue3'
+      }
+    },
+    setup() {
+
+      const state = useTitle()
+      // 上下文给render使用
+      return {
+        state
+      }
+    }
+  })
+
+  app.mount('#app')
+</script>
