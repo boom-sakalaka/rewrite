@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-25 22:02:57
- * @LastEditTime: 2021-05-26 21:51:29
+ * @LastEditTime: 2021-05-26 23:54:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\Vue\Vue3\HelloVue3.html
@@ -13,22 +13,79 @@
 
 <script>
 
-  // 就收obj 代理他 使他成为响应式
+  // 接收obj 代理他 使他成为响应式
   // 替换Object.defineProperty()
   function reactive(obj) {
     // Vue3 中基于Proxy
     return new Proxy(obj, {
       get(target, key) {
         console.log('get' + key);
+        // 依赖收集
+        track(target, key)
         return target[key]
       },
       set(target, key, val) {
         console.log('set' + key);
         target[key] = val
         //update() // 响应式更新
-        app.update(0)
+        // app.update(0)
+        trigger(target, key)
       },
     })
+  }
+  // 添加副作用函数
+  const effectStack = []
+  function effect(fn) {
+    // 如果fn中用到了响应式数据，fn会再次执行 ，称为副作用函数
+    const eff = function () {
+      try {
+        // 这样写是为了使用try catch
+        effectStack.push(eff)
+        fn()
+      } finally {
+        effectStack.pop()
+      }
+    }
+
+    // 执行一次， 触发依赖收集
+    eff();
+
+    return eff
+
+  }
+
+
+  const targetMap = {}
+  function track(target, key) {
+    // 获取副作用函数
+    const effect = effectStack[effectStack.length - 1]
+    if (effect) {
+      let map = targetMap[target]
+      if (!map) {
+        map = targetMap[target] = {}
+      }
+
+      let deps = map[key]
+      if (!deps) {
+        deps = map[key] = []
+      }
+
+      // 将副作用函数放入deps
+      if (deps.indexOf(effect) === -1) {
+        deps.push(effect)
+      }
+    }
+  }
+
+
+  function trigger(target, key) {
+    const map = targetMap[target]
+    if (map) {
+      const deps = map[key]
+      if (deps) {
+        deps.forEach(dep => dep())
+      }
+    }
   }
 
   // createApp 返回的应用程序实例是什么样子的
@@ -87,13 +144,13 @@
               })
 
               // app 实例上加了一个更新函数
-              this.update = function () {
+              this.update = effect(() => {
                 const el = options.render.call(this.proxy)
                 // 追加到宿主元素中去
                 parent.innerHTML = ''
                 // parent.appendChild(el)
                 insert(el, parent)
-              }
+              })
 
               // 初始化
               this.update()
