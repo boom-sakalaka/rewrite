@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-05-24 09:33:40
+ * @LastEditTime: 2021-06-05 15:41:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -104,3 +104,47 @@ function throttleI(fnc, await) {
     }
   };
 }
+
+// 箭头函数和普通函数的this指向问题
+
+// 修改前
+class Student {
+  constructor() {
+    this.name = 'Tom';
+  }
+  getInfo() {
+    return {
+      name: 'jerry',
+      getName() {
+        return this.name;
+      },
+    };
+  }
+}
+// 修改后
+class Student {
+  constructor() {
+    this.name = 'Tom';
+  }
+  getInfo() {
+    return {
+      name: 'jerry',
+      getName: () => {
+        return this.name;
+      },
+    };
+  }
+}
+const s = new Student();
+console.log(s.getInfo().getName()); // jerry
+
+// 函数的参数 引用
+function changeObjProperty(o) {
+  o.siteUrl = 'http://a.com';
+  o = new Object();
+  o.siteUrl = 'http://b.com';
+}
+
+let s = new Object();
+changeObjProperty(s);
+console.log(s.siteUrl);
