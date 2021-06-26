@@ -1,17 +1,91 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-15 11:45:49
+ * @LastEditTime: 2021-05-12 19:02:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \rewrite\test.html
+-->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- <script src="/rewrite/Currying/Currying.js"></script> -->
-    <script src="/rewrite/lazyFn/lazyfn.js"></script>
-    <script src="./utils.js"></script>
-    <script>
-      console.log(isNumber('1.1') + isNumber('1.2'));
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script src="/rewrite/Currying/Currying.js"></script> -->
+  <!-- <script src="/rewrite/lazyFn/lazyfn.js"></script>
+  <script src="./utils.js"></script>
+  <script>
+    console.log(isNumber('1.1') + isNumber('1.2'));
+  </script> -->
+
+  <!-- <script>
+    Function.prototype.call2 = function (content) {
+      content = content || window
+      content.fn = this
+      // 获取参数
+      // const arg = [].slice.call(arguments, 1)
+      // console.log(arg)
+      const arg = []
+      for (let i = 1; i < arguments.length; i++) {
+        arg.push('arguments[' + i + ']');
+      }
+      const result = eval('content.fn(' + arg + ')');
+      delete content.fn
+      return result;
+    }
+
+    Function.prototype.apply2 = function (content, arr) {
+      content = content || window
+      content.fn = this
+      // 获取参数
+      let result;
+      if (!arr) {
+        result = content.fn()
+      } else {
+        const args = [];
+        arr.forEach((item, i) => {
+          args.push('arr[' + i + ']')
+        })
+        result = eval('content.fn(' + args + ')')
+      }
+      delete content.fn
+      return result;
+    }
+
+    const obj = {
+      name: '张三'
+    }
+
+    function showName(str1, str2) {
+      console.log(str1 + '-' + str2);
+      console.log(this.name)
+    }
+    showName.apply2(obj, ['test1', 'test2']);
+  </script> -->
+
+  <script>
+
+    function delayeringArr(arr) {
+      if (arr instanceof Array) {
+        let newArr = [];
+        arr.forEach(item => {
+          newArr = newArr.concat(delayeringArr(item));
+        });
+        return newArr;
+      } else {
+        return arr;
+      }
+    }
+
+    const list = [1, 2, 3, [4, 5, [6, 7]]];
+    console.log(delayeringArr(list)[6]);
+  </script>
+</body>
+
 </html>

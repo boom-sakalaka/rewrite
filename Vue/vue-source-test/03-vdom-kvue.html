@@ -1,0 +1,149 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-10 12:27:04
+ * @LastEditTime: 2021-05-11 20:30:24
+ * @LastEditors: Please set LastEditors
+ * @Description: Vue 原理
+ * @FilePath: \rewrite\Vue\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="app"></div>
+
+<body>
+
+
+  <script>
+    // 数据响应式   对数据进行定义和拦截
+    function observe(obj) {
+      // https://blog.csdn.net/weixin_43473114/article/details/103469512  for each /for in /for of
+      // https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/
+      // foreach 不能终止循环
+      Object.keys(obj).forEach(key => {
+        defineReactive(obj, key, obj[key])
+      })
+    }
+    function defineReactive(obj, key, val) {
+      Object.defineProperty(obj, key, {
+        get() {
+          console.log('get', key)
+          return val
+        },
+        set(newVal) {
+          console.log('set', key)
+          val = newVal
+          app.update()
+        },
+      })
+    }
+    // 数据驱动，没有dom业务操作
+    function Vue(options) {
+      this.$options = options
+      this.$data = options.data();
+      // 响应式
+      observe(this.$data)
+    }
+    Vue.prototype.$mount = function (sel) {
+      // 转换生成dom的过程
+      // update 数据
+      this.update = function () {
+        console.log('vue update')
+        // 转换生成dom
+
+        // 虚拟dom的获取
+        const vnode = this.$options.render.call(this, this.createElement)
+
+        if (!this.isMounted) {
+          const parent = document.querySelector(sel)
+          // 根据vnode创建dom，并加入到parent
+          this.patch(parent, vnode)
+
+          this.isMounted = true
+          if (this.$options.mounted) {
+            this.$options.mounted.call(this)
+          }
+        } else {
+          // 更新
+          // diff
+          this.patch(this._vnode, vnode)
+        }
+        this._vnode = vnode
+      }
+      this.update()
+    }
+    Vue.prototype.createElement = function (tag, props, children) {
+      return { tag, props, children }
+    }
+    Vue.prototype.patch = function (n1, n2) {
+      if (n1.nodeType) {
+        // init 创建n2 对应的dom
+        const child = this.createEle(n2)
+        n1.appendChild(child)
+        n2.$el = child
+      } else {
+        const el = n2.$el = n1.$el
+        if (n1.tag === n2.tag) {
+          // 相同节点
+          if (typeof n1.children === 'string') {
+            if (typeof n2.children === 'string') {
+              // text 文本更新
+              if (n1.children !== n2.children) {
+                el.textContent = n2.children
+              }
+            }
+          }
+        } else {
+
+        }
+      }
+    }
+    Vue.prototype.createEle = function (vnode) {
+      const { tag, children } = vnode
+      const el = document.createElement(tag)
+      // props children
+      if (Array.isArray(children)) {
+        // 子元素
+        children.forEach(child => {
+          el.appendChild(this.createElement(child))
+        })
+      } else {
+        el.textContent = children
+      }
+      vnode.$el = el
+      return el
+    }
+  </script>
+  <script>
+    const app = new Vue({
+      data() {
+        return {
+          title: '第一个标题'
+        }
+      },
+      mounted() {
+        console.log('mounted')
+        setTimeout(() => {
+          console.log('change')
+          this.$data.title = "还是原来的标题，不过变了"
+        }, 4000)
+      },
+      render(h) {
+        return h('h3', null, this.$data.title)
+      }
+    })
+    app.$mount('#app');
+
+    // setInterval(() => {
+    //   app.$data.title = 'change'
+    // }, 2000)
+  </script>
+</body>
+
+</html>
