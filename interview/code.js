@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-06-05 15:41:59
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-07-03 17:13:51
+ * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
  */
@@ -148,3 +148,16 @@ function changeObjProperty(o) {
 let s = new Object();
 changeObjProperty(s);
 console.log(s.siteUrl);
+
+// 数7
+function getSevenNum(num) {
+  const sevArr = [];
+  for (let i = 0; i <= num; i++) {
+    if ((i % 7 === 0) | i.toString().includes('7')) {
+      sevArr.push(i);
+    }
+  }
+  console.log(sevArr);
+  return sevArr;
+}
+getSevenNum(100);
