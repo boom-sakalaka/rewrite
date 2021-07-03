@@ -1,0 +1,66 @@
+<!--
+ * @Author: GZH
+ * @Date: 2021-07-03 11:09:56
+ * @LastEditors: GZH
+ * @LastEditTime: 2021-07-03 11:22:04
+ * @FilePath: \rewrite\DesignPattern\SingletonPatternDemoTwo.html
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #modal {
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      background-color: red;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>创建全局唯一的一个Modal</h1>
+  <button id="open">打开弹框</button>
+  <button id="close">关闭弹框</button>
+  <script>
+
+    // 采用闭包来实现单例模式
+    const Modal = (function () {
+      let modal;
+      return function () {
+        if (!modal) {
+          modal = document.createElement('div')
+          modal.innerHTML = '我是一个全局唯一的Modal'
+          modal.id = 'modal'
+          modal.style.display = 'none'
+          document.body.appendChild(modal)
+        }
+        return modal
+      }
+    })()
+
+    document.querySelector('#open').addEventListener('click', function () {
+      const modal = new Modal();
+      modal.style.display = 'block'
+    });
+
+    document.querySelector('#close').addEventListener('click', function () {
+      const modal = new Modal();
+      modal.style.display = 'none'
+    });
+
+  </script>
+</body>
+
+</html>
