@@ -35,3 +35,14 @@ function flatten(arr) {
 }
 
 console.log(flatten(arr));
+
+var a = '1';
+function showa() {
+  console.log(a);
+}
+
+function showb() {
+  var a = '2';
+  showa();
+}
+showb();
