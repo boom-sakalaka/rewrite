@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-07-18 15:39:19
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-18 16:12:12
+ * @LastEditTime: 2021-07-18 16:13:18
  * @FilePath: \vue-demo-proj\src\views\Home.vue
  * @Description: 
 -->
@@ -19,6 +19,8 @@
 
 export default {
   name: 'Home',
-  components: { EventPatent },
+  components: {
+    // EventPatent
+  },
 };
 </script>
