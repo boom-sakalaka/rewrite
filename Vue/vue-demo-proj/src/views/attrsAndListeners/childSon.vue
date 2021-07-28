@@ -2,9 +2,9 @@
  * @Author: GZH
  * @Date: 2021-07-18 19:05:18
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-18 19:08:09
- * @FilePath: \vue-demo-proj\src\views\attrsAndListeners\childSon.vue
- * @Description: 
+ * @LastEditTime: 2021-07-28 15:17:02
+ * @FilePath: \rewrite\Vue\vue-demo-proj\src\views\attrsAndListeners\childSon.vue
+ * @Description:
 -->
 <template>
   <div>
