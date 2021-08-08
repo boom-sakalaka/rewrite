@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:39:58
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-08 21:44:19
+ * @LastEditTime: 2021-08-08 21:51:52
  * @FilePath: \rewrite\Promise\index.html
  * @Description: 
 -->
@@ -21,10 +21,10 @@
   <script src="./promise.js"></script>
   <script>
     let p = new Promise((resolve, reject) => {
-      resolve('okkkkk')
+      setTimeout(() => {
+        reject('111')
+      }, 1000)
     })
-
-    console.log(p)
 
     p.then(res => {
       console.log(res)
