@@ -2,17 +2,17 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:37:40
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-08 16:05:17
+ * @LastEditTime: 2021-08-08 21:43:52
  * @FilePath: \rewrite\Promise\promise.js
  * @Description:
  */
 function Promise(executor) {
+  // 保存实例对象的 this值
+  const self = this;
+
   // 添加属性
   this.PromiseState = 'pending';
   this.PromiseResult = null;
-
-  // 保存实力对象的 this值
-  const self = this;
 
   //resolve 函数
   function resolve(data) {
@@ -45,4 +45,12 @@ function Promise(executor) {
 }
 
 // 添加then方法
-Promise.prototype.then = function (onResolved, onRejected) {};
+Promise.prototype.then = function (onResolved, onRejected) {
+  if (this.PromiseState === 'fulfilled') {
+    onResolved(this.PromiseResult);
+  }
+
+  if (this.PromiseState === 'rejected') {
+    onRejected(this.PromiseResult);
+  }
+};

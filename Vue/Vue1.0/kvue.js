@@ -1,19 +1,24 @@
+/*
+ * @Author:
+ * @Date: 2021-07-30 20:39:04
+ * @LastEditors: GZH
+ * @LastEditTime: 2021-07-30 21:44:31
+ * @FilePath: \rewrite\Vue\Vue1.0\kvue.js
+ * @Description:
+ */
 function defineReactive(obj, key, val) {
-  // val可能是对象，需要递归处理
   observe(val);
-
   // 每执行一次defineReactive，就创建一个Dep实例
   const dep = new Dep();
-
   Object.defineProperty(obj, key, {
     get() {
-      console.log('get', val);
+      console.log('get');
       Dep.target && dep.addDep(Dep.target);
       return val;
     },
     set(newVal) {
       if (newVal !== val) {
-        console.log('set', newVal);
+        console.log('set');
         observe(newVal);
         val = newVal;
 
@@ -24,9 +29,7 @@ function defineReactive(obj, key, val) {
   });
 }
 
-// 对象响应式处理
 function observe(obj) {
-  // 判断obj类型必须是对象
   if (typeof obj !== 'object' || obj == null) {
     return;
   }
@@ -34,7 +37,6 @@ function observe(obj) {
   new Observer(obj);
 }
 
-// 将$data中的key代理到KVue实例上
 function proxy(vm) {
   Object.keys(vm.$data).forEach(key => {
     Object.defineProperty(vm, key, {
@@ -55,22 +57,21 @@ class KVue {
 
     this.$data = options.data;
 
-    // 响应化处理
+    // 响应式处理
     observe(this.$data);
 
     // 代理
     proxy(this);
 
-    // 编译
+    //编译
     new Compile('#app', this);
   }
 }
 
-// 每一个响应式对象，半生一个Observer实例
+// 每一个响应式对象，伴生一个Observer 实例
 class Observer {
   constructor(value) {
     this.value = value;
-
     // 判断value是obj还是数组
     this.walk(value);
   }
@@ -80,9 +81,9 @@ class Observer {
   }
 }
 
-// 编译过程
-// new Compile(el, vm)
+// 编译
 class Compile {
+  // 递归遍历 el
   constructor(el, vm) {
     this.$vm = vm;
 
@@ -95,28 +96,18 @@ class Compile {
   }
 
   compile(el) {
-    // 递归遍历el
     el.childNodes.forEach(node => {
       // 判断其类型
       if (this.isElement(node)) {
-        // console.log('编译元素', node.nodeName);
+        // 带有指令的
         this.compileElement(node);
       } else if (this.isInter(node)) {
-        // console.log('编译插值表达式', node.textContent);
         this.compileText(node);
       }
-
       if (node.childNodes) {
         this.compile(node);
       }
     });
-  }
-
-  // 插值文本编译
-  compileText(node) {
-    // 获取匹配表达式
-    // node.textContent = this.$vm[RegExp.$1]
-    this.update(node, RegExp.$1, 'text');
   }
 
   compileElement(node) {
@@ -131,29 +122,30 @@ class Compile {
         const dir = attrName.substring(2);
         // 执行指令
         this[dir] && this[dir](node, exp);
-      } else if (attrName.startWith('@')) {
-        //
       }
     });
   }
 
+  // 插值文本编译
+  compileText(node) {
+    // 获取匹配表达式
+    // node.textContent = this.$vm[RegExp.$1]
+    this.update(node, RegExp.$1, 'text');
+  }
   // 文本指令
   text(node, exp) {
     this.update(node, exp, 'text');
   }
-
   html(node, exp) {
     this.update(node, exp, 'html');
   }
 
-  // 所有动态绑定都需要创建更新函数以及对应watcher实例
   update(node, exp, dir) {
-    // textUpdater()
     // 初始化
     const fn = this[dir + 'Updater'];
     fn && fn(node, this.$vm[exp]);
 
-    // 更新:
+    // 更新
     new Watcher(this.$vm, exp, function (val) {
       fn && fn(node, val);
     });
@@ -176,18 +168,16 @@ class Compile {
   isInter(node) {
     return node.nodeType === 3 && /\{\{(.*)\}\}/.test(node.textContent);
   }
-
   isDirective(attrName) {
     return attrName.indexOf('k-') === 0;
   }
 }
 
-// Watcher: 小秘书，界面中的一个依赖对应一个小秘书
 class Watcher {
-  constructor(vm, key, updateFn) {
+  constructor(vm, key, undateFn) {
     this.vm = vm;
     this.key = key;
-    this.updateFn = updateFn;
+    this.updateFn = undateFn;
 
     // 读一次数据，触发defineReactive里面的get()
     Dep.target = this;
@@ -206,7 +196,6 @@ class Dep {
   constructor() {
     this.deps = [];
   }
-
   addDep(watcher) {
     this.deps.push(watcher);
   }
