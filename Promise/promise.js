@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:37:40
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-10 21:16:46
+ * @LastEditTime: 2021-08-10 21:44:30
  * @FilePath: \rewrite\Promise\promise.js
  * @Description:
  */
@@ -62,6 +62,16 @@ function Promise(executor) {
 // 添加then方法
 Promise.prototype.then = function (onResolved, onRejected) {
   const self = this;
+  // 判断回调函数
+  if (typeof onRejected !== 'function') {
+    onRejected = reson => {
+      throw reson;
+    };
+  }
+  //值传递
+  if (typeof onResolved !== 'function') {
+    onResolved = value => value;
+  }
   return new Promise((resolve, reject) => {
     // 封装函数
     function callback(type) {
@@ -108,4 +118,9 @@ Promise.prototype.then = function (onResolved, onRejected) {
       });
     }
   });
+};
+
+// 添加patch 方法
+Promise.prototype.catch = function (onRejected) {
+  return this.then(undefined, onRejected);
 };

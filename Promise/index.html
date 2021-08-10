@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:39:58
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-10 21:19:07
+ * @LastEditTime: 2021-08-10 21:37:46
  * @FilePath: \rewrite\Promise\index.html
  * @Description: 
 -->
@@ -21,32 +21,25 @@
   <script src="./promise.js"></script>
   <script>
     let p = new Promise((resolve, reject) => {
-      // resolve('ok')
-      // reject('error')
       setTimeout(() => {
-        resolve('ok')
-        // reject('error')
+        reject('ok')
       }, 1000)
     })
-
-    const result = p.then(res => {
-      console.log(res)
-
-      return 'hhhh'
-      // throw 'error'
-    }, (error) => {
-      // console.log(error)
-      // throw ('error')
-    }).then(res => {
-      console.log(res)
+    p.then(value => {
+      console.log(123132)
+    }).then(value => {
+      console.log(123132)
+    }).then(value => {
+      console.log(123132)
+    }).then(value => {
+      console.log(123132)
+    }).then(value => {
+      console.log(123132)
+    }).then(value => {
+      console.log(123132)
+    }).catch(e => {
+      console.warn(e)
     })
-
-    console.log(result)
-    // p.then(res => {
-    //   alert(res)
-    // }, (error) => {
-    //   alert(error)
-    // })
   </script>
 </body>
 
