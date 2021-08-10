@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:37:40
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-10 21:44:30
+ * @LastEditTime: 2021-08-10 22:12:32
  * @FilePath: \rewrite\Promise\promise.js
  * @Description:
  */
@@ -123,4 +123,30 @@ Promise.prototype.then = function (onResolved, onRejected) {
 // 添加patch 方法
 Promise.prototype.catch = function (onRejected) {
   return this.then(undefined, onRejected);
+};
+
+// 添加 resolve
+Promise.resolve = function (value) {
+  return new Promise((resolve, reject) => {
+    if (value instanceof Promise) {
+      value.then(
+        v => {
+          resolve(v);
+        },
+        r => {
+          reject(r);
+        }
+      );
+    } else {
+      // 状态设置为成功
+      resolve(value);
+    }
+  });
+};
+
+// 添加 reject
+Promise.reject = function (value) {
+  return new Promise((resolve, reject) => {
+    reject(value);
+  });
 };
