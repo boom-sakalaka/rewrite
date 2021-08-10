@@ -1,0 +1,176 @@
+<!--
+ * @Author: GZH
+ * @Date: 2021-08-10 15:56:31
+ * @LastEditors: GZH
+ * @LastEditTime: 2021-08-10 16:23:45
+ * @FilePath: \rewrite\DataStructuresAndAlgorithms\check.html
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    class Node {
+      constructor(element) {
+        this.element = element;
+        this.next = null;
+      }
+    }
+
+    // 链表
+    class LinkedList {
+      constructor() {
+        this.head = null;
+        this.length = 0;
+      }
+      // 追加元素
+      append(element) {
+        const node = new Node(element);
+        let current = null;
+        if (this.head === null) {
+          this.head = node;
+        } else {
+          current = this.head;
+          while (current.next) {
+            current = current.next;
+          }
+          current.next = node;
+        }
+        this.length++;
+      }
+      // 任意位置插入元素
+      insert(position, element) {
+        if (position >= 0 && position <= this.length) {
+          const node = new Node(element);
+          let current = this.head;
+          let previous = null;
+          let index = 0;
+          if (position === 0) {
+            this.head = node;
+          } else {
+            while (index++ < position) {
+              previous = current;
+              current = current.next;
+            }
+            node.next = current;
+            previous.next = node;
+          }
+          this.length++;
+        }
+        return false;
+      }
+
+      // 移除指定位置元素
+      removeAt(postion) {
+        // 检查越界
+        if (position > -1 && position < length) {
+          let current = this.head;
+          let previous = null;
+          let index = 0;
+          if (position == 0) {
+            this.head = current.next;
+          } else {
+            while (index++ < position) {
+              previous = current;
+              current = current.next;
+            }
+            previous.next = current.next;
+          }
+          this.length--;
+          return current.element;
+        }
+        return null;
+      }
+
+      // 寻找元素下标
+      findIndex(element) {
+        let current = this.head;
+        let index = -1;
+        while (current) {
+          if (element === current.element) {
+            return index + 1;
+          }
+          index++;
+          current = current.next;
+        }
+      }
+
+      // 删除指定文档
+      remove(element) {
+        const index = this.findIndex(element);
+        this.removeAt(index);
+      }
+
+      isEmpty() {
+        return !this.length;
+      }
+      size() {
+        return this.length;
+      }
+      // 转换字符串
+      toString() {
+        let current = this.head;
+        let string = '';
+        while (current) {
+          string += ` ${current.element}`;
+          current = current.next;
+        }
+        return string;
+      }
+    }
+
+    const linkedList = new LinkedList();
+
+    linkedList.append(1);
+    linkedList.append(1);
+    linkedList.append(2);
+    linkedList.append(2);
+    linkedList.append(3);
+    linkedList.append(3);
+    linkedList.append(4);
+    linkedList.append(5);
+    console.log(linkedList)
+    const deleteDuplicates = function (head) {
+      // 极端情况：0个或1个结点，则不会重复，直接返回
+      if (!head || !head.next) {
+        return head;
+      }
+      // dummy 登场
+      let dummy = new LinkedList();
+      // dummy 永远指向头结点
+      dummy.next = head;
+      // cur 从 dummy 开始遍历
+      let cur = dummy;
+      // 当 cur 的后面有至少两个结点时
+      while (cur.next && cur.next.next) {
+        // 对 cur 后面的两个结点进行比较
+        if (cur.next.element === cur.next.next.element) {
+          // 若值重复，则记下这个值
+          let element = cur.next.element;
+          // 反复地排查后面的元素是否存在多次重复该值的情况
+          while (cur.next && cur.next.element === element) {
+            // 若有，则删除
+            cur.next = cur.next.next;
+          }
+        } else {
+          // 若不重复，则正常遍历
+          cur = cur.next;
+        }
+      }
+      // 返回链表的起始结点
+      return dummy.next;
+    };
+    console.log(deleteDuplicates(linkedList.head))
+  </script>
+</body>
+
+</html>
