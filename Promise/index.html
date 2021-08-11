@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:39:58
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-11 21:07:56
+ * @LastEditTime: 2021-08-11 21:16:38
  * @FilePath: \rewrite\Promise\index.html
  * @Description: 
 -->
@@ -42,13 +42,23 @@
     // })
 
     const p1 = new Promise((resolve, reject) => {
+      console.log(1)
+      // resolve('ok')
+      // reject()
       setTimeout(() => {
-        resolve('ok1')
+        reject('ok1')
       }, 1000)
     })
-    const p2 = Promise.resolve('ok2')
-    const p3 = Promise.resolve('ok3')
-    console.log(Promise.race([p1, p2, p3]))
+    p1.then(res => {
+      console.log(2)
+    }, err => {
+      console.log(4)
+    })
+
+    console.log(3)
+    // const p2 = Promise.resolve('ok2')
+    // const p3 = Promise.resolve('ok3')
+    // console.log(Promise.race([p1, p2, p3]))
   </script>
 </body>
 

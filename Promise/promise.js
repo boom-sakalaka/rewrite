@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:37:40
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-11 21:08:13
+ * @LastEditTime: 2021-08-11 21:15:42
  * @FilePath: \rewrite\Promise\promise.js
  * @Description:
  */
@@ -29,8 +29,10 @@ function Promise(executor) {
       // if (self.callback.onResolved) {
       //   self.callback.onResolved(self.PromiseResult);
       // }
-      self.callback.forEach(item => {
-        item.onResolved(data);
+      setTimeout(() => {
+        self.callback.forEach(item => {
+          item.onResolved(data);
+        });
       });
     }
   }
@@ -45,8 +47,10 @@ function Promise(executor) {
       self.PromiseResult = data;
 
       // 调用失败的回调函数
-      self.callback.forEach(item => {
-        item.onRejected(data);
+      setTimeout(() => {
+        self.callback.forEach(item => {
+          item.onRejected(data);
+        });
       });
     }
   }
@@ -98,11 +102,15 @@ Promise.prototype.then = function (onResolved, onRejected) {
 
     //调用回调方法
     if (this.PromiseState === 'fulfilled') {
-      callback(onResolved);
+      setTimeout(() => {
+        callback(onResolved);
+      });
     }
 
     if (this.PromiseState === 'rejected') {
-      callback(onRejected);
+      setTimeout(() => {
+        callback(onRejected);
+      });
     }
 
     // 判断pending 状态
