@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:37:40
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-10 22:12:32
+ * @LastEditTime: 2021-08-11 21:08:13
  * @FilePath: \rewrite\Promise\promise.js
  * @Description:
  */
@@ -148,5 +148,47 @@ Promise.resolve = function (value) {
 Promise.reject = function (value) {
   return new Promise((resolve, reject) => {
     reject(value);
+  });
+};
+
+// all 方法
+Promise.all = function (promises) {
+  return new Promise((resolve, reject) => {
+    let count = 0;
+    let arr = [];
+    for (let i = 0; i < promises.length; i++) {
+      promises[i].then(
+        v => {
+          // 得知对象的状态是成功
+          // 每个promise 对象都成功
+          count++;
+          arr[i] = v;
+          if (count === promises.length) {
+            resolve(arr);
+          }
+        },
+        r => {
+          reject();
+        }
+      );
+    }
+  });
+};
+
+//race 方法
+Promise.race = function (promises) {
+  return new Promise((resolve, reject) => {
+    for (let i = 0; i < promises.length; i++) {
+      promises[i].then(
+        v => {
+          // 得知对象的状态是成功
+          // 每个promise 对象都成功
+          resolve(v);
+        },
+        r => {
+          reject();
+        }
+      );
+    }
   });
 };
