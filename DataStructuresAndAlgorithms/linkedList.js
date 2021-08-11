@@ -1,7 +1,7 @@
 /*
  * @Author: gzh
  * @Date: 2021-04-02 14:26:26
- * @LastEditTime: 2021-08-10 15:56:07
+ * @LastEditTime: 2021-08-11 17:17:17
  * @LastEditors: GZH
  * @Description: 链表的实现
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\linkedList.js
@@ -189,6 +189,8 @@ const deleteDuplicates = function (head) {
 示例 2:
 输入: 1->1->1->2->3
 输出: 2->3 */
+
+/** 先创建一个空节点，然后对比 这个空节点的后两个是否相等，如果相等就不断遍历取到不重复的 */
 const deleteDuplicates = function (head) {
   // 极端情况：0个或1个结点，则不会重复，直接返回
   if (!head || !head.next) {
