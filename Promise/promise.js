@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-08 15:37:40
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-08 22:46:07
+ * @LastEditTime: 2021-08-10 22:12:32
  * @FilePath: \rewrite\Promise\promise.js
  * @Description:
  */
@@ -61,21 +61,92 @@ function Promise(executor) {
 
 // 添加then方法
 Promise.prototype.then = function (onResolved, onRejected) {
-  //调用回调方法
-  if (this.PromiseState === 'fulfilled') {
-    onResolved(this.PromiseResult);
+  const self = this;
+  // 判断回调函数
+  if (typeof onRejected !== 'function') {
+    onRejected = reson => {
+      throw reson;
+    };
   }
+  //值传递
+  if (typeof onResolved !== 'function') {
+    onResolved = value => value;
+  }
+  return new Promise((resolve, reject) => {
+    // 封装函数
+    function callback(type) {
+      try {
+        // 获取回调函数的执行结果
+        let result = type(self.PromiseResult);
+        if (result instanceof Promise) {
+          result.then(
+            v => {
+              resolve(v);
+            },
+            r => {
+              reject(r);
+            }
+          );
+        } else {
+          // 结果的返回状态为成功
+          resolve(result);
+        }
+      } catch (e) {
+        reject(e);
+      }
+    }
 
-  if (this.PromiseState === 'rejected') {
-    onRejected(this.PromiseResult);
-  }
+    //调用回调方法
+    if (this.PromiseState === 'fulfilled') {
+      callback(onResolved);
+    }
 
-  // 判断pending 状态
-  if (this.PromiseState === 'pending') {
-    // 保存回调函数
-    this.callback.push({
-      onResolved,
-      onRejected,
-    });
-  }
+    if (this.PromiseState === 'rejected') {
+      callback(onRejected);
+    }
+
+    // 判断pending 状态
+    if (this.PromiseState === 'pending') {
+      // 保存回调函数
+      this.callback.push({
+        onResolved: function () {
+          callback(onResolved);
+        },
+        onRejected: function () {
+          callback(onRejected);
+        },
+      });
+    }
+  });
+};
+
+// 添加patch 方法
+Promise.prototype.catch = function (onRejected) {
+  return this.then(undefined, onRejected);
+};
+
+// 添加 resolve
+Promise.resolve = function (value) {
+  return new Promise((resolve, reject) => {
+    if (value instanceof Promise) {
+      value.then(
+        v => {
+          resolve(v);
+        },
+        r => {
+          reject(r);
+        }
+      );
+    } else {
+      // 状态设置为成功
+      resolve(value);
+    }
+  });
+};
+
+// 添加 reject
+Promise.reject = function (value) {
+  return new Promise((resolve, reject) => {
+    reject(value);
+  });
 };
