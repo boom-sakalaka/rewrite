@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-07-03 17:13:51
+ * @LastEditTime: 2021-08-12 10:00:45
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -59,8 +59,11 @@ console.log(curryAdd(1, 2, 3));
 
 // 拍平数组
 // 第一种方式
+// 只到取到第一层,如果需要 再继续拍平，需要再括号内加入 数字, 例如 arr.flat(99999)
+// 介绍 链接 https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-30
 const arr = [1, 2, [3, 4, [5, 6]]];
-console.log(arr.flat()); // 只到取到第一层
+console.log(arr.flat()); // [1,2,3,4,[5,6]]
+console.log(arr.flat(2)); // [1,2,3,4,5,6]
 
 // 自定义方法实现
 function flatten(arr) {
