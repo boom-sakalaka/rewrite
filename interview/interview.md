@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-30 16:09:43
- * @LastEditTime: 2021-04-30 16:14:48
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-08-12 10:18:17
+ * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\interview.md
 -->
@@ -33,7 +33,8 @@ webpack 打包优化 包括 TreeShaking 异步组件和加载、分离公共库�
 16. export 和 export default 的区别?
 17. Var 和 let/const 定义的变量作用域有何不同,是否挂载在 window 上(浏览器中)？
 18. JavaScript 规定了几种语言类型？
-19. JavaScript 中 基础类型和引用类型的区别
+    ---- 8 种 boolean null undefined number string symbol bigint object
+19. JavaScript 中 基础类型和引用类型的区别? 引申函数参数的按植传递问题?
 20. null 和 undefined 的区别 22.什么是事件冒泡？什么是事件捕获？
 21. event.preventDefault() 和 event.stopPropagation()方法之间的区别？
 22. == 和 === 的区别？ 25.如何判断变量是否是数组?
