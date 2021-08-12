@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-08-10 21:51:10
+ * @LastEditTime: 2021-08-12 14:12:03
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -29,8 +29,8 @@
 - [前端进阶](https://github.com/sl1673495/blogs/issues/37)
 - [JS 设计模式](https://juejin.cn/book/6844733790204461070)
 - [手写 Promise](https://www.bilibili.com/video/BV1GA411x7z1?p=25)
-- [ES6-12语法](https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-2)
-- [通俗的讲解虚拟DOM](https://juejin.cn/post/6994959998283907102#heading-0)
+- [ES6-12 语法](https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-2)
+- [通俗的讲解虚拟 DOM](https://juejin.cn/post/6994959998283907102#heading-0)
 
 ##### Vue
 
@@ -38,7 +38,8 @@
 - [vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
 - [Vue3 中 ref、toRef、toRefs 的区别](https://juejin.cn/post/6954789258607460359)
 - [v-model 在 Vue2 和 Vue3 中的区别](https://juejin.cn/post/6970210247726071845)
-- [Vue知识点总结](https://juejin.cn/post/6984210440276410399#heading-0)
+- [Vue 知识点总结](https://juejin.cn/post/6984210440276410399#heading-0)
+- [vue 响应式源码中 ---Observer 类 初始化 new Dep() 的原因是什么?](https://zhuanlan.zhihu.com/p/351145163)
 
 ##### React
 
