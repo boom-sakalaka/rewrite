@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-08-12 14:12:03
+ * @LastEditTime: 2021-08-12 14:22:05
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -34,12 +34,12 @@
 
 ##### Vue
 
-- [vue mixin](https://segmentfault.com/a/1190000014991578)
-- [vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
+- [Vue mixin](https://segmentfault.com/a/1190000014991578)
+- [Vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
 - [Vue3 中 ref、toRef、toRefs 的区别](https://juejin.cn/post/6954789258607460359)
 - [v-model 在 Vue2 和 Vue3 中的区别](https://juejin.cn/post/6970210247726071845)
 - [Vue 知识点总结](https://juejin.cn/post/6984210440276410399#heading-0)
-- [vue 响应式源码中 ---Observer 类 初始化 new Dep() 的原因是什么?](https://zhuanlan.zhihu.com/p/351145163)
+- [Vue 响应式源码中 ---Observer 类 初始化 new Dep() 的原因是什么?](https://zhuanlan.zhihu.com/p/351145163)
 
 ##### React
 
