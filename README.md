@@ -30,6 +30,7 @@
 - [JS 设计模式](https://juejin.cn/book/6844733790204461070)
 - [手写 Promise](https://www.bilibili.com/video/BV1GA411x7z1?p=25)
 - [ES6-12语法](https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-2)
+- [通俗的讲解虚拟DOM](https://juejin.cn/post/6994959998283907102#heading-0)
 
 ##### Vue
 
