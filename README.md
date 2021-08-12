@@ -38,6 +38,7 @@
 - [vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
 - [Vue3 中 ref、toRef、toRefs 的区别](https://juejin.cn/post/6954789258607460359)
 - [v-model 在 Vue2 和 Vue3 中的区别](https://juejin.cn/post/6970210247726071845)
+- [Vue知识点总结](https://juejin.cn/post/6984210440276410399#heading-0)
 
 ##### React
 
