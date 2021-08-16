@@ -2,9 +2,9 @@
  * @Author: GZH
  * @Date: 2021-07-03 14:26:16
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-03 14:26:33
+ * @LastEditTime: 2021-08-16 14:55:19
  * @FilePath: \rewrite\fetch.js
- * @Description:
+ * @Description: fetch 的封装
  */
 export default class HttpUtils {
   // get方法

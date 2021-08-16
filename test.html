@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-15 11:45:49
- * @LastEditTime: 2021-05-12 19:02:56
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-08-16 15:03:43
+ * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\test.html
 -->
@@ -69,7 +69,7 @@
     showName.apply2(obj, ['test1', 'test2']);
   </script> -->
 
-  <script>
+  <!-- <script>
 
     function delayeringArr(arr) {
       if (arr instanceof Array) {
@@ -85,6 +85,34 @@
 
     const list = [1, 2, 3, [4, 5, [6, 7]]];
     console.log(delayeringArr(list)[6]);
+  </script> -->
+
+  <script>
+    Function.prototype.myCall = function (ctx) {
+      ctx = ctx || window; // obj
+      let fn = Symbol();
+      ctx[fn] = this;
+      const arr = []
+      for (let i = 1; i < arguments.length; i++) {
+        arr.push(arguments[i]);
+      }
+
+      let result = ctx[fn](...arr);
+      delete ctx[fn];
+      return result;
+    };
+
+    const obj = {
+      a: 1
+    }
+    function fn1(b, c) {
+      console.log(this.a)
+      console.log(b)
+      console.log(c)
+    }
+
+    fn1.myCall(obj, 2, 3)
+
   </script>
 </body>
 
