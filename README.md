@@ -31,6 +31,8 @@
 - [手写 Promise](https://www.bilibili.com/video/BV1GA411x7z1?p=25)
 - [ES6-12 语法](https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-2)
 - [通俗的讲解虚拟 DOM](https://juejin.cn/post/6994959998283907102#heading-0)
+- [宏任务和微任务](https://segmentfault.com/a/1190000039055443)
+- [正则](https://github.com/qdlaoyao/js-regex-mini-book/blob/master/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%B7%E4%BD%A0%E4%B9%A6%EF%BC%881.1%E7%89%88%EF%BC%89.pdf)
 
 ##### Vue
 
