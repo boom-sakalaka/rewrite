@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-08-16 17:01:02
+ * @LastEditTime: 2021-08-16 17:02:44
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\rewrite\bindReWrite.js

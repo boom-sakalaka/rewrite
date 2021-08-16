@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-08-12 10:00:45
+ * @LastEditTime: 2021-08-16 17:20:10
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -59,7 +59,7 @@ console.log(curryAdd(1, 2, 3));
 
 // 拍平数组
 // 第一种方式
-// 只到取到第一层,如果需要 再继续拍平，需要再括号内加入 数字, 例如 arr.flat(99999)
+// 只到取到第一层,如果需要 再继续拍平，需要再括号内加入 数字, 例如 arr.flat(Infinity) Infinity 是无穷大，不管嵌套多少层都给你拉平
 // 介绍 链接 https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-30
 const arr = [1, 2, [3, 4, [5, 6]]];
 console.log(arr.flat()); // [1,2,3,4,[5,6]]
