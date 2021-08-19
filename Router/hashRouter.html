@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hash 模式</title>
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li><a href="#/page1">page1</a></li>
+      <li><a href="#/page2">page2</a></li>
+    </ul>
+    <!--渲染对应组件的地方-->
+    <div id="route-view"></div>
+  </div>
+  <script type="text/javascript">
+    // 第一次加载的时候，不会执行 hashchange 监听事件，默认执行一次
+    // DOMContentLoaded 为浏览器 DOM 加载完成时触发
+    window.addEventListener('DOMContentLoaded', Load)
+    window.addEventListener('hashchange', HashChange)
+    // 展示页面组件的节点
+    var routeView = null
+    function Load() {
+      routeView = document.getElementById('route-view')
+      HashChange()
+    }
+    function HashChange() {
+      // 每次触发 hashchange 事件，通过 location.hash 拿到当前浏览器地址的 hash 值
+      // 根据不同的路径展示不同的内容
+      switch (location.hash) {
+        case '#/page1':
+          routeView.innerHTML = 'page1'
+          return
+        case '#/page2':
+          routeView.innerHTML = 'page2'
+          return
+        default:
+          routeView.innerHTML = 'page1'
+          return
+      }
+    }
+  </script>
+</body>
+
+</html>
