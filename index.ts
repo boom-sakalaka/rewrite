@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-06-04 13:48:23
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-06 09:44:34
+ * @LastEditTime: 2021-08-21 18:03:46
  * @FilePath: \rewrite\index.ts
  * @Description:
  */
@@ -34,3 +34,40 @@ type Exclude<T, U> = T extends U ? never : T;
 
 // 从类型 T 中挑出类型 U
 type Extract<T, U> = T extends U ? T : never;
+
+// ----------------------------------------------------------------------------------------------
+// 允许一个对象拥有任意类型的key
+interface Person {
+  [propName: string]: any;
+}
+// ----------------------------------------------------------------------------------------------
+
+// interface 定义函数类型
+interface SFunc {
+  (source: string, subSting: string): boolean;
+}
+
+//- ------------------------------------------------------
+// 接口继承类的例子
+// class Control {
+//   private state: any
+// }
+
+// interface SelectableControl extends Control {
+//   select(): void
+// }
+
+// class Button extends Control implements SelectableControl {
+//   select() { }
+// }
+
+// class TextBox extends Control {
+//   select() { }
+// }
+
+// // Error：“ImageC”类型缺少“state”属性。
+// class ImageC implements SelectableControl {
+//   select() { }
+// }
+
+//- ------------------------------------------------------
