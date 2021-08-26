@@ -50,3 +50,6 @@
 - [React Hooks 详解 【近 1W 字】+ 项目实战](https://juejin.cn/post/6844903985338400782#heading-15)
 - [React Hooks 原理探究](https://juejin.cn/post/6891577820821061646)
 - [React 进阶](https://juejin.cn/book/6945998773818490884)
+
+##### 其它
+- [浏览器快捷键](https://juejin.cn/post/6999126516852490253)
