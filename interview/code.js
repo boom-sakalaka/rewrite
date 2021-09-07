@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-09-07 10:38:19
+ * @LastEditTime: 2021-09-07 15:26:52
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -80,6 +80,8 @@ function flatten(arr) {
 }
 console.log(flatten(arr));
 
+/***================================================================================================= */
+
 // 函数防抖
 function debounce(fnc, await) {
   let timeout, content, args;
@@ -92,6 +94,8 @@ function debounce(fnc, await) {
     }, await);
   };
 }
+
+/***================================================================================================= */
 
 // 函数节流
 function throttleI(fnc, await) {
@@ -108,6 +112,7 @@ function throttleI(fnc, await) {
   };
 }
 
+/***================================================================================================= */
 // 箭头函数和普通函数的this指向问题
 
 // 修改前
@@ -124,6 +129,9 @@ class Student {
     };
   }
 }
+
+/***================================================================================================= */
+
 // 修改后
 class Student {
   constructor() {
@@ -141,6 +149,8 @@ class Student {
 const s = new Student();
 console.log(s.getInfo().getName()); // jerry
 
+/***================================================================================================= */
+
 // 函数的参数 引用
 function changeObjProperty(o) {
   o.siteUrl = 'http://a.com';
@@ -151,6 +161,8 @@ function changeObjProperty(o) {
 let s = new Object();
 changeObjProperty(s);
 console.log(s.siteUrl);
+
+/***================================================================================================= */
 
 // 数7
 function getSevenNum(num) {
@@ -164,3 +176,87 @@ function getSevenNum(num) {
   return sevArr;
 }
 getSevenNum(100);
+
+/***================================================================================================= */
+
+// 手写 判断括号字符串是否有效
+// 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
+
+// 有效字符串需满足：
+
+//     左括号必须用相同类型的右括号闭合。
+//     左括号必须以正确的顺序闭合。
+
+// 示例 1：
+
+// 输入：s = "()"
+// 输出：true
+
+// 示例 2：
+
+// 输入：s = "()[]{}"
+// 输出：true
+
+// 示例 3：
+
+// 输入：s = "(]"
+// 输出：false
+const isValid = function (s) {
+  if (s.length % 2 === 1) {
+    return false;
+  }
+
+  const regObj = {
+    '{': '}',
+    '(': ')',
+    '[': ']',
+  };
+
+  let stack = [];
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === '{' || s[i] === '(' || s[i] === '[') {
+      stack.push(s[i]);
+    } else {
+      const cur = stack.pop();
+      if (s[i] !== regObj[cur]) {
+        return false;
+      }
+    }
+  }
+
+  if (stack.length) {
+    return false;
+  }
+
+  return true;
+};
+
+/***================================================================================================= */
+/* 编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串 ""。
+
+示例 1：
+
+输入：strs = ["flower","flow","flight"]
+输出："fl"
+
+示例 2：
+
+输入：strs = ["dog","racecar","car"]
+输出：""
+解释：输入不存在公共前缀。 */
+
+const longestCommonPrefix = function (strs) {
+  const str = strs[0];
+  let index = 0;
+  while (index < str.length) {
+    const strCur = str.slice(0, index + 1);
+    for (let i = 0; i < strs.length; i++) {
+      if (!strs[i] || !strs[i].startsWith(strCur)) {
+        return str.slice(0, index);
+      }
+    }
+    index++;
+  }
+  return str;
+};
