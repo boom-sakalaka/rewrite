@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-16 14:04:25
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-16 14:28:07
+ * @LastEditTime: 2021-09-08 14:13:54
  * @FilePath: \rewrite\myUtils.js
  * @Description:
  */
@@ -234,7 +234,7 @@ const fn = {
   dleHttp, // 去除http 域名
   getAroundNum, //生成范围内的随机数
   days, // 计算两个给定日期之间的天数
-  goToTop, // 滚动到页面底部
+  goToTop, // 滚动到页面顶部
   copyTextToClipboard, // 将文字复制到粘贴板
   getUrlParams, // 获取url 参数
 };
