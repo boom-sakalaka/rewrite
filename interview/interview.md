@@ -1,19 +1,21 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-30 16:09:43
- * @LastEditTime: 2021-08-12 10:18:17
+ * @LastEditTime: 2021-09-08 13:44:21
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\interview.md
 -->
 
-##### 谈谈前端性能优化的方法有哪些？
+0. 谈谈前端性能优化的方法有哪些？
 
-Css: 多个 css 文件合并减少 https 请求、将 css 文件放到页面最上方、移除空的 css 规则、
-充分利用 css 的继承属性，减少重复 css 规则（less/sass 的提取公共变量）雪碧图
-Js: 函数防抖节流、 图片懒加载、 谈到 回流和重塑、事件委托 前端服务端渲染 SSR 加分
-网络： 减少 https 请求 静态资源文件 CDN 托管
-webpack 打包优化 包括 TreeShaking 异步组件和加载、分离公共库打包、chunk 相关，js 和 css 文件分开打包 组件按需加载等
+- Css: 多个 css 文件合并减少 https 请求、将 css 文件放到页面最上方、移除空的 css 规则、
+  充分利用 css 的继承属性，减少重复 css 规则（less/sass 的提取公共变量）雪碧图
+  Js: 函数防抖节流、 图片懒加载、 谈到 回流和重塑、事件委托 前端服务端渲染 SSR 加分
+  网络： 减少 https 请求 静态资源文件 CDN 托管
+  webpack 打包优化 包括 TreeShaking 异步组件和加载、分离公共库打包、chunk 相关，js 和 css 文件分开打包 组件按需加载等
+
+---
 
 1. css 有那些选择器 以及样式的优先级是怎样的?
 2. display 有哪些值?
@@ -42,3 +44,21 @@ webpack 打包优化 包括 TreeShaking 异步组件和加载、分离公共库�
 24. 使用代码或者画图来描述原型链?
 25. 简单介绍 git？(本地仓库/远程仓库/提交/推送/ssh)
 26. let a = 1; console.log(window.a);输出的是什么?
+
+### js 原理面试题
+
+27. 函数的 arguments 为什么不是数组？如何转化成数组？
+
+- arguments 本身不能调用数组方法，有 length 属性，是类数组
+- 转换成数组的方法
+
+```javascript
+const arr = Array.prototype.slice.call(arguments);
+```
+
+```javascript
+// es6 展开运算符
+const arr = [...arguments];
+```
+
+---
