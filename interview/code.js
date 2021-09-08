@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-09-07 15:26:52
+ * @LastEditTime: 2021-09-08 09:50:49
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -80,6 +80,14 @@ function flatten(arr) {
 }
 console.log(flatten(arr));
 
+// 使用reduce 实现
+const arr = [1, 2, [3, 4, [5, 6]]];
+function flatten2(arr) {
+  return arr.reduce((pre, cur) => {
+    return pre.concat(Array.isArray(cur) ? flatten2(cur) : cur);
+  }, []);
+}
+console.log(flatten2(arr));
 /***================================================================================================= */
 
 // 函数防抖
