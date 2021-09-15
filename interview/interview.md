@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-30 16:09:43
- * @LastEditTime: 2021-09-08 13:44:21
+ * @LastEditTime: 2021-09-08 15:42:18
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\interview.md
@@ -62,3 +62,14 @@ const arr = [...arguments];
 ```
 
 ---
+
+28. rem 对比 vh vw
+
+- rem 根据根元素的 font-size 值的比例放大或者缩小
+- 弊端: 1 和根元素强耦合、系统字体放大或者缩小，会导致布局错乱；2.html 文件头部需要插入一段 js 代码
+
+- vh vw 的弊端 --- 兼容性问题
+
+---
+
+29. 手写代码用迭代实现斐波那契数列?

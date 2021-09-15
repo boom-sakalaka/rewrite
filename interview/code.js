@@ -1,11 +1,21 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-09-08 09:50:49
+ * @LastEditTime: 2021-09-08 16:35:11
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
  */
+
+var name = 'World';
+(function () {
+  if (typeof name === 'undefined') {
+    var name = 'jack';
+    console.log('GoodBye' + name);
+  } else {
+    console.log('Hello' + name);
+  }
+})();
 
 // trim 实现
 String.prototype.trim = function () {
