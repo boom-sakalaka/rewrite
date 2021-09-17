@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-09-08 13:52:26
+ * @LastEditTime: 2021-09-17 16:02:22
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -49,6 +49,13 @@
 - [React Hooks 详解 【近 1W 字】+ 项目实战](https://juejin.cn/post/6844903985338400782#heading-15)
 - [React Hooks 原理探究](https://juejin.cn/post/6891577820821061646)
 - [React 进阶](https://juejin.cn/book/6945998773818490884)
+
+##### Linux
+
+- [Linux 基础](https://juejin.cn/post/6844904090841907213)
+- [Linux 文件目录结构一览表](http://c.biancheng.net/view/2833.html)
+- [基于 Docker GitLab 搭建 GitLab runner 搭建 GitLab CI/CD](https://www.jianshu.com/p/c6e5e645591c)
+- [CentOS Linux SSH 秘钥登录配置](https://majing.io/posts/10000039841225)
 
 ##### 其它
 

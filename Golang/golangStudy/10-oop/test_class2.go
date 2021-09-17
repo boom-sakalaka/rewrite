@@ -2,8 +2,8 @@
  * @Author: GZH
  * @Date: 2021-09-16 10:45:13
  * @LastEditors: GZH
- * @LastEditTime: 2021-09-16 10:54:41
- * @FilePath: \GoProJ\src\golangStudy\10-oop\test_class2.go
+ * @LastEditTime: 2021-09-17 15:56:13
+ * @FilePath: \rewrite\Golang\golangStudy\10-oop\test_class2.go
  * @Description: 类的定义  类的继承
  */
 package main
