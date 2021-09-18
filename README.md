@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-09-17 16:02:22
+ * @LastEditTime: 2021-09-18 13:52:54
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -19,7 +19,7 @@
 
 ---
 
-#### 收集的挺好的学习资源
+#### 收集的挺好的学习资源，对于自己是记录学习过程，如果能帮助到别人就最好了。
 
 ---
 
@@ -36,19 +36,25 @@
 
 ##### Vue
 
+- [Vue2 + Vue3 基础语法学习](https://www.bilibili.com/video/BV1Zy4y1K7SH)
 - [Vue mixin](https://segmentfault.com/a/1190000014991578)
 - [Vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
 - [Vue3 中 ref、toRef、toRefs 的区别](https://juejin.cn/post/6954789258607460359)
 - [v-model 在 Vue2 和 Vue3 中的区别](https://juejin.cn/post/6970210247726071845)
 - [Vue 知识点总结](https://juejin.cn/post/6984210440276410399#heading-0)
 - [Vue 响应式源码中 ---Observer 类 初始化 new Dep() 的原因是什么?](https://zhuanlan.zhihu.com/p/351145163)
+- [Vite + Vue3 项目实践 + Git Action 部署](https://www.bilibili.com/video/BV1vX4y1K7bQ?p=15)
 
 ##### React
 
-- [React 基础使用](https://www.bilibili.com/video/BV1wy4y1D7JT)
+- [React 基础语法学习](https://www.bilibili.com/video/BV1wy4y1D7JT)
 - [React Hooks 详解 【近 1W 字】+ 项目实战](https://juejin.cn/post/6844903985338400782#heading-15)
 - [React Hooks 原理探究](https://juejin.cn/post/6891577820821061646)
 - [React 进阶](https://juejin.cn/book/6945998773818490884)
+
+##### TypeScript
+
+- [TS 学习](https://juejin.cn/post/6872111128135073806#heading-41)
 
 ##### Linux
 
@@ -60,3 +66,9 @@
 ##### 其它
 
 - [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
+
+##### GoLang
+
+- [Go 基础语法学习](https://www.bilibili.com/video/BV1gf4y1r79E)
+- [解决 VSCode 安装 Go tools 失败的问题](https://l2m2.top/2020/05/26/2020-05-26-fix-golang-tools-failed-on-vscode/)
+- [go mod 的使用](https://juejin.cn/post/6844903798658301960)
