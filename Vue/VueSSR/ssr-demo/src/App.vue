@@ -1,10 +1,20 @@
+<!--
+ * @Author: GZH
+ * @Date: 2021-09-21 10:18:40
+ * @LastEditors: GZH
+ * @LastEditTime: 2021-09-21 11:57:43
+ * @FilePath: \rewrite\Vue\VueSSR\ssr-demo\src\App.vue
+ * @Description: 
+-->
 <template>
   <div id="app">
+    <p>{{ $store.state.count }}</p>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home</router-link>
+      |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
