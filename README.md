@@ -50,6 +50,7 @@
 - [React 基础语法学习](https://www.bilibili.com/video/BV1wy4y1D7JT)
 - [React Hooks 详解 【近 1W 字】+ 项目实战](https://juejin.cn/post/6844903985338400782#heading-15)
 - [React Hooks 原理探究](https://juejin.cn/post/6891577820821061646)
+- [React 设计模式](https://mp.weixin.qq.com/s/dfnajqS0NqTkp7fzK4-4Sw)
 - [React 进阶](https://juejin.cn/book/6945998773818490884)
 
 ##### TypeScript
