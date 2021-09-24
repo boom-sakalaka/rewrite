@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_item {
+  flex-grow: 1;
+
+  cursor: pointer;
+}
+
+.active_bored {
+  height: 1px;
+  background-color: red;
+}
