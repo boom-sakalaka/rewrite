@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-09-24 15:27:06
  * @LastEditors: GZH
- * @LastEditTime: 2021-09-24 16:20:52
+ * @LastEditTime: 2021-09-24 16:31:51
  * @FilePath: \rewrite\React\React-Hooks-Learning\src\pages\Tabs\Tab.js
  * @Description:
  */
@@ -51,7 +51,6 @@ export default function Tab({ children, onChange }) {
     forceUpdate({});
     onChange && onChange(name);
   };
-  console.warn(tabList);
   return (
     <div>
       <div className='header'>
