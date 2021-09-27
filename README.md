@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-09-18 13:52:54
+ * @LastEditTime: 2021-09-27 15:59:33
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -73,5 +73,7 @@
 - [Go 基础语法学习](https://www.bilibili.com/video/BV1gf4y1r79E)
 - [解决 VSCode 安装 Go tools 失败的问题](https://l2m2.top/2020/05/26/2020-05-26-fix-golang-tools-failed-on-vscode/)
 - [go mod 的使用](https://juejin.cn/post/6844903798658301960)
-- [go defer,panic,recover详解 go 的异常处理](https://www.jianshu.com/p/63e3d57f285f)
-- [gin框架中间件c.Next()理解](https://blog.csdn.net/big_kevin/article/details/109025888)
+- [go defer,panic,recover 详解 go 的异常处理](https://www.jianshu.com/p/63e3d57f285f)
+- [gin 框架文档](https://www.topgoer.com/gin%E6%A1%86%E6%9E%B6/)
+- [gin 框架学习](https://www.bilibili.com/video/BV1gJ411p7xC?p=10&spm_id_from=pageDriver)
+- [gin 框架中间件 c.Next()理解](https://blog.csdn.net/big_kevin/article/details/109025888)
