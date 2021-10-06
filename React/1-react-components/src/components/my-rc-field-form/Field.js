@@ -1,16 +1,38 @@
-/*
- * @Author: GZH
- * @Date: 2021-09-23 20:15:38
- * @LastEditors: GZH
- * @LastEditTime: 2021-09-23 20:24:35
- * @FilePath: \rewrite\React\1-react-components\src\components\my-rc-field-form\Field.js
- * @Description:
- */
-import React, { Component } from 'react';
+import React, {Component} from "react";
+import FieldContext from "./FieldContext";
 
 export default class Field extends Component {
+  static contextType = FieldContext;
+  componentDidMount() {
+    const {registerEntity} = this.context;
+    this.cancelRegister = registerEntity(this);
+  }
+
+  componentWillUnmount() {
+    // 取消注册
+    if (this.cancelRegister) {
+      this.cancelRegister();
+    }
+  }
+  onStoreChange = () => {
+    this.forceUpdate();
+  };
+  getControlled = () => {
+    const {name} = this.props;
+    const {setFieldsValue, getFieldValue} = this.context;
+    return {
+      value: getFieldValue(name),
+      onChange: event => {
+        const newValue = event.target.value;
+        setFieldsValue({
+          [name]: newValue
+        });
+      }
+    };
+  };
   render() {
-    const { children } = this.props;
-    return children;
+    const {children} = this.props;
+    const returnChildNode = React.cloneElement(children, this.getControlled());
+    return returnChildNode;
   }
 }
