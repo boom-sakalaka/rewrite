@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-01 20:39:33
+ * @LastEditTime: 2021-10-06 22:20:08
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -53,6 +53,7 @@
 - [React Hooks 原理探究](https://juejin.cn/post/6891577820821061646)
 - [React 设计模式](https://mp.weixin.qq.com/s/dfnajqS0NqTkp7fzK4-4Sw)
 - [React 进阶](https://juejin.cn/book/6945998773818490884)
+- [React Portal 传送门 挂载到根组件](https://zhuanlan.zhihu.com/p/29880992)
 
 ##### TypeScript
 
