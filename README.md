@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-09-28 15:52:17
+ * @LastEditTime: 2021-10-06 22:20:08
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -53,6 +53,7 @@
 - [React Hooks 原理探究](https://juejin.cn/post/6891577820821061646)
 - [React 设计模式](https://mp.weixin.qq.com/s/dfnajqS0NqTkp7fzK4-4Sw)
 - [React 进阶](https://juejin.cn/book/6945998773818490884)
+- [React Portal 传送门 挂载到根组件](https://zhuanlan.zhihu.com/p/29880992)
 
 ##### TypeScript
 
@@ -65,9 +66,9 @@
 - [基于 Docker GitLab 搭建 GitLab runner 搭建 GitLab CI/CD](https://www.jianshu.com/p/c6e5e645591c)
 - [CentOS Linux SSH 秘钥登录配置](https://majing.io/posts/10000039841225)
 
-##### 其它
+##### Docker
 
-- [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
+- [Docker 基本使用](https://dockertips.readthedocs.io/en/latest/docker-install/docker-intro.html)
 
 ##### GoLang
 
@@ -78,3 +79,7 @@
 - [gin 框架文档](https://www.topgoer.com/gin%E6%A1%86%E6%9E%B6/)
 - [gin 框架学习](https://www.bilibili.com/video/BV1gJ411p7xC?p=10&spm_id_from=pageDriver)
 - [gin 框架中间件 c.Next()理解](https://blog.csdn.net/big_kevin/article/details/109025888)
+
+##### 其它
+
+- [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
