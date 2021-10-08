@@ -2,9 +2,10 @@
  * @Author: GZH
  * @Date: 2021-07-13 09:05:53
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-15 09:19:00
- * @FilePath: \my-app\src\pages\jsxSource\index.js
+ * @LastEditTime: 2021-10-08 10:59:55
+ * @FilePath: \rewrite\React\React-Hooks-Learning\src\pages\jsxSource\index.js
  * @Description: render 会被babel编译成  React.createElement的嵌套结构，
+ * (jsx结构只是为了书写方便，需要转成js函数才能被运行，这也是为什么需要babel转译的原因)
  * 从而生成一个个React element,在最后一个调和阶段生成与之对应的fiber对象
  *
  *
@@ -76,8 +77,9 @@ class Index extends React.Component {
 
     /* 第四步：修改容器节点 */
     console.log(reactElement);
+    //这一步 相当于替换了 reactElement.props.children 这个属性
     const newReactElement = React.cloneElement(reactElement, {}, ...newChildren);
-    console.log(newReactElement);
+    console.warn(newReactElement);
     return newReactElement;
   };
   render() {

@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-06-30 15:54:49
  * @LastEditors: GZH
- * @LastEditTime: 2021-09-24 16:13:38
+ * @LastEditTime: 2021-10-08 15:20:28
  * @FilePath: \rewrite\React\React-Hooks-Learning\src\App.js
  *  学习链接  https://juejin.cn/book/6945998773818490884/section/6959910136202657823
  */
@@ -18,7 +18,7 @@ import './App.css';
 // import JsxSource from './pages/jsxSource/index';
 // import StateSouce from './pages/state/index';
 // import PropsSource from './pages/props/index';
-// import Rform from './pages/Rform';
+import Rform from './pages/Rform';
 // import BigData from './pages/bigData';
 
 // import ReactRouterTest from './pages/mini-router/index.js';
@@ -42,7 +42,7 @@ function App() {
       {/* jsx 解析原理 */}
       {/* <JsxSource /> */}
 
-      {/* state 原理相关 */}
+      {/* state 原理相关 -- 合并更新和如何打破合并更新,(同步异步的玄学问题)*/}
       {/* <StateSouce /> */}
 
       {/* porps的原理相关 */}
@@ -51,7 +51,7 @@ function App() {
       </PropsSource> */}
 
       {/* react 表单 */}
-      {/* <Rform /> */}
+      <Rform />
 
       {/* 大数据时间分片 */}
       {/* <BigData /> */}
@@ -63,7 +63,7 @@ function App() {
       {/* <FormData /> */}
 
       {/*  自己封装的Tabs 组件 */}
-      <TabDemo />
+      {/* <TabDemo /> */}
     </div>
   );
 }

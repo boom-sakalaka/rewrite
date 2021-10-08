@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-06 22:20:08
+ * @LastEditTime: 2021-10-08 11:14:19
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -54,6 +54,7 @@
 - [React 设计模式](https://mp.weixin.qq.com/s/dfnajqS0NqTkp7fzK4-4Sw)
 - [React 进阶](https://juejin.cn/book/6945998773818490884)
 - [React Portal 传送门 挂载到根组件](https://zhuanlan.zhihu.com/p/29880992)
+- [由浅入深 React 的 Fiber 架构](https://juejin.cn/post/6844904193958887431#heading-25)
 
 ##### TypeScript
 

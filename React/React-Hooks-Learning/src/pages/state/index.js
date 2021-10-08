@@ -2,8 +2,8 @@
  * @Author: GZH
  * @Date: 2021-07-15 09:38:52
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-15 10:35:16
- * @FilePath: \my-app\src\pages\state\index.js
+ * @LastEditTime: 2021-10-08 15:04:28
+ * @FilePath: \rewrite\React\React-Hooks-Learning\src\pages\state\index.js
  * @Description:
  * 学习笔记
  * https://segmentfault.com/a/1190000039417644
@@ -11,10 +11,11 @@
  *
  *
  * 对比 函数组件的useState 和类组件的setState, 如果子组件没有加上 pureComponent ，那么不管怎样都会更新子组件
- * 函数组件会有一个默认对比的过程
+ * 函数组件会有一个默认对比的过程,也就是说 如果 this.setState 就会更新，而useState 如果引用一样不会触发刷新
+ * this.setState 倾向于 合并旧的 useState倾向于覆盖旧值
  */
 import React, { useEffect, useState } from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 // 首字母需要大写
 export default function StateSource() {
   const [number, setNumber] = useState(0);
@@ -23,23 +24,23 @@ export default function StateSource() {
   }, [number]);
   const handerClick = () => {
     // 跳过自动合并的过程
-    // /** 高优先级更新 **/
-    // ReactDOM.flushSync(() => {
-    //   setNumber(2);
-    // });
-    // /* 批量更新 */
-    // setNumber(1);
-    // /* 滞后更新 ，批量更新规则被打破 */
-    // setTimeout(() => {
-    //   setNumber(3);
-    // });
+    /** 高优先级更新 **/
+    ReactDOM.flushSync(() => {
+      setNumber(2);
+    });
+    /* 批量更新 */
+    setNumber(1);
+    /* 滞后更新 ，批量更新规则被打破 */
+    setTimeout(() => {
+      setNumber(3);
+    });
     // 会合并 执行最后一个
-    setNumber(number + 1);
-    setNumber(number + 1);
-    setNumber(number + 1);
-    setNumber(number + 1);
-    setNumber(number + 1);
-    setNumber(number + 1);
+    // setNumber(number + 1);
+    // setNumber(number + 1);
+    // setNumber(number + 1);
+    // setNumber(number + 1);
+    // setNumber(number + 1);
+    // setNumber(number + 1);
   };
   console.log(number);
   return (
