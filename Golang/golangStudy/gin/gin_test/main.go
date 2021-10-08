@@ -1,26 +1,62 @@
 package main
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
+type Login struct {
+	User     string `form:"user" json:"user" binding:"required"`
+	Password string `form:"password" json:"password" binding:"required"`
+}
+
 func main() {
-	r := gin.Default()
-	r.LoadHTMLFiles("./login.html")
-	r.GET("/login", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "login.html", nil)
+	router := gin.Default()
+
+	// 绑定JSON的示例 ({"user": "q1mi", "password": "123456"})
+	router.POST("/loginJSON", func(c *gin.Context) {
+		var login Login
+
+		if err := c.ShouldBind(&login); err == nil {
+			fmt.Printf("login info:%#v\n", login)
+			c.JSON(http.StatusOK, gin.H{
+				"user":     login.User,
+				"password": login.Password,
+			})
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
 	})
 
-	r.POST("/login", func(c *gin.Context) {
-		userName := c.PostForm("username")
-		password := c.PostForm("password")
-
-		c.JSON(http.StatusOK, gin.H{
-			"usename":  userName,
-			"password": password,
-		})
+	// 绑定form表单示例 (user=q1mi&password=123456)
+	router.POST("/loginForm", func(c *gin.Context) {
+		var login Login
+		// ShouldBind()会根据请求的Content-Type自行选择绑定器
+		if err := c.ShouldBind(&login); err == nil {
+			c.JSON(http.StatusOK, gin.H{
+				"user":     login.User,
+				"password": login.Password,
+			})
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
 	})
 
-	r.Run(":9090")
+	// 绑定QueryString示例 (/loginQuery?user=q1mi&password=123456)
+	router.GET("/loginForm", func(c *gin.Context) {
+		var login Login
+		// ShouldBind()会根据请求的Content-Type自行选择绑定器
+		if err := c.ShouldBind(&login); err == nil {
+			c.JSON(http.StatusOK, gin.H{
+				"user":     login.User,
+				"password": login.Password,
+			})
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	router.Run(":8080")
 }
