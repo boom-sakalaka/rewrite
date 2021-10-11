@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-09-08 16:35:11
+ * @LastEditTime: 2021-10-11 17:35:18
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -147,7 +147,8 @@ class Student {
     };
   }
 }
-
+const s = new Student();
+console.log(s.getInfo().getName()); // jerry
 /***================================================================================================= */
 
 // 修改后
@@ -165,7 +166,7 @@ class Student {
   }
 }
 const s = new Student();
-console.log(s.getInfo().getName()); // jerry
+console.log(s.getInfo().getName()); // Tom
 
 /***================================================================================================= */
 
@@ -174,11 +175,12 @@ function changeObjProperty(o) {
   o.siteUrl = 'http://a.com';
   o = new Object();
   o.siteUrl = 'http://b.com';
+  console.log('fnc', o.siteUrl); // http://b.com
 }
 
 let s = new Object();
 changeObjProperty(s);
-console.log(s.siteUrl);
+console.log(s.siteUrl); // http://a.com
 
 /***================================================================================================= */
 

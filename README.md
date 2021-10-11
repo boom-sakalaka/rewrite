@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-08 11:14:19
+ * @LastEditTime: 2021-10-11 17:45:35
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -33,6 +33,7 @@
 - [通俗的讲解虚拟 DOM](https://juejin.cn/post/6994959998283907102#heading-0)
 - [宏任务和微任务](https://juejin.cn/post/6844904004007247880#heading-10)
 - [通过游戏的方式学习 flex](http://flexboxfroggy.com/#zh-cn)
+- [手写 30 个 JS 原生方法](https://juejin.cn/post/7002248038529892383#heading-4)
 
 ##### Vue
 

@@ -1,8 +1,8 @@
 /*
  * @Author: ghz
  * @Date: 2021-04-07 16:53:11
- * @LastEditTime: 2021-05-11 14:03:20
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-10-11 15:50:47
+ * @LastEditors: GZH
  * @Description: 数组扁平化
  * @FilePath: \rewrite\flatten.js
  */
