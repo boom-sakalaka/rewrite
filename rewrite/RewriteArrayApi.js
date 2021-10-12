@@ -2,8 +2,8 @@
  * @Author: GZH
  * @Date: 2021-10-11 17:39:02
  * @LastEditors: GZH
- * @LastEditTime: 2021-10-12 15:52:54
- * @FilePath: \rewrite\rewrite\ArrayApi.js
+ * @LastEditTime: 2021-10-12 16:51:26
+ * @FilePath: \rewrite\rewrite\RewriteArrayApi.js
  * @Description: https://juejin.cn/post/7002248038529892383 原文地址
  *
  * 手写数组的api
@@ -172,3 +172,30 @@ Array.prototype.sx_join = function (s = ',') {
 
 console.log([1, 2, 3].sx_join()); // 1,2,3
 console.log([1, 2, 3].sx_join('*')); // 1*2*3
+
+/*========================================================================================  */
+/* splice */
+Array.prototype.sx_splice = function (start, length, ...values) {
+  length = start + length > this.length - 1 ? this.length - start : length;
+  const res = [],
+    tempArr = [...this];
+  for (let i = start; i < start + values.length; i++) {
+    this[i] = values[i - start];
+  }
+  if (values.length < length) {
+    const cha = length - values.length;
+    for (let i = start + values.length; i < tempArr.length; i++) {
+      this[i] = tempArr[i + cha];
+    }
+    this.length = this.length - cha;
+  }
+  if (values.length > length) {
+    for (let i = start + length; i < tempArr.length; i++) {
+      this.push(tempArr[i]);
+    }
+  }
+  for (let i = start; i < start + length; i++) {
+    res.push(tempArr[i]);
+  }
+  return res;
+};
