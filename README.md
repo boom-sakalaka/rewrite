@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-12 16:09:45
+ * @LastEditTime: 2021-10-12 23:43:17
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -61,6 +61,7 @@
 ##### TypeScript
 
 - [TS 学习](https://juejin.cn/post/6872111128135073806#heading-41)
+- [细数 TS 中那些奇怪的符号](https://segmentfault.com/a/1190000023943952)
 
 ##### Linux
 
