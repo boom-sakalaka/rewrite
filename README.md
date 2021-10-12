@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-11 17:45:35
+ * @LastEditTime: 2021-10-12 16:09:45
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -34,6 +34,7 @@
 - [宏任务和微任务](https://juejin.cn/post/6844904004007247880#heading-10)
 - [通过游戏的方式学习 flex](http://flexboxfroggy.com/#zh-cn)
 - [手写 30 个 JS 原生方法](https://juejin.cn/post/7002248038529892383#heading-4)
+- [for...in,for...of](https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/)
 
 ##### Vue
 

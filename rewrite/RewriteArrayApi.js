@@ -2,9 +2,11 @@
  * @Author: GZH
  * @Date: 2021-10-11 17:39:02
  * @LastEditors: GZH
- * @LastEditTime: 2021-10-12 15:50:48
+ * @LastEditTime: 2021-10-12 15:52:54
  * @FilePath: \rewrite\rewrite\ArrayApi.js
  * @Description: https://juejin.cn/post/7002248038529892383 原文地址
+ *
+ * 手写数组的api
  */
 
 const players = [
