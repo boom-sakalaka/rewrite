@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-06-04 13:48:23
  * @LastEditors: GZH
- * @LastEditTime: 2021-08-21 18:03:46
+ * @LastEditTime: 2021-10-13 10:18:06
  * @FilePath: \rewrite\index.ts
  * @Description:
  */
@@ -21,7 +21,7 @@ type Readonly<T> = { readonly [P in keyof T]: T[P] };
 
 // 从类型 T 中挑出所有属性名出现在类型 K 中的属性
 type Pick<T, K extends keyof T> = {
-  [P in K]: T[P];
+  [P in keyof K]: T[P];
 };
 
 // 构造一个 key-value 类型，其 key 是类型 K， value 是类型 T

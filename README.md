@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-13 09:21:55
+ * @LastEditTime: 2021-10-13 11:36:05
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -63,6 +63,8 @@
 - [TS 学习](https://juejin.cn/post/6872111128135073806#heading-41)
 - [细数 TS 中那些奇怪的符号](https://segmentfault.com/a/1190000023943952)
 - [自定义类型守卫的应用](https://juejin.cn/post/6844904071334199309)
+- [TS 练习](https://github.com/type-challenges/type-challenges/blob/master/README.zh-CN.md)
+- [理解 TypeScript 中的 infer 关键字](https://juejin.cn/post/6844904170353328135)
 
 ##### Linux
 
