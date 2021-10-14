@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-14 09:12:20
+ * @LastEditTime: 2021-10-14 10:22:54
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -87,6 +87,10 @@
 - [gin 框架文档](https://www.topgoer.com/gin%E6%A1%86%E6%9E%B6/)
 - [gin 框架学习](https://www.bilibili.com/video/BV1gJ411p7xC?p=10&spm_id_from=pageDriver)
 - [gin 框架中间件 c.Next()理解](https://blog.csdn.net/big_kevin/article/details/109025888)
+
+##### 算法
+
+- [快速排序](https://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html)
 
 ##### 其它
 

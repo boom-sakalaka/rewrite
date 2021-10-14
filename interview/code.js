@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-10-11 17:35:18
+ * @LastEditTime: 2021-10-14 10:22:23
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -279,4 +279,27 @@ const longestCommonPrefix = function (strs) {
     index++;
   }
   return str;
+};
+
+/***================================================================================================= */
+/* 快速排序 */
+var quickSort = function (arr) {
+  if (arr.length <= 1) return arr;
+
+  let pointIndex = Math.floor(arr.length / 2);
+
+  let pointVal = arr.splice(pointIndex, 1)[0];
+
+  let leftArr = [];
+  let rightArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < pointVal) {
+      leftArr.push(arr[i]);
+    } else {
+      rightArr.push(arr[i]);
+    }
+  }
+
+  return quickSort(leftArr).concat([pointVal], quickSort(rightArr));
 };
