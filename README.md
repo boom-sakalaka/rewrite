@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-13 11:36:05
+ * @LastEditTime: 2021-10-13 19:00:54
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -47,6 +47,7 @@
 - [Vue 知识点总结](https://juejin.cn/post/6984210440276410399#heading-0)
 - [Vue 响应式源码中 ---Observer 类 初始化 new Dep() 的原因是什么?](https://zhuanlan.zhihu.com/p/351145163)
 - [Vite + Vue3 项目实践 + Git Action 部署](https://www.bilibili.com/video/BV1vX4y1K7bQ?p=15)
+- [Vue 虚拟 don diff 算法](https://www.bilibili.com/video/BV1Ph41117hq)
 
 ##### React
 
