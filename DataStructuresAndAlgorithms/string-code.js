@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-07-08 08:58:40
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-08 13:42:23
+ * @LastEditTime: 2021-10-15 17:22:55
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\string-code.js
  * @Description: 字符串相关的算法
  */
@@ -11,6 +11,7 @@
  * 基本字符串算法
  */
 const str = 'AMDYES';
+
 console.log(str.toLocaleLowerCase()); // 字符串转小写
 console.log(str.toLocaleUpperCase()); // 字符串转大写
 console.log(str); // 不影响原字符串
@@ -97,6 +98,38 @@ const validPalindrome = function (s) {
 
   return false;
 };
+
+// 另外一种写法
+// const validPalindrome = function (s) {
+//   let sIndex = 0;
+//   let eIndex = s.length - 1;
+
+//   while (sIndex < eIndex && s[sIndex] === s[eIndex]) {
+//     sIndex++;
+//     eIndex--;
+//   }
+
+//   if (isPArr(sIndex + 1, eIndex)) {
+//     return false;
+//   }
+
+//   if (isPArr(sIndex, eIndex--)) {
+//     return false;
+//   }
+
+//   function isPArr(sI, eI) {
+//     while (sI < eI) {
+//       if (s[sI] != s[eI]) {
+//         return true;
+//       }
+//       sI++;
+//       eI--;
+//     }
+//     return false;
+//   }
+
+//   return true;
+// };
 
 /** ============================================================= */
 /**

@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-07-07 15:37:35
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-31 18:00:36
+ * @LastEditTime: 2021-10-15 16:59:30
  * @FilePath: \rewrite\DataStructuresAndAlgorithms\array-code.js
  * @Description:  数组相关的算法题目
  */
@@ -34,6 +34,7 @@ function getArrIndexTwo(arr, target) {
     obj[arr[i]] = i;
   }
 }
+
 console.log(getArrIndexTwo(arr5, 9));
 /**
  * 给定两个有序的数组  ，把他们结合成为一个有序的数组
@@ -91,7 +92,7 @@ function threeSum(arr) {
 
   // 循环数组 只需要倒数第二个就行， 因为 左右指针会获取到后两个值
   for (let i = 0; i < len - 2; i++) {
-    // 如果
+    // 这里存疑
     if (i > 0 && arr[i] === arr[i - 1]) {
       continue;
     }
@@ -126,3 +127,43 @@ function threeSum(arr) {
 }
 
 console.log(threeSum(arr3));
+
+// function threeSumTwo(arr) {
+//   const myArr = arr.sort((a, b) => a - b);
+//   const length = myArr.length;
+
+//   for (let i = 0; i < length; i++) {
+//     // if (i > 0 && arr[i] === arr[i - 1]) {
+//     //   continue;
+//     // }
+
+//     let j = i + 1;
+//     let k = length - 1;
+//     let result = [];
+//     while (j < k) {
+//       if (arr[i] + arr[j] + arr[k] > 0) {
+//         k--;
+//         while (j < k && arr[k + 1] === arr[k]) {
+//           k--;
+//         }
+//       } else if (arr[i] + arr[j] + arr[k] < 0) {
+//         j++;
+//         while (j < k && arr[j] === arr[j - 1]) {
+//           j++;
+//         }
+//       } else {
+//         result.push([arr[i], arr[j], arr[k]]);
+//         k--;
+//         j++;
+//         while (j < k && arr[k + 1] === arr[k]) {
+//           k--;
+//         }
+//         while (j < k && arr[j] === arr[j - 1]) {
+//           j++;
+//         }
+//       }
+//     }
+//   }
+
+//   return result;
+// }
