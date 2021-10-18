@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-30 16:09:43
- * @LastEditTime: 2021-09-08 15:42:18
+ * @LastEditTime: 2021-10-18 10:20:45
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\interview.md
@@ -73,3 +73,21 @@ const arr = [...arguments];
 ---
 
 29. 手写代码用迭代实现斐波那契数列?
+
+30. Vue 优化方法
+
+- 组件不嵌套太深
+- v-if v-show 区分
+- 合理使用 computed watch
+- v-for v-if 不混在一起
+- keep-alive
+- 第三方组件按需引入
+- 异步路由 异步组件
+- 图片懒加载
+- 防抖和节流
+- source-map
+- loader 的设置,不扫描 nodu_module
+- splitchunks
+- alias
+
+31.
