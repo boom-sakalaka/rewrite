@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-30 16:09:43
- * @LastEditTime: 2021-10-18 10:20:45
+ * @LastEditTime: 2021-10-18 10:32:50
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\interview.md
@@ -81,6 +81,7 @@ const arr = [...arguments];
 - 合理使用 computed watch
 - v-for v-if 不混在一起
 - keep-alive
+- v-for 加 key
 - 第三方组件按需引入
 - 异步路由 异步组件
 - 图片懒加载
