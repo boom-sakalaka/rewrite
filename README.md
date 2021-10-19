@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-14 10:22:54
+ * @LastEditTime: 2021-10-19 09:51:02
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -95,3 +95,4 @@
 ##### 其它
 
 - [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
+- [npx 的介绍](http://www.ruanyifeng.com/blog/2019/02/npx.html)
