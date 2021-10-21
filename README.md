@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-19 09:51:02
+ * @LastEditTime: 2021-10-21 16:59:11
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -91,6 +91,10 @@
 ##### 算法
 
 - [快速排序](https://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html)
+
+##### 微前端
+
+- [qiankun 的使用](https://juejin.cn/post/7007714510186217508#heading-11)
 
 ##### 其它
 
