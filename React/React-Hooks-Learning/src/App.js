@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-06-30 15:54:49
  * @LastEditors: GZH
- * @LastEditTime: 2021-10-09 16:18:22
+ * @LastEditTime: 2021-10-23 09:48:36
  * @FilePath: \rewrite\React\React-Hooks-Learning\src\App.js
  *  学习链接  https://juejin.cn/book/6945998773818490884/section/6959910136202657823
  */
@@ -18,8 +18,8 @@ import './App.css';
 // import JsxSource from './pages/jsxSource/index';
 // import StateSouce from './pages/state/index';
 // import PropsSource from './pages/props/index';
-import Rform from './pages/Rform';
-// import BigData from './pages/bigData';
+// import Rform from './pages/Rform';
+import BigData from './pages/bigData';
 
 // import ReactRouterTest from './pages/mini-router/index.js';
 // import FormData from './pages/FormData/index';
@@ -56,7 +56,7 @@ function App() {
       {/* <Rform /> */}
 
       {/* 大数据时间分片 */}
-      {/* <BigData /> */}
+      <BigData />
 
       {/* 实现react的  mini-router */}
       {/* <ReactRouterTest /> */}
@@ -68,7 +68,7 @@ function App() {
       {/* <TabDemo /> */}
 
       {/* hooks的函数防抖节流 */}
-      <DebounceDemo />
+      {/* <DebounceDemo /> */}
     </div>
   );
 }
