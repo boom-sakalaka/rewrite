@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-28 10:10:09
+ * @LastEditTime: 2021-10-29 15:08:27
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -49,6 +49,7 @@
 - [Vue 响应式源码中 ---Observer 类 初始化 new Dep() 的原因是什么?](https://zhuanlan.zhihu.com/p/351145163)
 - [Vite + Vue3 项目实践 + Git Action 部署](https://www.bilibili.com/video/BV1vX4y1K7bQ?p=15)
 - [Vue 虚拟 Dom diff 算法](https://www.bilibili.com/video/BV1Ph41117hq)
+- [Vue3 官方文档关于 setup 语法糖的使用](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
 
 ##### React
 
