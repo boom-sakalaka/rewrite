@@ -2,17 +2,22 @@
  * @Author: GZH
  * @Date: 2021-11-01 14:08:58
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-01 14:20:02
+ * @LastEditTime: 2021-11-01 14:39:32
  * @FilePath: \vue-admin\.eslintrc.js
  * @Description:
  */
 module.exports = {
+    globals: {
+        defineProps: 'readonly',
+        defineEmits: 'readonly'
+    },
     env: {
         browser: true,
         es2021: true
     },
     extends: [
-        'plugin:vue/essential',
+        // 'plugin:vue/essential',
+        'plugin:vue/vue3-essential',
         'airbnb-base',
         'plugin:prettier/recommended' // 添加 prettier 插件
     ],

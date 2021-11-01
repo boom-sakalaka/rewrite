@@ -2,12 +2,12 @@
  * @Author: GZH
  * @Date: 2021-11-01 10:02:12
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-01 14:19:51
+ * @LastEditTime: 2021-11-01 14:35:36
  * @FilePath: \vue-admin\src\components\HelloWorld.vue
  * @Description: 
 -->
 <script setup lang="ts">
-import { ref, defineProps } from 'vue'
+import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
 
