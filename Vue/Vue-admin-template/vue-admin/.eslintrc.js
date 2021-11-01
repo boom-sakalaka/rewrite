@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-01 14:08:58
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-01 16:13:29
+ * @LastEditTime: 2021-11-01 23:01:23
  * @FilePath: \vue-admin\.eslintrc.js
  * @Description:
  */
@@ -47,6 +47,22 @@ module.exports = {
                 jsx: 'never',
                 ts: 'never',
                 tsx: 'never'
+            }
+        ],
+        'no-plusplus': 'off',
+        'no-param-reassign': [
+            'error',
+            {
+                props: true,
+                ignorePropertyModificationsFor: [
+                    'e', // for e.returnvalue
+                    'ctx', // for Koa routing
+                    'req', // for Express requests
+                    'request', // for Express requests
+                    'res', // for Express responses
+                    'response', // for Express responses
+                    'state' // for vuex state
+                ]
             }
         ]
         // quotes: ['error', 'double'] // 引号规则为：“双引号”，否则一律按照 “error” 处理（你也可以改成warn试一下）

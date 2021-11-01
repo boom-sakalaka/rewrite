@@ -2,14 +2,23 @@
  * @Author: GZH
  * @Date: 2021-11-01 14:54:48
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-01 14:59:21
- * @FilePath: \vue-admin\src\components\Home.vue
+ * @LastEditTime: 2021-11-01 23:22:33
+ * @FilePath: \vue-admin\src\components\my-Home.vue
  * @Description: 
 -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useStore } from '@/store'
+
+const store = useStore()
+
+const initName = () => {
+    store.dispatch('todos/initTodoa')
+}
+</script>
 
 <template>
     <div>home</div>
+    <p @click="initName">{{ $store.state.todos?.name }}</p>
 </template>
 
 <style scoped>

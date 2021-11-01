@@ -2,21 +2,24 @@
  * @Author: GZH
  * @Date: 2021-11-01 10:02:12
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-01 14:35:36
+ * @LastEditTime: 2021-11-01 22:27:33
  * @FilePath: \vue-admin\src\components\HelloWorld.vue
  * @Description: 
 -->
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useStore } from '@/store'
 
 defineProps<{ msg: string }>()
+
+const store = useStore()
 
 const count = ref(0)
 </script>
 
 <template>
     <h1>{{ msg }}</h1>
-
+    <div>{{ store.state.count }}</div>
     <p>
         Recommended IDE setup:
         <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
