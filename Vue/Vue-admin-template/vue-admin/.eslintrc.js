@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-01 14:08:58
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-01 23:01:23
+ * @LastEditTime: 2021-11-02 15:44:53
  * @FilePath: \vue-admin\.eslintrc.js
  * @Description:
  */
@@ -64,7 +64,10 @@ module.exports = {
                     'state' // for vuex state
                 ]
             }
-        ]
+        ],
+
+        'vue/multi-word-component-names': 'off'
+
         // quotes: ['error', 'double'] // 引号规则为：“双引号”，否则一律按照 “error” 处理（你也可以改成warn试一下）
     }
 }
