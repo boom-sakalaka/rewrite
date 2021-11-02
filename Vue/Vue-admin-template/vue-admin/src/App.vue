@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-01 10:02:12
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-02 16:14:53
+ * @LastEditTime: 2021-11-02 17:16:33
  * @FilePath: \vue-admin\src\App.vue
  * @Description: 
 -->
@@ -17,10 +17,11 @@ import Comp from '@/components/Count.vue'
     <Comp msg="测试msg" />
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-    <!-- <router-link to="/">home</router-link>|
+    <br />
+    <router-link to="/">home</router-link>|
     <router-link to="/about">about</router-link>
 
-    <router-view></router-view> -->
+    <router-view></router-view>
 </template>
 
 <style>

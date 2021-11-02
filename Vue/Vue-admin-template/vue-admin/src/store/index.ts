@@ -1,12 +1,13 @@
-/* eslint-disable symbol-description */
 /*
  * @Author: GZH
  * @Date: 2021-11-01 22:03:44
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-01 23:20:56
+ * @LastEditTime: 2021-11-02 16:57:21
  * @FilePath: \vue-admin\src\store\index.ts
  * @Description:
  */
+
+/* eslint-disable symbol-description */
 // store.ts
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
