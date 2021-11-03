@@ -2,39 +2,17 @@
  * @Author: GZH
  * @Date: 2021-11-01 10:02:12
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-03 10:15:11
+ * @LastEditTime: 2021-11-03 13:46:32
  * @FilePath: \vue-admin\src\App.vue
  * @Description: 
 -->
 <script setup lang="ts">
-import { ElButton } from 'element-plus'
-import Comp from '@/components/Count.vue'
-
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-// import HelloWorld from './components/HelloWorld.vue'
+// import Comp from '@/components/Count.vue'
 </script>
 
 <template>
-    <Comp msg="测试msg" />
-
-    <el-button type="primary">按钮</el-button>
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-    <br />
-    <router-link to="/">home</router-link>|
-    <router-link to="/about">about</router-link>
-
+    <!-- <Comp msg="测试msg" /> -->
     <router-view></router-view>
 </template>
 
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-</style>
+<style scoped lang="scss"></style>
