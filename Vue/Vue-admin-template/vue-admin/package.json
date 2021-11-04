@@ -8,6 +8,7 @@
         "json-server": "json-server __json_server_mock__/db.json --watch --port 3001 --middlewares __json_server_mock__/middleware.js"
     },
     "dependencies": {
+        "@element-plus/icons": "^0.0.11",
         "axios": "^0.24.0",
         "element-plus": "^1.2.0-beta.1",
         "pinia": "^2.0.2",
