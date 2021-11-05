@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-03 11:13:37
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-04 16:33:51
+ * @LastEditTime: 2021-11-05 09:45:09
  * @FilePath: \vue-admin\src\pages\layout\index.vue
  * @Description: 
 -->
@@ -27,6 +27,7 @@ import { computed } from 'vue'
 
 import { useRoute, RouteRecordRaw } from 'vue-router'
 import { routes } from '@/router' // 导入路由
+import Tabs from '@/components/tabs/index.vue'
 
 const currentRout = useRoute()
 const viewKey = computed(() => {
@@ -77,7 +78,7 @@ const currentRouteActiveMenu = computed(() => currentRout.meta?.activeMenu || ''
             <el-header style="text-align: right; font-size: 12px">
                 <el-dropdown>
                     <span class="el-dropdown-link">
-                        <el-icon><setting /></el-icon>
+                        <el-icon style="margin-right: 15px"><setting /></el-icon>
                     </span>
 
                     <template #dropdown>
@@ -90,8 +91,24 @@ const currentRouteActiveMenu = computed(() => currentRout.meta?.activeMenu || ''
                 </el-dropdown>
                 <span>王小虎</span>
             </el-header>
+            <el-main>
+                <tabs />
+                <router-view v-slot="{ Component, route }">
+                    <keep-alive>
+                        <component
+                            v-if="route && route.meta && route.meta.isCache"
+                            :is="Component"
+                            :key="viewKey"
+                        />
+                    </keep-alive>
+                    <component
+                        v-if="route && route.meta && !route.meta.isCache"
+                        :is="Component"
+                        :key="viewKey"
+                    />
+                </router-view>
+            </el-main>
         </el-container>
-        <router-view></router-view>
     </el-container>
 </template>
 <style lang="scss" scoped>

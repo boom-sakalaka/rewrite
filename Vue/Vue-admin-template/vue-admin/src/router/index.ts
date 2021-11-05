@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-01 14:52:32
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-04 15:24:35
+ * @LastEditTime: 2021-11-05 14:06:20
  * @FilePath: \vue-admin\src\router\index.ts
  * @Description:
  */
@@ -21,7 +21,7 @@ export const routes: Array<RouteRecordRaw> = [
         children: [
             {
                 path: 'home',
-                name: 'home',
+                name: 'Home',
                 component: () => import('@/pages/home/index.vue'),
                 meta: {
                     title: '首页',
