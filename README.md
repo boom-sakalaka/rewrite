@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-10-31 16:23:30
+ * @LastEditTime: 2021-11-06 09:18:05
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -43,7 +43,7 @@
 - [vue 中的$attrs和$listeners](https://segmentfault.com/a/1190000022708579)
 - [Vue mixin](https://segmentfault.com/a/1190000014991578)
 - [Vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
-- [巩固 extent 的使用，加上自定义指令--(element-ui 的 v-loading 和 this.$loading 的实现)](https://segmentfault.com/a/1190000018535744)
+- [巩固 extent 的使用，加上自定义指令--(element-ui 的 v-loading 和 this.$loading 的实现)](https://segmentfault.com/a/1190000018535744) - [vue 鼠标右击事件@contextmenu.prevent](https://blog.csdn.net/jyn15159/article/details/116445826)
 - [Vue3 中 ref、toRef、toRefs 的区别](https://juejin.cn/post/6954789258607460359)
 - [v-model 在 Vue2 和 Vue3 中的区别](https://juejin.cn/post/6970210247726071845)
 - [Vue 知识点总结](https://juejin.cn/post/6984210440276410399#heading-0)
