@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-11-06 09:18:05
+ * @LastEditTime: 2021-11-06 15:57:18
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -51,6 +51,7 @@
 - [Vite + Vue3 项目实践 + Git Action 部署](https://www.bilibili.com/video/BV1vX4y1K7bQ?p=15)
 - [Vue 虚拟 Dom diff 算法](https://www.bilibili.com/video/BV1Ph41117hq)
 - [Vue3 官方文档关于 setup 语法糖的使用](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
+- [Vue3 自定义指令的修改](https://juejin.cn/post/6968996649515515917#heading-2)
 
 ##### React
 
