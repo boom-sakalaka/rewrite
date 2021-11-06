@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-11-06 15:57:18
+ * @LastEditTime: 2021-11-06 17:35:28
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -40,7 +40,8 @@
 ##### Vue
 
 - [Vue2 + Vue3 基础语法学习](https://www.bilibili.com/video/BV1Zy4y1K7SH)
-- [vue 中的$attrs和$listeners](https://segmentfault.com/a/1190000022708579)
+- [vue2 中的$attrs和$listeners](https://segmentfault.com/a/1190000022708579)
+- [Vue3 中的$attrs($listeners / inheritAttrs 已被移除掉) ](https://codeantenna.com/a/VJIajdNC5s)
 - [Vue mixin](https://segmentfault.com/a/1190000014991578)
 - [Vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
 - [巩固 extent 的使用，加上自定义指令--(element-ui 的 v-loading 和 this.$loading 的实现)](https://segmentfault.com/a/1190000018535744) - [vue 鼠标右击事件@contextmenu.prevent](https://blog.csdn.net/jyn15159/article/details/116445826)
