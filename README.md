@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-11-06 17:35:28
+ * @LastEditTime: 2021-11-08 16:59:39
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -52,6 +52,8 @@
 - [Vite + Vue3 项目实践 + Git Action 部署](https://www.bilibili.com/video/BV1vX4y1K7bQ?p=15)
 - [Vue 虚拟 Dom diff 算法](https://www.bilibili.com/video/BV1Ph41117hq)
 - [Vue3 官方文档关于 setup 语法糖的使用](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
+- [Vue3 官方文档 ts 类型判断 defineProps 和 withDefaults 的使用(默认值)](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E4%BB%85%E9%99%90-typescript-%E7%9A%84%E5%8A%9F%E8%83%BD)
+- [Vue3 语法糖 视频(官方文档看不太明白的可以看视频)](https://www.bilibili.com/video/BV1Rb4y1C7p3)
 - [Vue3 自定义指令的修改](https://juejin.cn/post/6968996649515515917#heading-2)
 
 ##### React
