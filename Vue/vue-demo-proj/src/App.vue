@@ -2,18 +2,19 @@
  * @Author: GZH
  * @Date: 2021-07-18 17:18:17
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-28 15:59:08
+ * @LastEditTime: 2021-11-08 10:31:28
  * @FilePath: \vue-demo-proj\src\App.vue
  * @Description: 
 -->
 <template>
-  <div id="app">
-    <div id="nav">
+  <!-- <div id="app"> -->
+  <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
+      <router-link to="/betterScroll">betterScroll</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+    </div> -->
+  <router-view />
+  <!-- </div> -->
 </template>
 
 <style lang="scss">

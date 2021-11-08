@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-07-18 15:39:19
  * @LastEditors: GZH
- * @LastEditTime: 2021-07-28 16:03:32
+ * @LastEditTime: 2021-11-08 11:29:12
  * @FilePath: \vue-demo-proj\src\views\Home.vue
  * @Description: 
 -->
@@ -31,11 +31,30 @@ import AttrParent from './attrsAndListeners/attrParent.vue';
 
 export default {
   name: 'Home',
+  async created() {
+    const result = await this.getData(3);
+    console.warn(result);
+  },
   components: {
     // VMParent,
     AttrParent,
     // EventPatent
     // kForm,
+  },
+  methods: {
+    getData(data) {
+      return new Promise((resolve, reject) => {
+        if (data === 1) {
+          setTimeout(() => {
+            resolve('getdata success');
+          }, 1000);
+        } else {
+          setTimeout(() => {
+            reject('getdata error');
+          }, 1000);
+        }
+      });
+    },
   },
 };
 </script>

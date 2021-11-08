@@ -8,6 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@better-scroll/core": "^2.4.2",
+    "@better-scroll/observe-dom": "^2.4.2",
+    "@better-scroll/pull-up": "^2.4.2",
     "async-validator": "^3.5.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",

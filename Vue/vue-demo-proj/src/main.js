@@ -2,8 +2,8 @@
  * @Author: GZH
  * @Date: 2021-07-18 15:39:19
  * @LastEditors: GZH
- * @LastEditTime: 2021-09-28 15:49:57
- * @FilePath: \rewrite\Vue\vue-demo-proj\src\main.js
+ * @LastEditTime: 2021-11-08 10:28:03
+ * @FilePath: \vue-demo-proj\src\main.js
  * @Description:
  */
 import Vue from 'vue';
@@ -12,6 +12,8 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import myloading from './my-loading';
+
+import './assets/base.scss';
 
 // 注册自己的v-on 指令
 Vue.use(myloading.directive);

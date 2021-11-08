@@ -903,6 +903,32 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
+"@better-scroll/core@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.nlark.com/@better-scroll/core/download/@better-scroll/core-2.4.2.tgz?cache=0&sync_timestamp=1627912679131&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40better-scroll%2Fcore%2Fdownload%2F%40better-scroll%2Fcore-2.4.2.tgz#e69470012d79923a18034c3e4931720fbb06eae5"
+  integrity sha1-5pRwAS15kjoYA0w+STFyD7sG6uU=
+  dependencies:
+    "@better-scroll/shared-utils" "^2.4.2"
+
+"@better-scroll/observe-dom@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.nlark.com/@better-scroll/observe-dom/download/@better-scroll/observe-dom-2.4.2.tgz?cache=0&sync_timestamp=1627912683213&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40better-scroll%2Fobserve-dom%2Fdownload%2F%40better-scroll%2Fobserve-dom-2.4.2.tgz#cc1e6d82a8f53525c282c9a4bcea5d1be8c21c95"
+  integrity sha1-zB5tgqj1NSXCgsmkvOpdG+jCHJU=
+  dependencies:
+    "@better-scroll/core" "^2.4.2"
+
+"@better-scroll/pull-up@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.nlark.com/@better-scroll/pull-up/download/@better-scroll/pull-up-2.4.2.tgz?cache=0&sync_timestamp=1627912680151&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40better-scroll%2Fpull-up%2Fdownload%2F%40better-scroll%2Fpull-up-2.4.2.tgz#25357ceef7bac7520930f0631896b63a10f82a6f"
+  integrity sha1-JTV87ve6x1IJMPBjGJa2OhD4Km8=
+  dependencies:
+    "@better-scroll/core" "^2.4.2"
+
+"@better-scroll/shared-utils@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.nlark.com/@better-scroll/shared-utils/download/@better-scroll/shared-utils-2.4.2.tgz#1ac5c97495727093a22a8009560795dd5e3c18da"
+  integrity sha1-GsXJdJVycJOiKoAJVgeV3V48GNo=
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -1835,6 +1861,11 @@ async-limiter@~1.0.0:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/async-limiter/download/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
   integrity sha1-3TeelPDbgxCwgpH51kwyCXZmF/0=
+
+async-validator@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.npmmirror.com/async-validator/download/async-validator-3.5.2.tgz?cache=0&sync_timestamp=1634529574100&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fasync-validator%2Fdownload%2Fasync-validator-3.5.2.tgz#68e866a96824e8b2694ff7a831c1a25c44d5e500"
+  integrity sha1-aOhmqWgk6LJpT/eoMcGiXETV5QA=
 
 async@^2.6.2:
   version "2.6.3"
