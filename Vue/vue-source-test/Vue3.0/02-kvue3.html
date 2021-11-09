@@ -1,0 +1,198 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-25 22:02:57
+ * @LastEditTime: 2021-05-26 23:54:31
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \rewrite\Vue\Vue3\HelloVue3.html
+-->
+<div id="app">
+  <h1>{{title}}</h1>
+  <!-- <h1>{{state.title}}</h1> -->
+</div>
+
+<script>
+
+  // 接收obj 代理他 使他成为响应式
+  // 替换Object.defineProperty()
+  function reactive(obj) {
+    // Vue3 中基于Proxy
+    return new Proxy(obj, {
+      get(target, key) {
+        console.log('get' + key);
+        // 依赖收集
+        track(target, key)
+        return target[key]
+      },
+      set(target, key, val) {
+        console.log('set' + key);
+        target[key] = val
+        //update() // 响应式更新
+        // app.update(0)
+        trigger(target, key)
+      },
+    })
+  }
+  // 添加副作用函数
+  const effectStack = []
+  function effect(fn) {
+    // 如果fn中用到了响应式数据，fn会再次执行 ，称为副作用函数
+    const eff = function () {
+      try {
+        // 这样写是为了使用try catch
+        effectStack.push(eff)
+        fn()
+      } finally {
+        effectStack.pop()
+      }
+    }
+
+    // 执行一次， 触发依赖收集
+    eff();
+
+    return eff
+
+  }
+
+
+  const targetMap = {}
+  function track(target, key) {
+    // 获取副作用函数
+    const effect = effectStack[effectStack.length - 1]
+    if (effect) {
+      let map = targetMap[target]
+      if (!map) {
+        map = targetMap[target] = {}
+      }
+
+      let deps = map[key]
+      if (!deps) {
+        deps = map[key] = []
+      }
+
+      // 将副作用函数放入deps
+      if (deps.indexOf(effect) === -1) {
+        deps.push(effect)
+      }
+    }
+  }
+
+
+  function trigger(target, key) {
+    const map = targetMap[target]
+    if (map) {
+      const deps = map[key]
+      if (deps) {
+        deps.forEach(dep => dep())
+      }
+    }
+  }
+
+  // createApp 返回的应用程序实例是什么样子的
+  const Vue = {
+    createApp(options) {
+      // 暴露给浏览器平台
+      const renderer = Vue.createRenderer({
+        querySelector(selector) {
+          return document.querySelector(selector)
+        },
+        insert(child, parent, anchor) {
+          parent.insertBefore(child, anchor || null)
+        }
+      })
+      return renderer.createApp(options)
+    },
+    createRenderer({ querySelector, insert }) {
+      // 返回自定义的渲染器
+      return {
+        createApp(options) {
+          // 返回就是app实例
+          return {
+            mount(selector) {
+              // mount 的目标是什么?
+              const parent = querySelector(selector)
+              // 将组件的配置解析为dom
+              // 通过render 函数
+              if (!options.render) {
+                options.render = this.compile(parent.innerHTML)
+              }
+
+              // 兼容options api
+              if (options.setup) {
+                this.setupState = options.setup()
+              } else {
+                this.data = options.data()
+              }
+
+              // Proxy
+              // 确定render中数据如何获取
+              this.proxy = new Proxy(this, {
+                get(target, key) {
+                  if (key in target.setupState) {
+                    return target.setupState[key]
+                  } else {
+                    return target.data[key]
+                  }
+                },
+                set(target, key, val) {
+                  if (key in target.setupState) {
+                    target.setupState[key] = val
+                  } else {
+                    target.data[key] = val
+                  }
+                }
+              })
+
+              // app 实例上加了一个更新函数
+              this.update = effect(() => {
+                const el = options.render.call(this.proxy)
+                // 追加到宿主元素中去
+                parent.innerHTML = ''
+                // parent.appendChild(el)
+                insert(el, parent)
+              })
+
+              // 初始化
+              this.update()
+            },
+            compile(template) {
+              // 没有用到template 解析 硬编码
+              return function render() {
+                const h3 = document.createElement('h3')
+                h3.textContent = this.title
+                return h3
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</script>
+<script>
+  // 1. 函数式： 类型支持更好 ts
+  // 2. 标准化、简化 一致性
+  // 3. tree-shaking 
+  // 4. 复用性 composition api
+  // 5. 性能优化 编译期的优化
+  // 6. 扩展性：自定义渲染器
+  const app = Vue.createApp({
+    data() {
+      return {
+        title: 'Hello Vue3'
+      }
+    },
+    setup() {
+      // 规避this
+      const state = reactive({
+        title: 'hello vue3!!!!!!!!!!!'
+      })
+      setTimeout(() => {
+        state.title = 'mytitle'
+      }, 2000);
+      return state
+    }
+  })
+
+  app.mount('#app')
+</script>

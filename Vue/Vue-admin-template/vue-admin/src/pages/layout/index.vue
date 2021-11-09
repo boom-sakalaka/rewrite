@@ -2,145 +2,118 @@
  * @Author: GZH
  * @Date: 2021-11-03 11:13:37
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-05 09:45:09
+ * @LastEditTime: 2021-11-09 16:05:37
  * @FilePath: \vue-admin\src\pages\layout\index.vue
  * @Description: 
 -->
-<!-- <script setup lang="ts">
-import { useUserStore } from '@/piniaStore/user'
-
-const store = useUserStore()
-</script>
-
 <template>
-    <div>layout</div>
-    <h1>{{ store.name }}</h1>
-    <h1>{{ store.age }}</h1>
-    <h1>{{ store.getUserNickName }}</h1>
-    <h1>{{ store.getUserNameAndAge }}</h1>
-</template>
-
-<style scoped></style> -->
-
-<script setup lang="ts">
-import { computed } from 'vue'
-
-import { useRoute, RouteRecordRaw } from 'vue-router'
-import { routes } from '@/router' // 导入路由
-import Tabs from '@/components/tabs/index.vue'
-
-const currentRout = useRoute()
-const viewKey = computed(() => {
-    return currentRout.path || Date.now()
-})
-
-const menu = computed(() => {
-    return routes.filter((item: RouteRecordRaw) => {
-        return !['Redirect', '404'].includes(item.name as string)
-    })
-})
-
-const currentRouteName = computed(() => currentRout.name)
-const currentRouteActiveMenu = computed(() => currentRout.meta?.activeMenu || '')
-</script>
-
-<template>
-    <el-container style="height: 100%; border: 1px solid #eee">
-        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-            <el-menu :default-openeds="menu.map((item, index) => index.toString())">
-                <el-sub-menu
-                    v-for="(item, index) in menu"
-                    :key="item.name"
-                    :index="index.toString()"
-                >
+    <el-row class="tac">
+        <el-col :span="12">
+            <h5>Default colors</h5>
+            <el-menu
+                default-active="2"
+                class="el-menu-vertical-demo"
+                @open="handleOpen"
+                @close="handleClose"
+            >
+                <el-sub-menu index="1">
                     <template #title>
-                        <el-icon><setting /></el-icon>
-                        <span v-if="item.meta">{{ item.meta.title }}</span>
+                        <el-icon><location /></el-icon>
+                        <span>Navigator One</span>
                     </template>
-                    <el-menu-item-group v-for="child in item.children || []" :key="child.name">
-                        <router-link
-                            :class="{
-                                active:
-                                    child.name === currentRouteName ||
-                                    child.name === currentRouteActiveMenu
-                            }"
-                            v-if="child.meta && child.meta.isNav"
-                            :to="{
-                                name: child.name
-                            }"
-                            >{{ child.meta?.title }}</router-link
-                        >
+                    <el-menu-item-group title="Group One">
+                        <el-menu-item index="1-1">item one</el-menu-item>
+                        <el-menu-item index="1-2">item one</el-menu-item>
                     </el-menu-item-group>
+                    <el-menu-item-group title="Group Two">
+                        <el-menu-item index="1-3">item three</el-menu-item>
+                    </el-menu-item-group>
+                    <el-sub-menu index="1-4">
+                        <template #title>item four</template>
+                        <el-menu-item index="1-4-1">item one</el-menu-item>
+                    </el-sub-menu>
                 </el-sub-menu>
+                <el-menu-item index="2">
+                    <el-icon><icon-menu /></el-icon>
+                    <span>Navigator Two</span>
+                </el-menu-item>
+                <el-menu-item index="3" disabled>
+                    <el-icon><document /></el-icon>
+                    <span>Navigator Three</span>
+                </el-menu-item>
+                <el-menu-item index="4">
+                    <el-icon><setting /></el-icon>
+                    <span>Navigator Four</span>
+                </el-menu-item>
             </el-menu>
-        </el-aside>
-        <el-container>
-            <el-header style="text-align: right; font-size: 12px">
-                <el-dropdown>
-                    <span class="el-dropdown-link">
-                        <el-icon style="margin-right: 15px"><setting /></el-icon>
-                    </span>
-
-                    <template #dropdown>
-                        <el-dropdown-menu>
-                            <el-dropdown-item>查看</el-dropdown-item>
-                            <el-dropdown-item>新增</el-dropdown-item>
-                            <el-dropdown-item>删除</el-dropdown-item>
-                        </el-dropdown-menu>
+        </el-col>
+        <el-col :span="12">
+            <h5>Custom colors</h5>
+            <el-menu
+                active-text-color="#ffd04b"
+                background-color="#545c64"
+                class="el-menu-vertical-demo"
+                default-active="2"
+                text-color="#fff"
+                @open="handleOpen"
+                @close="handleClose"
+            >
+                <el-sub-menu index="1">
+                    <template #title>
+                        <el-icon><location /></el-icon>
+                        <span>Navigator One</span>
                     </template>
-                </el-dropdown>
-                <span>王小虎</span>
-            </el-header>
-            <el-main>
-                <tabs />
-                <router-view v-slot="{ Component, route }">
-                    <keep-alive>
-                        <component
-                            v-if="route && route.meta && route.meta.isCache"
-                            :is="Component"
-                            :key="viewKey"
-                        />
-                    </keep-alive>
-                    <component
-                        v-if="route && route.meta && !route.meta.isCache"
-                        :is="Component"
-                        :key="viewKey"
-                    />
-                </router-view>
-            </el-main>
-        </el-container>
-    </el-container>
+                    <el-menu-item-group title="Group One">
+                        <el-menu-item index="1-1">item one</el-menu-item>
+                        <el-menu-item index="1-2">item one</el-menu-item>
+                    </el-menu-item-group>
+                    <el-menu-item-group title="Group Two">
+                        <el-menu-item index="1-3">item three</el-menu-item>
+                    </el-menu-item-group>
+                    <el-sub-menu index="1-4">
+                        <template #title>item four</template>
+                        <el-menu-item index="1-4-1">item one</el-menu-item>
+                    </el-sub-menu>
+                </el-sub-menu>
+                <el-menu-item index="2">
+                    <el-icon><icon-menu /></el-icon>
+                    <span>Navigator Two</span>
+                </el-menu-item>
+                <el-menu-item index="3" disabled>
+                    <el-icon><document /></el-icon>
+                    <span>Navigator Three</span>
+                </el-menu-item>
+                <el-menu-item index="4">
+                    <el-icon><setting /></el-icon>
+                    <span>Navigator Four</span>
+                </el-menu-item>
+            </el-menu>
+        </el-col>
+    </el-row>
 </template>
-<style lang="scss" scoped>
-.el-header {
-    background-color: #b3c0d1;
-    color: var(--el-text-color-primary);
-    line-height: 60px;
-}
 
-.el-aside {
-    color: var(--el-text-color-primary);
-}
-a {
-    text-decoration: none;
-    color: #303133;
-    font-size: 14px;
-    padding: 10px 0;
-    display: block;
-    text-align: center;
-    &.active {
-        background: #409eff;
-        color: #fff;
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { Location, Document, Menu as IconMenu, Setting } from '@element-plus/icons'
+
+export default defineComponent({
+    components: {
+        Location,
+        Document,
+        Setting,
+        IconMenu
+    },
+    setup() {
+        const handleOpen = (key, keyPath) => {
+            console.log(key, keyPath)
+        }
+        const handleClose = (key, keyPath) => {
+            console.log(key, keyPath)
+        }
+        return {
+            handleOpen,
+            handleClose
+        }
     }
-}
-:deep(.el-menu-item-group__title) {
-    display: none;
-}
-.el-main {
-    padding: 20px 10px;
-    :deep(.el-scrollbar) {
-        text-align: left;
-        padding: 0;
-    }
-}
-</style>
+})
+</script>

@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-01 10:02:12
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-03 10:09:35
+ * @LastEditTime: 2021-11-09 16:17:13
  * @FilePath: \vue-admin\vite.config.ts
  * @Description:
  */
@@ -15,10 +15,10 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
-        vue(),
-        Components({
-            resolvers: [ElementPlusResolver()]
-        })
+        vue()
+        // Components({
+        //     resolvers: [ElementPlusResolver()]
+        // })
     ],
     resolve: {
         alias: {

@@ -3,7 +3,7 @@
  * @Author: GZH
  * @Date: 2021-11-04 15:51:47
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-05 11:43:47
+ * @LastEditTime: 2021-11-09 16:07:06
  * @FilePath: \vue-admin\src\elementPlusCom.ts
  * @Description:
  */
@@ -12,6 +12,7 @@ import {
     ElAside,
     ElHeader,
     ElMenu,
+    ElMenuItem,
     ElSubMenu,
     ElMenuItemGroup,
     ElDropdown,
@@ -19,7 +20,9 @@ import {
     ElDropdownItem,
     ElIcon,
     ElMain,
-    ElScrollbar
+    ElScrollbar,
+    ElRow,
+    ElCol
 } from 'element-plus'
 import { Setting } from '@element-plus/icons'
 
@@ -29,6 +32,7 @@ export const ElComponent = [
     ElHeader,
     ElMenu,
     ElSubMenu,
+    ElMenuItem,
     ElMenuItemGroup,
     ElDropdown,
     ElDropdownMenu,
@@ -36,5 +40,7 @@ export const ElComponent = [
     ElIcon,
     Setting,
     ElMain,
-    ElScrollbar
+    ElScrollbar,
+    ElRow,
+    ElCol
 ]
