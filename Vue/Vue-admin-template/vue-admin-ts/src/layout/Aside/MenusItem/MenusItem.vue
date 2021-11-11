@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-10 15:11:39
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-11 09:20:11
+ * @LastEditTime: 2021-11-11 11:58:29
  * @FilePath: \vue-admin-ts\src\layout\Aside\MenusItem\MenusItem.vue
  * @Description: 
 -->
@@ -29,7 +29,6 @@
 /* eslint-disable import/no-self-import */
 /* eslint-disable import/no-extraneous-dependencies */
 import { RouteRecordRaw } from 'vue-router'
-import { Location } from '@element-plus/icons'
 import MenusItem from '@/layout/Aside/MenusItem/MenusItem.vue'
 // 获取props的值
 interface IProps {

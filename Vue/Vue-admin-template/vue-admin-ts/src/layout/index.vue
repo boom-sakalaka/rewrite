@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-09 16:58:08
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-10 16:33:11
+ * @LastEditTime: 2021-11-11 09:34:34
  * @FilePath: \vue-admin-ts\src\layout\index.vue
  * @Description: 
 -->
@@ -33,7 +33,6 @@
 </template>
 
 <script lang="ts" setup>
-/* eslint-disable import/no-extraneous-dependencies */
 import { Setting } from '@element-plus/icons'
 import Aside from './Aside/index.vue'
 </script>

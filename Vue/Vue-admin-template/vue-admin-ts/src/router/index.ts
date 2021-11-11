@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-09 16:55:29
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-10 18:21:35
+ * @LastEditTime: 2021-11-11 09:52:02
  * @FilePath: \vue-admin-ts\src\router\index.ts
  * @Description:
  */
@@ -151,6 +151,15 @@ export const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
     history: createWebHistory(),
     routes
+})
+
+router.beforeEach(() => {
+    router.addRoute({
+        path: '/about',
+        name: 'about',
+        component: Layout
+    })
+    console.warn(router.getRoutes())
 })
 
 export default router
