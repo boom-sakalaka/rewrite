@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-11-11 15:27:50
+ * @LastEditTime: 2021-11-12 10:30:52
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -303,3 +303,24 @@ var quickSort = function (arr) {
 
   return quickSort(leftArr).concat([pointVal], quickSort(rightArr));
 };
+
+/***================================================================================================= */
+/* 实现千分位分隔符 */
+var str = '100000000000',
+  reg = /(?=(\B\d{3})+$)/g;
+str.replace(reg, ',');
+
+/***================================================================================================= */
+/* 把一个JSON对象的key从下划线形式（Pascal）转换到小驼峰形式（Camel） */
+function getCamelCase(str) {
+  let arr = str.split('_');
+  return arr
+    .map((item, index) => {
+      if (index === 0) {
+        return item;
+      } else {
+        return item.charAt(0).toUpperCase() + item.slice(1);
+      }
+    })
+    .join('');
+}

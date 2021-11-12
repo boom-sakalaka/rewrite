@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-11-09 16:55:29
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-11 09:52:02
+ * @LastEditTime: 2021-11-12 10:22:58
  * @FilePath: \vue-admin-ts\src\router\index.ts
  * @Description:
  */
@@ -159,7 +159,6 @@ router.beforeEach(() => {
         name: 'about',
         component: Layout
     })
-    console.warn(router.getRoutes())
 })
 
 export default router
