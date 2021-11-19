@@ -2,22 +2,29 @@
  * @Author: GZH
  * @Date: 2021-07-19 08:36:00
  * @LastEditors: GZH
- * @LastEditTime: 2021-11-08 10:12:09
+ * @LastEditTime: 2021-11-18 15:04:55
  * @FilePath: \vue-demo-proj\src\router\index.js
  * @Description:
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+// import Home from '../views/Home.vue';
+import Cmtest from '../views/cmtest';
 
 Vue.use(VueRouter);
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: Home,
+  // },
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: Cmtest,
   },
+
   {
     path: '/about',
     name: 'About',
@@ -41,7 +48,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes,
 });
