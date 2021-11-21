@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-11-11 15:18:21
+ * @LastEditTime: 2021-11-21 20:17:17
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -66,6 +66,10 @@
 - [React Portal 传送门 挂载到根组件](https://zhuanlan.zhihu.com/p/29880992)
 - [由浅入深 React 的 Fiber 架构](https://juejin.cn/post/6844904193958887431#heading-25)
 
+##### 微信小程序
+
+- [微信小程序语法](https://www.bilibili.com/video/BV12K411A7A2?p=15&t=7)
+
 ##### TypeScript
 
 - [TS 学习](https://juejin.cn/post/6872111128135073806#heading-41)
@@ -108,3 +112,4 @@
 - [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
 - [npx 的介绍](http://www.ruanyifeng.com/blog/2019/02/npx.html)
 - [移动端适配相关概念](https://juejin.cn/post/6844903845617729549#heading-0)
+- [MySQL](https://www.bilibili.com/video/BV1iq4y1u7vj)
