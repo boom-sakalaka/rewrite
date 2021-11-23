@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-11-21 20:17:17
+ * @LastEditTime: 2021-11-23 22:30:12
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -69,6 +69,7 @@
 ##### 微信小程序
 
 - [微信小程序语法](https://www.bilibili.com/video/BV12K411A7A2?p=15&t=7)
+- [微信小程序的例子](https://www.bilibili.com/video/BV1zU4y1t7nT?p=11&spm_id_from=pageDriver)
 
 ##### TypeScript
 
