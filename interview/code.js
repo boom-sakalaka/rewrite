@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-11-12 10:30:52
+ * @LastEditTime: 2021-11-29 11:01:26
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -302,6 +302,40 @@ var quickSort = function (arr) {
   }
 
   return quickSort(leftArr).concat([pointVal], quickSort(rightArr));
+};
+
+/***================================================================================================= */
+/* 冒泡排序 */
+const bubbleSort = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+};
+/***================================================================================================= */
+/* 冒泡排序 ---优化*/
+
+const bubbleSortY = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let flag = true;
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        flag = false;
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+    // 如果一次优化没有发生交换，那么代表优化已经提前完成，直接跳出循环
+    if (flag) break;
+  }
+  return arr;
 };
 
 /***================================================================================================= */
