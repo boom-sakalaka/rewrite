@@ -36,6 +36,7 @@
 - [手写 30 个 JS 原生方法](https://juejin.cn/post/7002248038529892383#heading-4)
 - [for...in,for...of](https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/)
 - [async/await 原理](https://juejin.cn/post/7007031572238958629)
+- [正则](https://juejin.cn/post/6844903845227659271#heading-0)
 
 ##### Vue
 
