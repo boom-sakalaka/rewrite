@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-11-25 10:45:04
+ * @LastEditTime: 2021-12-02 17:21:03
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -29,6 +29,7 @@
 - [前端进阶](https://github.com/sl1673495/blogs/issues/37)
 - [JS 设计模式](https://juejin.cn/book/6844733790204461070)
 - [手写 Promise](https://www.bilibili.com/video/BV1GA411x7z1?p=25)
+- [关于 Promise 的题目(对于理解原理很有帮助，不过要先理解原理再看题目)](https://juejin.cn/post/6844904077537574919#heading-3)
 - [ES6-12 语法](https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-2)
 - [通俗的讲解虚拟 DOM](https://juejin.cn/post/6994959998283907102#heading-0)
 - [宏任务和微任务](https://juejin.cn/post/6844904004007247880#heading-10)
