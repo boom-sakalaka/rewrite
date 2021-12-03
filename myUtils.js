@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-16 14:04:25
  * @LastEditors: GZH
- * @LastEditTime: 2021-09-08 14:13:54
+ * @LastEditTime: 2021-12-03 13:49:56
  * @FilePath: \rewrite\myUtils.js
  * @Description:
  */
@@ -16,6 +16,11 @@ function isNumber(val) {
   } else {
     return 0;
   }
+}
+
+// 判断是否是真的数字 https://www.jianshu.com/p/389497773125
+function myIsNaN(value) {
+  return typeof value === 'number' && !isNaN(value);
 }
 
 // 字母数字混合排序
@@ -223,6 +228,7 @@ function getUrlParams(url) {
 
 const fn = {
   isNumber, // 判断是否是数字
+  myIsNaN, // 判断是否是数字
   sortAlphaNum, // 混合排序
   floatAdd, // 浮点数加法
   floatSub, // 浮点数减法
