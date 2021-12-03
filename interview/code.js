@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-13 15:34:56
- * @LastEditTime: 2021-11-29 11:01:26
+ * @LastEditTime: 2021-12-03 10:26:21
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\interview\code.js
@@ -358,3 +358,58 @@ function getCamelCase(str) {
     })
     .join('');
 }
+
+/***================================================================================================= */
+/* 使用Promise实现每隔1秒输出1,2,3 */
+
+const arr = [1, 2, 3];
+arr.reduce(
+  (p, x) =>
+    p.then(() => {
+      return new Promise(r => {
+        setTimeout(() => {
+          r(console.log(x));
+        }, 1000);
+      });
+    }),
+  Promise.resolve()
+);
+
+/***================================================================================================= */
+/* 红灯3秒亮一次，黄灯2秒亮一次，绿灯1秒亮一次；如何让三个灯不断交替重复亮灯？（用Promise实现）三个亮灯函数已经存在： */
+function red() {
+  console.log('red');
+}
+function green() {
+  console.log('green');
+}
+function yellow() {
+  console.log('yellow');
+}
+
+const light = (timer, cb) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      cb();
+      resolve();
+    }, timer);
+  });
+};
+
+function toStep() {
+  return Promise.resolve()
+    .then(() => {
+      return light(3000, red);
+    })
+    .then(() => {
+      return light(2000, yellow);
+    })
+    .then(() => {
+      light(1000, green);
+    })
+    .then(() => {
+      return toStep();
+    });
+}
+
+toStep();
