@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-12-03 09:13:56
+ * @LastEditTime: 2021-12-06 19:17:00
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -112,10 +112,13 @@
 - [qiankun 的使用](https://juejin.cn/post/7007714510186217508#heading-11)
 
 ###### 数据结构和算法
-- [javaScript版数据结构与算法](https://www.bilibili.com/video/BV1r7411n7Pw)
+
+- [javaScript 版数据结构与算法](https://www.bilibili.com/video/BV1r7411n7Pw)
 
 ###### 浏览器相关知识
+
 - [前端需要知道的浏览器相关知识](https://juejin.cn/post/6844904021308735502#heading-101)
+- [浏览器跨窗口通信](https://juejin.cn/post/7002012595200720927#heading-10)
 
 ##### 其它
 
