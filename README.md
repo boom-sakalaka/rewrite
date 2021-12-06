@@ -111,6 +111,9 @@
 
 - [qiankun 的使用](https://juejin.cn/post/7007714510186217508#heading-11)
 
+###### 数据结构和算法
+- javaScript版数据结构与算法(https://www.bilibili.com/video/BV1r7411n7Pw)
+
 ##### 其它
 
 - [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
