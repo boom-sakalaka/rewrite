@@ -60,6 +60,7 @@
 - [Vue3 语法糖 视频(官方文档看不太明白的可以看视频)](https://www.bilibili.com/video/BV1Rb4y1C7p3)
 - [Vue3 自定义指令的修改](https://juejin.cn/post/6968996649515515917#heading-2)
 - [手写 mini-vue](https://www.bilibili.com/video/BV1564y1s7s5)
+- [Vue3 响应式解析Reactivity(Reflect and Proxy)](https://segmentfault.com/a/1190000039365544)
 
 ##### React
 
