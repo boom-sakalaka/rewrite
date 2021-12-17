@@ -29,7 +29,7 @@
 - [前端进阶](https://github.com/sl1673495/blogs/issues/37)
 - [JS 设计模式](https://juejin.cn/book/6844733790204461070)
 - [手写 Promise](https://www.bilibili.com/video/BV1GA411x7z1?p=25)
-- [关于 Promise 的题目(对于理解原理很有帮助，不过要先理解原理再看题目)](https://juejin.cn/post/6844904077537574919#heading-3)
+- [关于 Promise 的题目(对于理解原理很有帮助)](https://juejin.cn/post/6844904077537574919#heading-3)
 - [ES6-12 语法](https://juejin.cn/post/6995334897065787422?share_token=1138e1e2-98cd-462d-9e69-fed483c410f3#heading-2)
 - [通俗的讲解虚拟 DOM](https://juejin.cn/post/6994959998283907102#heading-0)
 - [宏任务和微任务](https://juejin.cn/post/6844904004007247880#heading-10)
@@ -60,6 +60,7 @@
 - [Vue3 语法糖 视频(官方文档看不太明白的可以看视频)](https://www.bilibili.com/video/BV1Rb4y1C7p3)
 - [Vue3 自定义指令的修改](https://juejin.cn/post/6968996649515515917#heading-2)
 - [手写 mini-vue](https://www.bilibili.com/video/BV1564y1s7s5)
+- [Vue3 响应式解析Reactivity(Reflect and Proxy)](https://segmentfault.com/a/1190000039365544)
 
 ##### React
 
