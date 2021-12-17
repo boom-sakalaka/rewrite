@@ -2,48 +2,39 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/hello.js":
-/*!**********************!*\
-  !*** ./src/hello.js ***!
-  \**********************/
+/***/ "./src/reactive/reactive.js":
+/*!**********************************!*\
+  !*** ./src/reactive/reactive.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "reactive": () => (/* binding */ reactive)
 /* harmony export */ });
 /*
  * @Author: GZH
- * @Date: 2021-12-17 09:48:55
+ * @Date: 2021-12-17 10:16:04
  * @LastEditors: GZH
- * @LastEditTime: 2021-12-17 09:51:47
- * @FilePath: \mini-vue\src\hello.js
- * @Description:
+ * @LastEditTime: 2021-12-17 11:59:27
+ * @FilePath: \mini-vue\src\reactive\reactive.js
+ * @Description: reactive 方法
  */
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('hello');
 
+function reactive(target) {
+  const proxy = new Proxy(target, {
+    get(target, key, receiver) {
+      const res = Reflect.get(target, key, receiver);
+      return res;
+    },
+    set(target, key, value, receiver) {
+      const res = Reflect.set(target, key, value, receiver);
+      return res;
+    },
+  });
 
-/***/ }),
-
-/***/ "./src/world.js":
-/*!**********************!*\
-  !*** ./src/world.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/*
- * @Author: GZH
- * @Date: 2021-12-17 09:49:11
- * @LastEditors: GZH
- * @LastEditTime: 2021-12-17 09:52:51
- * @FilePath: \mini-vue\src\world.js
- * @Description:
- */
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('world');
+  return proxy;
+}
 
 
 /***/ })
@@ -111,20 +102,18 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ "./src/hello.js");
-/* harmony import */ var _world__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./world */ "./src/world.js");
+/* harmony import */ var _reactive_reactive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reactive/reactive */ "./src/reactive/reactive.js");
 /*
  * @Author: GZH
  * @Date: 2021-12-17 09:48:38
  * @LastEditors: GZH
- * @LastEditTime: 2021-12-17 09:53:04
+ * @LastEditTime: 2021-12-17 12:16:00
  * @FilePath: \mini-vue\src\index.js
  * @Description:
  */
 
 
-
-console.log(`${_hello__WEBPACK_IMPORTED_MODULE_0__["default"]} ${_world__WEBPACK_IMPORTED_MODULE_1__["default"]}`);
+const objValue = (window.objValue = (0,_reactive_reactive__WEBPACK_IMPORTED_MODULE_0__.reactive)({ a: 1, b: 2 }));
 
 })();
 
