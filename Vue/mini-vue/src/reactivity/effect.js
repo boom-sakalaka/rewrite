@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-12-17 14:18:46
  * @LastEditors: GZH
- * @LastEditTime: 2021-12-17 14:29:26
+ * @LastEditTime: 2021-12-17 16:36:31
  * @FilePath: \mini-vue\src\reactivity\effect.js
  * @Description:
  */
@@ -15,6 +15,7 @@ export function effect(fn, option = {}) {
     try {
       effectStack.push(effectFn);
       activeEffect = effectFn;
+      // console.warn('触发effect');
       return fn();
     } finally {
       effectStack.pop();
