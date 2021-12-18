@@ -2,13 +2,12 @@
  * @Author: GZH
  * @Date: 2021-12-18 14:32:18
  * @LastEditors: GZH
- * @LastEditTime: 2021-12-18 15:12:11
+ * @LastEditTime: 2021-12-18 17:36:48
  * @FilePath: \mini-vue\src\runtime\vnode.js
- * @Description: 虚拟dom,vue h函数的作用就是生成，它接受3个参数， type ： 类型 props： 属性 ，children： 嵌套的内容
+ * @Description:
  */
-
-import { isArray, isNumber, isString } from '../utils';
-// import { isReactive } from '../reactivity';
+import { isArray, isNumber, isObject, isString } from '../utils';
+import { isReactive } from '../reactivity';
 
 export const ShapeFlags = {
   ELEMENT: 1, // 00000001
@@ -32,7 +31,6 @@ export const Fragment = Symbol('Fragment');
  */
 export function h(type, props, children) {
   let shapeFlag = 0;
-
   if (isString(type)) {
     shapeFlag = ShapeFlags.ELEMENT;
   } else if (type === Text) {
@@ -50,10 +48,39 @@ export function h(type, props, children) {
     shapeFlag |= ShapeFlags.ARRAY_CHILDREN;
   }
 
+  if (props) {
+    // 其实是因为，vnode要求immutable，这里如果直接赋值的话是浅引用
+    // 如果使用者复用了props的话，就不再immutable了，因此这里要复制一下。style同理
+    // for reactive or proxy objects, we need to clone it to enable mutation.
+    if (isReactive(props)) {
+      props = Object.assign({}, props);
+    }
+    // reactive state objects need to be cloned since they are likely to be
+    // mutated
+    if (isReactive(props.style)) {
+      props.style = Object.assign({}, props.style);
+    }
+  }
+
   return {
     type,
     props,
     children,
     shapeFlag,
+    el: null,
+    anchor: null,
+    key: props && props.key,
+    component: null, // 专门用于存储组件的实例
   };
+}
+
+export function normalizeVNode(result) {
+  if (isArray(result)) {
+    return h(Fragment, null, result);
+  }
+  if (isObject(result)) {
+    return result;
+  }
+  // string, number
+  return h(Text, null, result.toString());
 }

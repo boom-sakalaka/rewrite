@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-12-17 09:48:38
  * @LastEditors: GZH
- * @LastEditTime: 2021-12-18 15:53:03
+ * @LastEditTime: 2021-12-18 17:37:41
  * @FilePath: \mini-vue\src\index.js
  * @Description:
  */
@@ -46,45 +46,44 @@ import { h, Text, Fragment, render } from './runtime';
 // });
 
 // runTime  测试 ==================================================================
+// const vnode = h(
+//   'div',
+//   {
+//     class: 'a b',
+//     style: {
+//       border: '1px solid',
+//       fontSize: '14px',
+//     },
+//     onClick: () => console.warn('click'),
+//     id: 'foo',
+//     checked: '',
+//     custom: false,
+//   },
+//   [
+//     h('ul', null, [
+//       h(
+//         'li',
+//         {
+//           style: {
+//             color: 'red',
+//           },
+//         },
+//         1
+//       ),
+//       h('li', null, 2),
+//       h(
+//         'li',
+//         {
+//           style: {
+//             color: 'blue',
+//           },
+//         },
+//         3
+//       ),
+//       h(Fragment, null, [h('li', null, 4), h('li')]),
+//       h('li', null, [h(Text, null, 'hello world')]),
+//     ]),
+//   ]
+// );
 
-const vnode = h(
-  'div',
-  {
-    class: 'a b',
-    style: {
-      border: '1px solid',
-      fontSize: '14px',
-    },
-    onClick: () => console.warn('click'),
-    id: 'foo',
-    checked: '',
-    custom: false,
-  },
-  [
-    h('ul', null, [
-      h(
-        'li',
-        {
-          style: {
-            color: 'red',
-          },
-        },
-        1
-      ),
-      h('li', null, 2),
-      h(
-        'li',
-        {
-          style: {
-            color: 'blue',
-          },
-        },
-        3
-      ),
-      h(Fragment, null, [h('li', null, 4), h('li')]),
-      h('li', null, [h(Text, null, 'hello world')]),
-    ]),
-  ]
-);
-
-render(vnode, document.body);
+// render(vnode, document.body);

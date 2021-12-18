@@ -2,37 +2,40 @@
  * @Author: GZH
  * @Date: 2021-12-17 10:17:34
  * @LastEditors: GZH
- * @LastEditTime: 2021-12-17 16:18:27
+ * @LastEditTime: 2021-12-18 17:37:29
  * @FilePath: \mini-vue\src\utils\index.js
- * @Description: 公用的方法
+ * @Description:
  */
-export function isObject(value) {
-  return typeof value === 'object' && value !== null;
+export function isObject(target) {
+  return typeof target === 'object' && target !== null;
 }
 
-export function isFunction(value) {
-  return typeof value === 'function';
+export function isArray(target) {
+  return Array.isArray(target);
 }
 
-export function isArray(value) {
-  return Array.isArray(value);
+export function isString(target) {
+  return typeof target === 'string';
 }
 
-export function isString(value) {
-  return typeof value === 'string';
+export function isNumber(target) {
+  return typeof target === 'number';
 }
 
-export function isNumber(value) {
-  return typeof value === 'number';
+export function isBoolean(target) {
+  return typeof target === 'boolean';
 }
 
-export function hasChanged(value, oldValue) {
-  return value !== oldValue && (value === value || oldValue === oldValue);
+export function isFunction(target) {
+  return typeof target === 'function';
 }
 
-const camelizeRE = /-(\w)/g;
+export function hasChanged(oldValue, value) {
+  return oldValue !== value && !(Number.isNaN(oldValue) && Number.isNaN(value));
+}
+
 export function camelize(str) {
-  return str.replace(camelizeRE, (_, c) => (c ? c.toUpperCase() : ''));
+  return str.replace(/-(\w)/g, (_, c) => (c ? c.toUpperCase() : ''));
 }
 
 export function capitalize(str) {
