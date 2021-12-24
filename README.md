@@ -93,7 +93,7 @@
 - [基于 Docker GitLab 搭建 GitLab runner 搭建 GitLab CI/CD](https://www.jianshu.com/p/c6e5e645591c)
 - [CentOS Linux SSH 秘钥登录配置](https://majing.io/posts/10000039841225)
 
-##### java
+##### Java
 - [SpringBoot 的基本使用](https://www.bilibili.com/video/BV15b4y1a7yG?p=1)
 
 ##### Docker
