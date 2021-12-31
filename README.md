@@ -26,6 +26,7 @@
 ##### JS 基础
 
 - [冴羽博客-JS 基础](https://github.com/mqyqingfeng/Blog)
+- [JS 解析与预执行过程](https://segmentfault.com/a/1190000022309160)
 - [前端进阶](https://github.com/sl1673495/blogs/issues/37)
 - [JS 设计模式](https://juejin.cn/book/6844733790204461070)
 - [手写 Promise](https://www.bilibili.com/video/BV1GA411x7z1?p=25)
