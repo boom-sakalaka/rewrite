@@ -58,7 +58,6 @@
 - [Vue 虚拟 Dom diff 算法](https://www.bilibili.com/video/BV1Ph41117hq)
 - [Vue3 官方文档关于 setup 语法糖的使用](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
 - [Vue3 官方文档 ts 类型判断 defineProps 和 withDefaults 的使用(默认值)](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E4%BB%85%E9%99%90-typescript-%E7%9A%84%E5%8A%9F%E8%83%BD)
-- [Vu3 Vue-router4 meta 路由元信息 的 TS 拓展](https://juejin.cn/post/6995478754571059237#heading-7)
 - [Vue3 语法糖 视频(官方文档看不太明白的可以看视频)](https://www.bilibili.com/video/BV1Rb4y1C7p3)
 - [Vue3 自定义指令的修改](https://juejin.cn/post/6968996649515515917#heading-2)
 - [手写 mini-vue](https://www.bilibili.com/video/BV1564y1s7s5)
@@ -88,6 +87,8 @@
 - [自定义类型守卫的应用](https://juejin.cn/post/6844904071334199309)
 - [TS 练习](https://github.com/type-challenges/type-challenges/blob/master/README.zh-CN.md)
 - [理解 TypeScript 中的 infer 关键字](https://juejin.cn/post/6844904170353328135)
+- [Vu3 Vue-router4 meta 路由元信息 的 TS 拓展](https://juejin.cn/post/6995478754571059237#heading-7)
+- [TS 中无法导入scss 的解决方法](https://www.codenong.com/40382842/)
 
 ##### Linux
 
