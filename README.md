@@ -85,6 +85,7 @@
 ##### TypeScript
 
 - [TS 学习](https://juejin.cn/post/6872111128135073806#heading-41)
+- [Typescript 内置类型](https://juejin.cn/post/6844903860692074504#heading-1)
 - [细数 TS 中那些奇怪的符号](https://segmentfault.com/a/1190000023943952)
 - [自定义类型守卫的应用](https://juejin.cn/post/6844904071334199309)
 - [TS 练习](https://github.com/type-challenges/type-challenges/blob/master/README.zh-CN.md)
