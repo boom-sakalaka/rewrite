@@ -121,9 +121,6 @@
 
 - [快速排序](https://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html)
 
-##### 微前端
-
-- [qiankun 的使用](https://juejin.cn/post/7007714510186217508#heading-11)
 
 ###### 数据结构和算法
 
