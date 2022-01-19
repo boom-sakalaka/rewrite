@@ -66,6 +66,7 @@
 - [手写mini-vue 简单版](https://www.bilibili.com/video/BV1Rt4y1B7sC?p=1)
 - [Vue3 响应式解析Reactivity(Reflect and Proxy)](https://segmentfault.com/a/1190000039365544)
 - [uni-app的学习](https://www.bilibili.com/video/BV1vh411B7Sb)
+- [跟尤雨溪一起解读Vue3源码](https://www.bilibili.com/video/BV1rC4y187Vw)
 
 ##### React
 
