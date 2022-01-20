@@ -93,6 +93,7 @@
 - [理解 TypeScript 中的 infer 关键字](https://juejin.cn/post/6844904170353328135)
 - [Vu3 Vue-router4 meta 路由元信息 的 TS 拓展](https://juejin.cn/post/6995478754571059237#heading-7)
 - [TS 中无法导入scss 的解决方法](https://www.codenong.com/40382842/)
+- [TypeScript类型元编程入门指南](https://juejin.cn/post/7025619077158666270)
 
 ##### Linux
 
