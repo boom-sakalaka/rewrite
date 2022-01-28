@@ -30,11 +30,11 @@ ok，那么我们让团队成员都按照图片的提交规范提交 Git 信息�
 
 - **_cz-customizable_**
 
-​ 配置 commit 时候的步骤和提交类型等
+ 配置 commit 时候的步骤和提交类型等
 
 - **_commitlint_**
 
-​ 校验 commit 信息是否符合规范，在 git 的钩子 **_commit-msg_** 中使用
+ 校验 commit 信息是否符合规范，在 git 的钩子 **_commit-msg_** 中使用
 
 - **_lint-staged_**
 
@@ -126,7 +126,7 @@ ok，那么我们让团队成员都按照图片的提交规范提交 Git 信息�
     allowCustomScopes: true,
     allowBreakingChanges: ['feat', 'fix']
   }
-
+  
   ```
 
   因为使用了 commitizen，所以我们能用**_git cz_** 这个命令提交代码，然后我们在 **_package.json_** 文件中配置的 **_config_**
@@ -201,7 +201,7 @@ ok，那么我们让团队成员都按照图片的提交规范提交 Git 信息�
   #!/bin/sh
   . "$(dirname "$0")/_/husky.sh"
   . "$(dirname "$0")/common.sh"
-
+  
   yarn …
   ```
 
@@ -261,3 +261,5 @@ yran prettier "./src/**/*.{js,jsx,ts,tsx,vue,less,sass,scss,css.json}" --write &
 参照
 
 [vue 项目集成 husky, commitlint, lint-staged, prettier 总结](https://juejin.cn/post/6979515308143263751#heading-1)
+
+![image-20220128122859583](img/image-20220128122859583.png)
