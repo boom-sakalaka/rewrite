@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2021-12-10 22:01:49
+ * @LastEditTime: 2022-02-11 15:28:42
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -39,7 +39,7 @@
 - [for...in,for...of](https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/)
 - [async/await 原理](https://juejin.cn/post/7007031572238958629)
 - [正则](https://juejin.cn/post/6844903845227659271#heading-0)
-- [WeakMap的作用和使用场景](https://www.jianshu.com/p/f698d90836f4)
+- [WeakMap 的作用和使用场景](https://www.jianshu.com/p/f698d90836f4)
 - [做题网站](https://fe.ecool.fun/topic-list?tagId=10)
 
 ##### Vue
@@ -59,14 +59,15 @@
 - [Vue 虚拟 Dom diff 算法](https://www.bilibili.com/video/BV1Ph41117hq)
 - [Vue3 官方文档关于 setup 语法糖的使用](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
 - [Vue3 官方文档 ts 类型判断 defineProps 和 withDefaults 的使用(默认值)](https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E4%BB%85%E9%99%90-typescript-%E7%9A%84%E5%8A%9F%E8%83%BD)
-- [Pinia学习](https://juejin.cn/post/7049196967770980389)
+- [Pinia 学习](https://juejin.cn/post/7049196967770980389)
 - [Vue3 语法糖 视频(官方文档看不太明白的可以看视频)](https://www.bilibili.com/video/BV1Rb4y1C7p3)
 - [Vue3 自定义指令的修改](https://juejin.cn/post/6968996649515515917#heading-2)
 - [手写 mini-vue](https://www.bilibili.com/video/BV1564y1s7s5)
-- [手写mini-vue 简单版](https://www.bilibili.com/video/BV1Rt4y1B7sC?p=1)
-- [Vue3 响应式解析Reactivity(Reflect and Proxy)](https://segmentfault.com/a/1190000039365544)
-- [uni-app的学习](https://www.bilibili.com/video/BV1vh411B7Sb)
-- [跟尤雨溪一起解读Vue3源码](https://www.bilibili.com/video/BV1rC4y187Vw)
+- [手写 mini-vue 简单版](https://www.bilibili.com/video/BV1Rt4y1B7sC?p=1)
+- [Vue3 响应式解析 Reactivity(Reflect and Proxy)](https://segmentfault.com/a/1190000039365544)
+- [uni-app 的学习](https://www.bilibili.com/video/BV1vh411B7Sb)
+- [Vue 3 响应式原理 (Vue 3 Reactivity](https://www.bilibili.com/video/BV1SZ4y1x7a9)
+- [跟尤雨溪一起解读 Vue3 源码](https://www.bilibili.com/video/BV1rC4y187Vw)
 
 ##### React
 
@@ -92,8 +93,8 @@
 - [TS 练习](https://github.com/type-challenges/type-challenges/blob/master/README.zh-CN.md)
 - [理解 TypeScript 中的 infer 关键字](https://juejin.cn/post/6844904170353328135)
 - [Vu3 Vue-router4 meta 路由元信息 的 TS 拓展](https://juejin.cn/post/6995478754571059237#heading-7)
-- [TS 中无法导入scss 的解决方法](https://www.codenong.com/40382842/)
-- [TypeScript类型元编程入门指南](https://juejin.cn/post/7025619077158666270)
+- [TS 中无法导入 scss 的解决方法](https://www.codenong.com/40382842/)
+- [TypeScript 类型元编程入门指南](https://juejin.cn/post/7025619077158666270)
 
 ##### Linux
 
@@ -103,6 +104,7 @@
 - [CentOS Linux SSH 秘钥登录配置](https://majing.io/posts/10000039841225)
 
 ##### Java
+
 - [SpringBoot 的基本使用](https://www.bilibili.com/video/BV15b4y1a7yG?p=1)
 
 ##### Docker
@@ -123,7 +125,6 @@
 
 - [快速排序](https://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html)
 
-
 ###### 数据结构和算法
 
 - [javaScript 版数据结构与算法](https://www.bilibili.com/video/BV1r7411n7Pw)
@@ -140,5 +141,5 @@
 - [移动端适配相关概念](https://juejin.cn/post/6844903845617729549#heading-0)
 - [Eslint 配置](https://mp.weixin.qq.com/s/QYrive47_wHILPwfTUXBJw?st=08DCBB17353D0FEBF318FB43D22F1898C9C82D873DAB54A2AA44D6C62A33EA77899B5222C5854355952B69DCBC6C38774FB869C1B5407E05FD38779D49C073CC265CE4533EE3362289B90A6EBB80B2F383FF32B93996A433E608674595365019A958C55A410DCF126052F4CA963467E4860055FBE0073EC2D0C14129CA78D966CC0ED65942A3202BE27210B858F30840FD065B54C8F497C1705435D84A3E44DA28E64265D168CC50CA666BF0DABF0FBAA5BFDC94B808F958969A208AB5F036E257319C5DCCE7C8E86736AB1B2D42AC0AD0C17F5A50CA22C918390C229A72F428&vid=1688853214406189&cst=A4DDE2B548B73094D916C665892D1FB5EC2FA40302FB29A4C8588ED51251C4D45A9D1EF02A23E19470FC7D09AFCFE95A&deviceid=2c5712c3-e865-4abc-a913-fb01a2fae7b8&version=3.1.18.6007&platform=win)
 - [MySQL](https://www.bilibili.com/video/BV1iq4y1u7vj)
-- [vite项目搭建(一)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/vite-cli/vite-cli.md)
-- [vite项目搭建(二)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/Git-Hook/git-hook.md)
+- [vite 项目搭建(一)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/vite-cli/vite-cli.md)
+- [vite 项目搭建(二)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/Git-Hook/git-hook.md)
