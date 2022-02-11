@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-16 14:04:25
  * @LastEditors: GZH
- * @LastEditTime: 2021-12-03 13:49:56
+ * @LastEditTime: 2022-02-11 11:35:01
  * @FilePath: \rewrite\myUtils.js
  * @Description:
  */
@@ -226,6 +226,11 @@ function getUrlParams(url) {
 // let url = 'https://www.junjin.cn?a=1&b=2'
 // console.log(getUrlParams(url)) // { a: 1, b: 2 }
 
+//判断是否为空
+function isVoid(value) {
+  return value === undefined || value === null || value === '';
+}
+
 const fn = {
   isNumber, // 判断是否是数字
   myIsNaN, // 判断是否是数字
@@ -243,4 +248,5 @@ const fn = {
   goToTop, // 滚动到页面顶部
   copyTextToClipboard, // 将文字复制到粘贴板
   getUrlParams, // 获取url 参数
+  isVoid, // 判断是否为空
 };
