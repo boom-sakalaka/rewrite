@@ -2,7 +2,7 @@
  * @Author: GZH
  * @Date: 2021-08-16 14:04:25
  * @LastEditors: GZH
- * @LastEditTime: 2022-02-11 11:35:01
+ * @LastEditTime: 2022-02-18 10:05:10
  * @FilePath: \rewrite\myUtils.js
  * @Description:
  */
@@ -250,3 +250,5 @@ const fn = {
   getUrlParams, // 获取url 参数
   isVoid, // 判断是否为空
 };
+
+// -.css -.png -.jpg -.js
