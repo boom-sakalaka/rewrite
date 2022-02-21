@@ -66,6 +66,7 @@
 - [Vue3 响应式解析 Reactivity(Reflect and Proxy)](https://segmentfault.com/a/1190000039365544)
 - [uni-app 的学习](https://www.bilibili.com/video/BV1vh411B7Sb)
 - [uni-app中的生命周期](https://juejin.cn/post/6891934358467575822)
+- [uni-app 首次获取位置后再获取不到的解决方法](https://blog.csdn.net/Amnesiac666/article/details/121489952)
 - [Vue 3 响应式原理 (Vue 3 Reactivity](https://www.bilibili.com/video/BV1SZ4y1x7a9)
 - [跟尤雨溪一起解读 Vue3 源码](https://www.bilibili.com/video/BV1rC4y187Vw)
 
