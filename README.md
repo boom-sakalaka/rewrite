@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2022-02-11 15:28:42
+ * @LastEditTime: 2022-03-06 10:53:29
  * @LastEditors: GZH
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -10,7 +10,6 @@
 ## 学习笔记
 
 #### 手写各种 Api，框架原理等
-
 
 ---
 
@@ -65,9 +64,9 @@
 - [手写 mini-vue 简单版](https://www.bilibili.com/video/BV1Rt4y1B7sC?p=1)
 - [Vue3 响应式解析 Reactivity(Reflect and Proxy)](https://segmentfault.com/a/1190000039365544)
 - [uni-app 的学习](https://www.bilibili.com/video/BV1vh411B7Sb)
-- [uni-app中的生命周期](https://juejin.cn/post/6891934358467575822)
+- [uni-app 中的生命周期](https://juejin.cn/post/6891934358467575822)
 - [uni-app 小程序 首次获取位置后再获取不到的解决方法](https://blog.csdn.net/Amnesiac666/article/details/121489952)
-- [uni-app多个视频播放暂停问题](https://juejin.cn/post/6844904037284855822)
+- [uni-app 多个视频播放暂停问题](https://juejin.cn/post/6844904037284855822)
 - [Vue 3 响应式原理 (Vue 3 Reactivity](https://www.bilibili.com/video/BV1SZ4y1x7a9)
 - [跟尤雨溪一起解读 Vue3 源码](https://www.bilibili.com/video/BV1rC4y187Vw)
 
@@ -113,7 +112,6 @@
 
 - [Docker 基本使用](https://dockertips.readthedocs.io/en/latest/docker-install/docker-intro.html)
 
-
 ###### 数据结构和算法
 
 - [javaScript 版数据结构与算法](https://www.bilibili.com/video/BV1r7411n7Pw)
@@ -133,3 +131,4 @@
 - [MySQL](https://www.bilibili.com/video/BV1iq4y1u7vj)
 - [vite 项目搭建(一)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/vite-cli/vite-cli.md)
 - [vite 项目搭建(二)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/Git-Hook/git-hook.md)
+- [脚手架制作](https://juejin.cn/post/6966119324478079007)
