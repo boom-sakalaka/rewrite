@@ -36,6 +36,7 @@
 - [手写 30 个 JS 原生方法](https://juejin.cn/post/7002248038529892383#heading-4)
 - [for...in,for...of](https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/)
 - [async/await 原理](https://juejin.cn/post/7007031572238958629)
+- [async/await的错误捕捉](https://juejin.cn/post/7064389512729722910)
 - [正则](https://juejin.cn/post/6844903845227659271#heading-0)
 - [WeakMap 的作用和使用场景](https://www.jianshu.com/p/f698d90836f4)
 - [做题网站](https://fe.ecool.fun/topic-list?tagId=10)
