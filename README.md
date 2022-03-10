@@ -45,6 +45,7 @@
 
 - [Vue2 + Vue3 基础语法学习](https://www.bilibili.com/video/BV1Zy4y1K7SH)
 - [vue2 中的$attrs和$listeners](https://segmentfault.com/a/1190000022708579)
+- [Vue中的JSX 语法](https://blog.51cto.com/u_12699853/3964961)
 - [Vue3 中的$attrs($listeners / inheritAttrs 已被移除掉) ](https://codeantenna.com/a/VJIajdNC5s)
 - [Vue mixin](https://segmentfault.com/a/1190000014991578)
 - [Vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
