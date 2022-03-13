@@ -36,6 +36,7 @@
 - [手写 30 个 JS 原生方法](https://juejin.cn/post/7002248038529892383#heading-4)
 - [for...in,for...of](https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/)
 - [async/await 原理](https://juejin.cn/post/7007031572238958629)
+- [async/await的错误捕捉](https://juejin.cn/post/7064389512729722910)
 - [正则](https://juejin.cn/post/6844903845227659271#heading-0)
 - [WeakMap 的作用和使用场景](https://www.jianshu.com/p/f698d90836f4)
 - [做题网站](https://fe.ecool.fun/topic-list?tagId=10)
@@ -44,6 +45,7 @@
 
 - [Vue2 + Vue3 基础语法学习](https://www.bilibili.com/video/BV1Zy4y1K7SH)
 - [vue2 中的$attrs和$listeners](https://segmentfault.com/a/1190000022708579)
+- [Vue中的JSX 语法](https://blog.51cto.com/u_12699853/3964961)
 - [Vue3 中的$attrs($listeners / inheritAttrs 已被移除掉) ](https://codeantenna.com/a/VJIajdNC5s)
 - [Vue mixin](https://segmentfault.com/a/1190000014991578)
 - [Vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
@@ -125,6 +127,8 @@
 ##### 其它
 
 - [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
+- [谷歌浏览器network过滤](https://blog.csdn.net/tengdazhang770960436/article/details/90644523)
+- [腾讯地图组件的使用](https://lbs.qq.com/webApi/component/componentGuide/componentPicker)
 - [npx 的介绍](http://www.ruanyifeng.com/blog/2019/02/npx.html)
 - [移动端适配相关概念](https://juejin.cn/post/6844903845617729549#heading-0)
 - [Eslint 配置](https://mp.weixin.qq.com/s/QYrive47_wHILPwfTUXBJw?st=08DCBB17353D0FEBF318FB43D22F1898C9C82D873DAB54A2AA44D6C62A33EA77899B5222C5854355952B69DCBC6C38774FB869C1B5407E05FD38779D49C073CC265CE4533EE3362289B90A6EBB80B2F383FF32B93996A433E608674595365019A958C55A410DCF126052F4CA963467E4860055FBE0073EC2D0C14129CA78D966CC0ED65942A3202BE27210B858F30840FD065B54C8F497C1705435D84A3E44DA28E64265D168CC50CA666BF0DABF0FBAA5BFDC94B808F958969A208AB5F036E257319C5DCCE7C8E86736AB1B2D42AC0AD0C17F5A50CA22C918390C229A72F428&vid=1688853214406189&cst=A4DDE2B548B73094D916C665892D1FB5EC2FA40302FB29A4C8588ED51251C4D45A9D1EF02A23E19470FC7D09AFCFE95A&deviceid=2c5712c3-e865-4abc-a913-fb01a2fae7b8&version=3.1.18.6007&platform=win)
