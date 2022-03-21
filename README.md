@@ -98,6 +98,7 @@
 - [Vu3 Vue-router4 meta 路由元信息 的 TS 拓展](https://juejin.cn/post/6995478754571059237#heading-7)
 - [TS 中无法导入 scss 的解决方法](https://www.codenong.com/40382842/)
 - [TypeScript 类型元编程入门指南](https://juejin.cn/post/7025619077158666270)
+- [TS 类型体操](https://juejin.cn/post/7061556434692997156#heading-0)
 
 ##### Linux
 
