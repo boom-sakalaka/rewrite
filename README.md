@@ -73,6 +73,7 @@
 - [uni-app 调试 debug](https://uniapp.dcloud.io/api/other/set-enable-debug.html#setenabledebug)
 - [Vue 3 响应式原理 (Vue 3 Reactivity](https://www.bilibili.com/video/BV1SZ4y1x7a9)
 - [跟尤雨溪一起解读 Vue3 源码](https://www.bilibili.com/video/BV1rC4y187Vw)
+- [Vue-cli 的配置](https://staven630.github.io/vue-cli4-config/#splitchunks)
 
 ##### React
 
