@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2022-03-06 10:53:29
- * @LastEditors: GZH
+ * @LastEditTime: 2022-03-23 10:25:56
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
 -->
@@ -36,17 +36,18 @@
 - [手写 30 个 JS 原生方法](https://juejin.cn/post/7002248038529892383#heading-4)
 - [for...in,for...of](https://www.zhangxinxu.com/wordpress/2018/08/for-in-es6-for-of/)
 - [async/await 原理](https://juejin.cn/post/7007031572238958629)
-- [async/await的错误捕捉](https://juejin.cn/post/7064389512729722910)
+- [async/await 的错误捕捉](https://juejin.cn/post/7064389512729722910)
 - [正则](https://juejin.cn/post/6844903845227659271#heading-0)
 - [WeakMap 的作用和使用场景](https://www.jianshu.com/p/f698d90836f4)
 - [做题网站](https://fe.ecool.fun/topic-list?tagId=10)
 - [内存泄漏](http://www.ruanyifeng.com/blog/2017/04/memory-leak.html)
+- [JSON.stringify 的作用](https://juejin.cn/post/7072122968087724046)
 
 ##### Vue
 
 - [Vue2 + Vue3 基础语法学习](https://www.bilibili.com/video/BV1Zy4y1K7SH)
 - [vue2 中的$attrs和$listeners](https://segmentfault.com/a/1190000022708579)
-- [Vue中的JSX 语法](https://blog.51cto.com/u_12699853/3964961)
+- [Vue 中的 JSX 语法](https://blog.51cto.com/u_12699853/3964961)
 - [Vue3 中的$attrs($listeners / inheritAttrs 已被移除掉) ](https://codeantenna.com/a/VJIajdNC5s)
 - [Vue mixin](https://segmentfault.com/a/1190000014991578)
 - [Vue extend 的使用](https://www.jianshu.com/p/7f5c4d0804ce)
@@ -74,7 +75,7 @@
 - [Vue 3 响应式原理 (Vue 3 Reactivity](https://www.bilibili.com/video/BV1SZ4y1x7a9)
 - [跟尤雨溪一起解读 Vue3 源码](https://www.bilibili.com/video/BV1rC4y187Vw)
 - [Vue-cli 的配置](https://staven630.github.io/vue-cli4-config/#splitchunks)
-- [GZIP的作用与配置](https://juejin.cn/post/6844903825585897485)
+- [GZIP 的作用与配置](https://juejin.cn/post/6844903825585897485)
 
 ##### React
 
@@ -132,7 +133,7 @@
 ##### 其它
 
 - [浏览器快捷键(好像有点用)](https://juejin.cn/post/6999126516852490253)
-- [谷歌浏览器network过滤](https://blog.csdn.net/tengdazhang770960436/article/details/90644523)
+- [谷歌浏览器 network 过滤](https://blog.csdn.net/tengdazhang770960436/article/details/90644523)
 - [腾讯地图组件的使用](https://lbs.qq.com/webApi/component/componentGuide/componentPicker)
 - [npx 的介绍](http://www.ruanyifeng.com/blog/2019/02/npx.html)
 - [移动端适配相关概念](https://juejin.cn/post/6844903845617729549#heading-0)
