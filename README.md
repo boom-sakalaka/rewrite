@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-30 23:20:13
- * @LastEditTime: 2022-03-23 10:25:56
+ * @LastEditTime: 2022-03-30 08:52:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \rewrite\README.md
@@ -142,3 +142,4 @@
 - [vite 项目搭建(一)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/vite-cli/vite-cli.md)
 - [vite 项目搭建(二)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/Git-Hook/git-hook.md)
 - [脚手架制作](https://juejin.cn/post/6966119324478079007)
+- [webpack 学习](https://juejin.cn/post/7078461343711363103)
