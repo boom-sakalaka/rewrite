@@ -143,3 +143,4 @@
 - [vite 项目搭建(二)](https://github.com/boom-sakalaka/rewrite/blob/master/article/web/Git-Hook/git-hook.md)
 - [脚手架制作](https://juejin.cn/post/6966119324478079007)
 - [webpack 学习](https://juejin.cn/post/7078461343711363103)
+- [pnpm](https://juejin.cn/post/7036319707590295565)
