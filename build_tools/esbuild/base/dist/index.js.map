@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.jsx"],
+  "sourcesContent": ["/*\r\n * @Date: 2022-04-19 11:45:15\r\n * @LastEditTime: 2022-04-19 11:45:15\r\n * @FilePath: \\rewrite\\build_tools\\esbuild\\base\\src\\index.jsx\r\n * @Description:\r\n */\r\n// src/index.jsx\r\nimport Server from 'react-dom/server';\r\n\r\nlet Greet = () => <h1>Hello, juejin!</h1>;\r\nconsole.log(Server.renderToString(<Greet />));\r\n"],
+  "mappings": "AAOA,gCAEA,GAAI,GAAQ,IAAM,oBAAC,UAAG,gBAAc,EACpC,QAAQ,IAAI,EAAO,eAAe,oBAAC,MAAM,CAAE,CAAC",
+  "names": []
+}
