@@ -43,6 +43,7 @@
 - [内存泄漏](http://www.ruanyifeng.com/blog/2017/04/memory-leak.html)
 - [JSON.stringify 的作用](https://juejin.cn/post/7072122968087724046)
 - [Babel的作用](https://juejin.cn/post/7129535563639554085#heading-21)
+- [性能优化实践](https://juejin.cn/column/7001715712922222623)
 
 ##### Vue
 
