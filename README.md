@@ -44,7 +44,7 @@
 - [JSON.stringify 的作用](https://juejin.cn/post/7072122968087724046)
 - [Babel的作用](https://juejin.cn/post/7129535563639554085#heading-21)
 - [性能优化实践](https://juejin.cn/column/7001715712922222623)
-
+- [深入浅出 npm & yarn & pnpm 包管理机制](https://mp.weixin.qq.com/s/5YJYxvcqZIifQIsTR_I3fA)
 ##### Vue
 
 - [Vue2 + Vue3 基础语法学习](https://www.bilibili.com/video/BV1Zy4y1K7SH)
