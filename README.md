@@ -149,3 +149,6 @@
 - [pnpm](https://juejin.cn/post/7036319707590295565)
 - [浅析组件库实现按需引入的几种方式](https://segmentfault.com/a/1190000041062139)
 - [前端工程化 - 剖析npm的包管理机制](https://segmentfault.com/a/1190000021305625)
+
+##### ThreeJS
+- [ThreeJS 贴图的作用](https://juejin.cn/post/7129065605461884964)
