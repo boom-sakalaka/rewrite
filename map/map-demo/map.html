@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>添加多边形区域覆盖物</title>
+  <style type="text/css">
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font: 12px/16px Verdana, Helvetica, Arial, sans-serif;
+    }
+
+    #info {
+      width: 603px;
+      padding-top: 3px;
+      overflow: hidden;
+    }
+
+    .btn {
+      width: 190px;
+    }
+  </style>
+  <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+  <script>
+    var init = function () {
+      var center = new qq.maps.LatLng(39.916527, 116.397128);
+      var map = new qq.maps.Map(document.getElementById('container'), {
+        center: center,
+        zoom: 13
+      });
+      var path1 = [
+        new qq.maps.LatLng(39.930131, 116.417301),
+        new qq.maps.LatLng(39.930131, 116.377476),
+        new qq.maps.LatLng(39.911305, 116.377476),
+        new qq.maps.LatLng(39.911305, 116.417301)
+      ];
+      //添加覆盖物
+      var polygon = new qq.maps.Polygon({
+        path: path1,
+        strokeColor: '#000000',
+        strokeWeight: 5,
+        fillColor: '#111111',
+        map: map
+      });
+
+      //添加Marker
+      var marker = new qq.maps.Marker({
+        position: new qq.maps.LatLng(39.916527, 116.397128),
+        map: map
+      });
+      var marker1 = new qq.maps.Marker({
+        position: new qq.maps.LatLng(39.901305, 116.397128),
+        map: map
+      });
+      //点击Maker，判断是否在覆盖物范围内
+      qq.maps.event.addListener(marker, 'click', function () {
+
+        alert(polygon.getBounds().contains(new qq.maps.LatLng(39.916527, 116.397128)));
+      });
+      qq.maps.event.addListener(marker1, 'click', function () {
+
+        alert(polygon.getBounds().contains(new qq.maps.LatLng(39.901305, 116.397128)));
+      });
+    }
+  </script>
+</head>
+
+<body onload="init()">
+  <div id="container"></div>
+
+</body>
+
+</html>
